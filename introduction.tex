@@ -59,13 +59,16 @@ Possible objective are:
 
 
 
-\section{Road Network}
+\section{Matrix Representation of the Road Network}
 
-We consider the higher level road network, i.e., A, S, L, B.
-and we vertices of the matrix crossing points of the roads.
-the edges are the road section between those points, for which we
-consider the distance the length of the bridges and their capacity constraints (and the lowest encountered bridge capacity).
-This way we can, answer questions concerning transports between those vertices.
+For now, we consider the \textit{higher level road network} in Carinthia,
+i.e., \textit{A}, \textit{S}, \textit{L}, \textit{B}, in form of a matrix.
+The vertices of the matrix are the crossing points of the roads, while
+the road section connecting those points form the edges of the matrix.
+For each edge, we have the distance between the vertices and the length of the bridges along the segment and the capacity constraints (and the lowest encountered bridge capacity) for each edge.
+This way, we can answer various questions concerning transports between those vertices.
+
+
 
 \begin{figure}
  \centering
