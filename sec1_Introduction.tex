@@ -6,20 +6,26 @@ Due to the global economic expansion of several industries and the dynamics of d
 \par The article continuous with a review of the existing body of knowledge in the field (Section 2). Then, we give a problem description and introduce notations along with the model assumptions in section 3. Next, the optimization model is presented and illustrated in an example of application (Section 4). Finally, section 5 closes the article, summarizing the research implications, study limitations and future lines of research.
 
 
-Possible objective are:
+Possible objectives are:
 \begin{itemize}
   \item Shortest Path (classic).
 
   \item Minimal wear of infrastructure. Reducing the wear induced by over-weight transports
   minimizes maintenance costs, extends lifetime of the building structures, and
   improves safety (Genoa bridge collapse in 2018).
+  \citet{Kakan2014}
 
   % \item Minimize the number of different road operators and municipalities the path
   % traverses. In that sense, the process of getting official approval of the
   % path should be simplified.
 
-  \item Number of Bridges.
-  \item Preferably higher roads (if possible).
+  \item Number of Bridges, i.e., less work for the civil engineer.
+  \item Preferably high level roads (if possible).
+  Achieve this be exponential weightening of the road segments.
+  \textit{A}: $w=2^0$,    \textit{S}: $w=2^1$,      \textit{B}: $w=2^2$,     \textit{L}: $w=2^3$.
+  The considered Austrian road network is clearly structured into these road levels.
+  Clearly, for any other network, a similar weightening be introduced
+  (if not given) under consideration of the road widths etc.
 \end{itemize}
 
 \begin{itemize}

@@ -3,12 +3,20 @@
 % !TeX spellcheck = en_US
 \subsection{Matrix Representation of the Road Network}
 
-For now, we consider the \textit{higher level road network} in Carinthia,
-i.e., \textit{A}, \textit{S}, \textit{L}, \textit{B}, in form of a matrix.
+For now, we consider the \textit{higher level road network} in Carinthia, Austria,
+i.e., \textit{A}, \textit{S}, \textit{L}, \textit{B}, in the  form of a matrix.
 The vertices of the matrix are the crossing points of the roads, while
 the road section connecting those points form the edges of the matrix.
-For each edge, we have the distance between the vertices and the length of the bridges along the segment and the capacity constraints (and the lowest encountered bridge capacity) for each edge.
+For each edge, we have the distance between the vertices and the length of the bridges along the segment
+and the capacity constraints (and the lowest encountered bridge capacity).
 This way, we can answer various questions concerning transports between those vertices.
+Without loss of generality, we assume an undirected graph.
+In that sense, the travel distance along an edge is independent of
+the travel direction, and  the same bridges are surpassed in both directions.
+The problem statement can
+easily be extended to a directed graph. However, the authors omitted this for reasons of simplicity.
+
+For now, we explore the different objectives on a simple toy example that we illustrate in Figure \ref{fig_toy_example_1}.
 
 
 \begin{figure}[!ht]
@@ -16,4 +24,12 @@ This way, we can answer various questions concerning transports between those ve
   \includegraphics[width=0.9\textwidth]{map.jpg}
   \caption{Overview of the higher level road network in Carinthia.}
   \label{fig:higher level}
+\end{figure}
+
+
+\begin{figure}[!ht]
+  \centering
+  \input{./figures/toy_network.tex}
+  \caption{Toy Example 1.}
+  \label{fig_toy_example_1}
 \end{figure}
