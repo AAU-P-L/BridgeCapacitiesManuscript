@@ -29,35 +29,41 @@
   % Nodes
   % \node[cblue] (n_1_1) at (0,0) {1};
   % \node[cblue] (n_2_1) at (4,0) {2};
-  \node[cblue] (n_3_1) at (8,0) {6};
+  \node[cblue] (n_6) at (8,0) {6};
 
   % \node[cblue] (n_1_2) at (0,4) {4};
-  \node[cblue] (n_2_2) at (4,4) {4};
-  \node[cblue] (n_3_2) at (8,4) {5};
+  \node[cblue] (n_4) at (4,4) {4};
+  \node[cblue] (n_5) at (8,4) {5};
 
-  \node[cblue] (n_1_3) at (0,8) {1};
-  \node[cblue] (n_2_3) at (4,8) {2};
-  \node[cblue] (n_3_3) at (8,8) {3};
+  \node[cblue] (n_1) at (0,8) {1};
+  \node[cblue] (n_2) at (4,8) {2};
+  \node[cblue] (n_3) at (8,8) {3};
+
 
 
 
   %  A links
-  \draw[A_path] (n_2_2)--  (n_3_2)  node [midway, above, sloped] (TextNode) {$3; 2$};
-  \draw[A_path] (n_3_1) to[bend left]   node [midway, above, sloped]  {$3.7; 1$} (n_3_2)  ;
-  \draw[A_path] (n_2_2) -- (n_1_3)  node [midway, above, sloped] (TextNode) {$4 ; 1$};
+
+  \draw[A_path] (n_4)--  (n_5)  node [midway, above, sloped] (TextNode) {$3~[10t]$};
+  \draw[A_path] (n_6) to[bend left]   node [midway, above, sloped]  {$3.7~ [10t]$} (n_5)  ;
+  \draw[A_path] (n_4) -- (n_1)  node [midway, above, sloped] (TextNode) {$4 ~[10t]~[10t]$};
+
 
   % S links
-  \draw[S_path] (n_2_2) to node [midway, above, sloped] {$7; 2$} (n_3_1);
+  \draw[S_path] (n_4) to node [midway, above, sloped] {$8~ [10t]$} (n_6);
 
   %  L lines
-  \draw[L_path] (n_1_3) --  (n_2_3)  node [midway, above, sloped] (TextNode) {$4; 3$};
-  \draw[L_path] (n_2_3)--  (n_3_3)  node [midway, above, sloped] (TextNode) {$5; 1$};
-  % \draw[L_path] (n_3_3) to[out=-20,in=-20]  (n_3_2)  node [midway, above, sloped] (TextNode) {$l=3, b=2$};
-  \draw[L_path] (n_3_3) to[bend left] node [midway, above, sloped]   {$3; 2$}    (n_3_2);
-  \draw[L_path] (n_3_2) to[bend left]  node [midway, above, sloped] {$4.5; 2$} (n_3_1);
+  \draw[L_path] (n_1) --  (n_2)  node [midway, above, sloped] (TextNode) {$4~[10t]$};
+
+  \draw[L_path] (n_2)--  (n_3)  node [midway, above, sloped] (TextNode) {$5$};
+  % \draw[L_path] (n_3) to[out=-20,in=-20]  (n_5)  node [midway, above, sloped] (TextNode) {$l=3, b=2$};
+  \draw[L_path] (n_3) to[bend left] node [midway, above, sloped]   {$3~[10t]$}    (n_5);
+
+
+  \draw[L_path] (n_5) to[bend left]  node [midway, above, sloped] {$4.5$} (n_6);
 
   % B links
-  % \draw[B_path] (n_3_1) to node [midway, above, sloped] {$7; 2$} (n_2_1);
+  % \draw[B_path] (n_6) to node [midway, above, sloped] {$7; 2$} (n_2_1);
 
 
   % Legends
