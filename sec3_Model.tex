@@ -16,28 +16,28 @@ the travel direction, and  the same bridges are surpassed in both directions.
 The problem statement can
 easily be extended to a directed graph. However, the authors omitted this for reasons of simplicity.
 
-Classically,  the considered network consists of
+Classically,  the considered network $\mathcal{N}=(\mathcal{V},\mathcal{E})$ consists of
 \begin{itemize}
-  \item \emph{Nodes} $\mathcal{N}=\{1,\ldots, n\}$, which represent the intersections of different road segments as
+  \item \emph{Nodes} (vertices) $\mathcal{V}=\{1,\ldots, n\}$, which represent the intersections of different road segments as
   well as the start (end) points of the road segments, and
 
-  \item \emph{Links} $\mathcal{L} \subseteq \mathcal{N} \times \mathcal{N}$,
+  \item \emph{Links} (edges) $\mathcal{E} \subseteq \mathcal{L} \times \mathcal{L}$,
   representing the road network connecting the road segments.
 \end{itemize}
 
-Road links $\ell \in \mathcal{L}$ have a length $d(l)\in \mathbb{R}^{+}$ representing their road length.
-Further, they have a weights $c(l) \in C$ giving their \emph{classification} according to {\color{red} ??}.
+Road links $e \in \mathcal{E}$ have a length $\ell(e)\in \mathbb{R}^{+}$ representing their road length.
+Further, they have a weights $c(e) \in C$ giving their \emph{classification} according to {\color{red} ??}.
 The classes $C$ describe the level of the roads {\color{red} ??},
 while they have an ordering they are an dimensionless quantity.
 
 Bridges (and other types of building structures that must be overpassed)
 have \emph{weight limits} (measured in metric tons) which are determined by civil engineers.
-Each road link $\ell \in \mathcal{L}$ contains a nonnegative number of bridges, where each has a weight limit.
-For each link $\ell$, we set a \emph{weight limit} $w(\ell) \in \mathbb{R}^{+}$ which is the
-minimum over all bridges on this link and the \emph{number of bridges} $b(\ell) \in \mathbb{N}^{0}$.
-A weight limit $w(\ell)= \infty$ describes the circumstance
-that no limit is given for $\ell$.
-Similarly, we assume that nodes $n \in \mathcal{N}$ can have weight limits.
+Each road link $e \in \mathcal{E}$ contains a nonnegative number of bridges, where each has a weight limit.
+For each link $e$, we set a \emph{weight limit} $w(e) \in \mathbb{R}^{+}$ which is the
+minimum over all bridges on this link and the \emph{number of bridges} $b(e) \in \mathbb{N}^{0}$.
+A weight limit $w(e)= \infty$ describes the circumstance
+that no limit is given for $e$.
+Similarly, we assume that nodes $v \in \mathcal{V}$ can have weight limits.
 \begin{figure}[!ht]
  \centering
   \includegraphics[width=0.9\textwidth]{map.jpg}
@@ -60,6 +60,22 @@ A simple toy example, see Figure \ref{fig_toy_example_1}, shall illustrate these
 \citet{TACCARI2016122}
 
 \subsection{Mathematical Model}
+
+Next, we give an exact problem formulation.
+
+A \emph{transport request} $r=(o,d,w) \in \mathcal{V} \times \mathcal{V} \times \mathbb{R}^{+}$
+has an \emph{origin} $o$, a \emph{destination} $d$, a \emph{total weight} $w$.
+
+Clearly, a transport $r$ can only pass through nodes $v \in \mathcal{V}$ with
+$w(r) \leq w(v)$ and traverse road links $e \in \mathcal{E}$ for which $w(r) \leq w(e)$ holds.
+
+Accordingly, we define the sub-network $\mathcal{N}_{\omega}$ that contains only the vertices and edges from $\mathcal{N}$ that have a weight limit larger than $\omega \in \mathbb{R}^{+}$.
+Hence, for the remainder of this manuscript, we set $\mathcal{N}=\mathcal{N}_{\omega=w(r)}$.
+
+\subsubsection{Feasible Subnetwork}
+
+
+
 
 
 \begin{align*}
