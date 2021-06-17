@@ -16,9 +16,29 @@ the travel direction, and  the same bridges are surpassed in both directions.
 The problem statement can
 easily be extended to a directed graph. However, the authors omitted this for reasons of simplicity.
 
-For now, we explore the different objectives on a simple toy example that we illustrate in Figure \ref{fig_toy_example_1}.
+Classically,  the considered network consists of
+\begin{itemize}
+  \item \emph{Nodes} $\mathcal{N}=\{1,\ldots, n\}$, which represent the intersections of different road segments as
+  well as the start (end) points of the road segments, and
 
+  \item \emph{Links} $\mathcal{L} \subseteq \mathcal{N} \times \mathcal{N}$,
+  representing the road network connecting the road segments.
 
+\end{itemize}
+
+Road links $\ell \in \mathcal{L}$ have a length $d(l)\in \mathbb{R}^{+}$ representing their road length.
+Further, they have a weights $c(l) \in C$ giving their \emph{classification} according to {\color{red} ??}.
+The classes $C$ describe the level of the roads {\color{red} ??},
+while they have an ordering they are an dimensionless quantity.
+
+Bridges (and other types of building structures that must be overpassed)
+have \emph{weight limits} (measured in metric tons) which are determined by civil engineers.
+Each road link $\ell \in \mathcal{L}$ contains a nonnegative number of bridges, where each has a weight limit.
+For each link $\ell$, we set a \emph{weight limit} $w(\ell) \in \mathbb{R}^{+}$ which is the
+minimum over all bridges on this link and the \emph{number of bridges} $b(\ell) \in \mathbb{N}^{0}$.
+A weight limit $w(\ell)= \infty$ describes the circumstance
+that no limit is given for $\ell$.
+Similarly, we assume that nodes $n \in \mathcal{N}$ can have weight limits.
 \begin{figure}[!ht]
  \centering
   \includegraphics[width=0.9\textwidth]{map.jpg}
@@ -27,9 +47,24 @@ For now, we explore the different objectives on a simple toy example that we ill
 \end{figure}
 
 
+A simple toy example, see Figure \ref{fig_toy_example_1}, shall illustrate these definitions.
 \begin{figure}[!ht]
   \centering
   \input{./figures/toy_network.tex}
   \caption{Toy Example 1.}
   \label{fig_toy_example_1}
 \end{figure}
+
+
+\subsection{Related Work on the Shortest Path Problem}
+
+\citet{TACCARI2016122}
+
+\subsection{Mathematical Model}
+
+
+\begin{align*}
+   \min \sum    \\
+   \text{s.t.}  &  \\
+    & \sum
+\end{align*}
