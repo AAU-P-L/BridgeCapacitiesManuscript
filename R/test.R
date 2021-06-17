@@ -69,7 +69,7 @@ leaflet() %>%
         popup =paste0(bridgesP$BR_NAME, ": ", as.character(bridgesP$MAXLAST)),
         labelOptions = labelOptions(noHide = TRUE, offset = c(0, -12), textOnly = TRUE)
       )
-  
+
 
 # http://postgis.net/workshops/postgis-intro/spatial_relationships.html
 # https://stackoverflow.com/questions/43463150/print-label-on-circle-markers-in-leaflet-in-rshiny
