@@ -18,11 +18,11 @@ easily be extended to a directed graph. However, the authors omitted this for re
 
 Classically,  the considered network $\mathcal{N}=(\mathcal{V},\mathcal{E})$ consists of
 \begin{itemize}
-  \item \emph{Nodes} (vertices) $\mathcal{V}=\{1,\ldots, n\}$, which represent the intersections of different road segments as
-  well as the start (end) points of the road segments, and
+  \item \emph{Nodes} (vertices) $\mathcal{V}=\{1,\ldots, n\}$, which represent the intersections of road
+  well as the start (end) points of the roads, and
 
   \item \emph{Links} (edges) $\mathcal{E} \subseteq \mathcal{L} \times \mathcal{L}$,
-  representing the road network connecting the road segments.
+  correspond to the roads (road segements) connecting the vertices.
 \end{itemize}
 
 Road links $e \in \mathcal{E}$ have a length $\ell(e)\in \mathbb{R}^{+}$ representing their road length.
@@ -79,8 +79,8 @@ vertices $1,\ldots,|\mathcal{V}|$. We consider a directed graph $G=(\mathcal{V},
 In that sense, the auxiliary variables $x_{ij}$, $(i,j) \in \mathcal{V}$
 is set to $1$ if and only if node $j$ is visited directly after node $i$, and to $0$ otherwise.
 A standard IP formulation to determine the shortest path between $s$ and $t$ can be given as follows
-\begin{align*}
-  \min \quad &\sum_{(i,j)\in \mathcal{E}}  \ell_{ij} x_{ij}   \\
+\begin{align}
+  \min \quad &\sum_{(i,j)\in \mathcal{E}}  \c_{ij} x_{ij} \label{obj} \\
   \text{s.t.}\quad &
   \sum_{(i,j)\in \delta^{+} (i)} x_{ji} - \sum_{(i,j)\in \delta^{-}(i)} x_{ij} =
   \begin{cases}
@@ -92,5 +92,25 @@ A standard IP formulation to determine the shortest path between $s$ and $t$ can
   \\
   &  \sum_{(i,j)\in \delta^{+} (i)} x_{ij}   x_ {ij} \leq 1     \qquad \forall i \in \mathcal{E}\\
   &  x_{ij} \in \{0,1\}   \qquad \forall (i,j) \in \mathcal{V}
-\end{align*}
-The set of outgoing (ingoing) edges of vertice $i$ is denoted by  $\delta^{+} (i)$  $(\delta^{-} (i))$.
+\end{align}
+The set of outgoing (ingoing) edges of vertex $i$ is denoted by  $\delta^{+} (i)$  $(\delta^{-} (i))$.
+
+
+We consider three different objectives, i.e., different assignment of $c_{ij}$.
+\begin{enumerate}
+  \item \emph{Classic shortest path}, where $c_{ij}=\ell_{ij}$. \label{obj_short}
+  \item \emph{Minimal number of surpassed briges}, where  $c_{ij}=b_{ij}$.  \label{obj_minBridge}
+  \item \emph{Prefer high level roads}, where we assign an exponential weighting to the road classes (in ascending order of preference) $C$, $c_0=2^0,c_1=2^1, \ldots$.  \label{obj_highLevelRoad}
+\end{enumerate}
+
+\subsubsection{Solution Procedere}
+
+As objective functions \ref{obj_short} and  \ref{obj_highLevelRoad}
+use costs which induce no \emph{negative cycles}  on $G$, the problem can be efficiently solved
+by polynomial-time algorithms like
+\emph{Bellman-Ford's} \cite{Bell1958,Ford1956} or \emph{Dijistra's} \cite{dijkstra1959note} algorithm.
+In case of \ref{obj:obj_minBridge}, links having no bridges ($b(e)=0$) can induce cycles which are of length zero.
+
+
+% https://algs4.cs.princeton.edu/44sp/
+% https://jgrapht.org/javadoc-SNAPSHOT/org.jgrapht.core/org/jgrapht/alg/shortestpath/DijkstraShortestPath.html
