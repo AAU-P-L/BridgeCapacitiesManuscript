@@ -39,7 +39,7 @@ A weight limit $w(e)= \infty$ describes the circumstance
 that no limit is given for $e$.
 Similarly, we assume that nodes $v \in \mathcal{V}$ can have weight limits.
 \begin{figure}[!ht]
- \centering
+  \centering
   \includegraphics[width=0.9\textwidth]{map.jpg}
   \caption{Overview of the higher level road network in Carinthia.}
   \label{fig:higher level}
@@ -63,8 +63,9 @@ A simple toy example, see Figure \ref{fig_toy_example_1}, shall illustrate these
 
 Next, we give an exact problem formulation.
 
+\subsubsection{Feasible Subnetwork}
 A \emph{transport request} $r=(o,d,w) \in \mathcal{V} \times \mathcal{V} \times \mathbb{R}^{+}$
-has an \emph{origin} $o$, a \emph{destination} $d$, a \emph{total weight} $w$.
+has an \emph{origin} $s$, a \emph{destination} $t$, a \emph{total weight} $w$.
 
 Clearly, a transport $r$ can only pass through nodes $v \in \mathcal{V}$ with
 $w(r) \leq w(v)$ and traverse road links $e \in \mathcal{E}$ for which $w(r) \leq w(e)$ holds.
@@ -72,14 +73,24 @@ $w(r) \leq w(v)$ and traverse road links $e \in \mathcal{E}$ for which $w(r) \le
 Accordingly, we define the sub-network $\mathcal{N}_{\omega}$ that contains only the vertices and edges from $\mathcal{N}$ that have a weight limit larger than $\omega \in \mathbb{R}^{+}$.
 Hence, for the remainder of this manuscript, we set $\mathcal{N}=\mathcal{N}_{\omega=w(r)}$.
 
-\subsubsection{Feasible Subnetwork}
-
-
-
-
-
+\subsubsection{Integer Programming Formulation}
+In order to give an \emph{Integer Programming} (IP) formulation for we enumerate the
+vertices $1,\ldots,|\mathcal{V}|$. We consider a directed graph $G=(\mathcal{V},\mathcal{E})$ that is derived from the network $\mathcal{N}$.
+In that sense, the auxiliary variables $x_{ij}$, $(i,j) \in \mathcal{V}$
+is set to $1$ if and only if node $j$ is visited directly after node $i$, and to $0$ otherwise.
+A standard IP formulation to determine the shortest path between $s$ and $t$ can be given as follows
 \begin{align*}
-   \min \sum    \\
-   \text{s.t.}  &  \\
-    & \sum
+  \min \quad &\sum_{(i,j)\in \mathcal{E}}  \ell_{ij} x_{ij}   \\
+  \text{s.t.}\quad &
+  \sum_{(i,j)\in \delta^{+} (i)} x_{ji} - \sum_{(i,j)\in \delta^{-}(i)} x_{ij} =
+  \begin{cases}
+    1 \quad& \text{if}~ i=s, \\
+    -1 \quad& \text{if}~ i=t \\
+    0 \quad&\text{else}
+  \end{cases}
+  \qquad \forall i \in \mathcal{E}
+  \\
+  &  \sum_{(i,j)\in \delta^{+} (i)} x_{ij}   x_ {ij} \leq 1     \qquad \forall i \in \mathcal{E}\\
+  &  x_{ij} \in \{0,1\}   \qquad \forall (i,j) \in \mathcal{V}
 \end{align*}
+The set of outgoing (ingoing) edges of vertice $i$ is denoted by  $\delta^{+} (i)$  $(\delta^{-} (i))$.
