@@ -1,24 +1,6 @@
 % !TeX root =./main.tex
 % !TeX spellcheck = en_US
 
-<<<<<<< Updated upstream
-Due to the global economic expansion of several industries and the dynamics of digitalization, the transport sector has been gaining massive momentum for years.
-Since 2010 global freight continuously increases with forecasts predicting growth rates of 3.2 \% until 2050 \cite{figura2020preferences, InternationalTransportForum}.
-Various transportation modes, including rail, maritime, air and road cargo are available to cope with this rapid international developments and to satisfy upcoming transport needs.
-At this point, road transportation is expected to rise in importance due to its dominating role for domestic transportation, with almost 80 \% of the total volume of goods being carried by trucks in the European Union \cite{Eurostat}.
-The increase in demand also holds true for the transportation of superheavy, bulky and extra-large goods \cite{gavrilova2021analysis}, referred to as oversized and heavy weight cargoes (OHC) in the rest of the article \cite{Luo.2021}.
-OHC is typically associated with the transportation of industry goods (e.g. generators, turbines, construction equipment) that exceed maximum legal limits in terms of weight and/or size.
-In comparison with traditional freight transportation, OHC often requires time-consuming and complex efforts with regard to the planning and execution on the road, as no two OHC transports are completely the same \cite{Wolnowska.2019}.
-Some OHC transports may require complete road closures or detours and the escort by police and other law enforcement.
-Consequently, the planning is usually conducted on an individual level, taking the different specifications of each OHC into consideration \cite{Bazaras.2013}.
-Here, several relevant technical, administrative and organizational criteria are subject of detailed analysis to reduce technical, economic, social and political risks, thereby increasing the safety of OHC transports \cite{Palsaitis. 2012}.
-Granular planning is further dependent on national standards and legislations but generally involves the evaluation of multiple factors related to restrictions on the physical characteristics of the road, road turning radius, total length of the route, demand for installation of transshipment sites or obstacles due to legal requirements \cite{PETRASKA.2018}.
-Especially, oversized load is limited by road turning radius, transportation corridor width and road-side obstacles, such as traffic lights or power lines. Hence, planning is dominated by these local characteristics and in-person inspection of the suggested transport route.
-Overweight load, i.e. vehicles loaded with more than 11 tons per axle, are even harder to plan then over-sized load.
-One of the most safety relevant attribute that need to be considered here is the maximum bridge carrying capacity, which must not be surpassed by the weight of total OHC transport when passing over.
-This is for two reasons; overloading remarkably contributes to shorten service lifes of pavements and bridges; and reduces bridge safety to levels that may fall below those set in the design standards, potentially resulting in failures or collapse \cite{fiorillo2018fragility}.
-Historical incidents, such as the Genova bridge collapse \cite{Morgese.2020, MorandiNYTimes}, impressively demonstrate the effects of long-term infrastructural violations on bridge fragility, thereby underlining the relevance to comply with certain standards and norms in OHC planning.
-=======
 Due to the global economic expansion of several industries and the dynamics of digitalization, the transport sector has been gaining massive momentum for years.
 Since 2010 global freight continuously increases with forecasts predicting growth rates of 3.2 \% until 2050 \cite{figura2020preferences, InternationalTransportForum}.
 Various transportation modes, including rail, maritime, air and road cargo are available to cope with this rapid international developments and to satisfy upcoming transport needs.
@@ -36,10 +18,11 @@ Overweight load, i.e. vehicles loaded with more than 11 tons per axle, are even 
 One of the most safety relevant attribute that need to be considered here is the maximum bridge carrying capacity, which must not be surpassed by the weight of total OHC transport when passing over.
 This is for two reasons; overloading remarkably contributes to shorten service lifes of pavements and bridges; and reduces bridge safety to levels that may fall below those set in the design standards, potentially resulting in failures or collapse \cite{fiorillo2018fragility}.
 Historical incidents, such as the Genova bridge collapse \cite{Morgese.2020, MorandiNYTimes},  demonstrate the effects of long-term infrastructural violations on bridge fragility, thereby underlining the relevance to comply with certain standards and norms in OHC planning.
->>>>>>> Stashed changes
+
 \par In practice, the planning process for such overweight transports and corresponding routes involves several stakeholders, such as client companies, carriers, governmental institutions and civil engineers.
 This labor intense planning procedure is described in \cite{Osegueda.1999}. In the beginning, the client company or carrier drafts a first route design and submits this to a responsible authority for approval.
-There, a civil engineer is consulted who must determine the allowable weight and speed to pass every single bridge on the route. Aside from statical calculations, the civil engineer relies on onsite visits and inspections of bridge elements to check bridge tolerances and technical restrictions.
+There, a civil engineer is consulted who must determine the allowable weight and speed to pass every single bridge on the route.
+Aside from statical calculations, the civil engineer relies on onsite visits and inspections of bridge elements to check bridge tolerances and technical restrictions.
 In case of route infeasibility due to infrastructural violations or changes for any other reason, the initial route draft requires rework by the client company and subsequent resubmit and -evaluation by the civil engineer.
 This costly and time-consuming process must be repeated until the route is declared feasible and a permit is granted.
 What seems problematic in this entire process is that the development of the initial route design is conducted primarily based on commercial GIS applications (such as Google Maps) that are limited in terms of data accuracy.
@@ -54,46 +37,3 @@ Therefore, we consider different types of vehicles and different loads. This ser
 The article continuous with a review of the existing body of knowledge in the field (Section 2).
 Then, we give a problem description and introduce notations along with the model assumptions in section 3. Next, the optimization model is presented and illustrated in an example of application (Section 4).
 Finally, section 5 closes the article, summarizing the research implications, study limitations and future lines of research.
-
-TEAT
-
-
-Possible objectives are:
-\begin{itemize}
-  \item Shortest Path (classic).
-
-  \item Minimal wear of infrastructure. Reducing the wear induced by over-weight transports
-  minimizes maintenance costs, extends lifetime of the building structures, and
-  improves safety (Genoa bridge collapse in 2018).
-  \citet{Kakan2014}
-
-  % \item Minimize the number of different road operators and municipalities the path
-  % traverses. In that sense, the process of getting official approval of the
-  % path should be simplified.
-
-  \item Number of Bridges, i.e., less work for the civil engineer.
-  \item Preferably high level roads (if possible).
-  Achieve this be exponential weightening of the road segments.
-  \textit{A}: $w=2^0$,    \textit{S}: $w=2^1$,      \textit{B}: $w=2^2$,     \textit{L}: $w=2^3$.
-  The considered Austrian road network is clearly structured into these road levels.
-  Clearly, for any other network, a similar weightening be introduced
-  (if not given) under consideration of the road widths etc.
-\end{itemize}
-
-\begin{itemize}
-
-
-
-
-
-  \item Commercial Solutions
-
-  \item HERE
-  \url{https://www.here.com/}
-  \item PRISMA
-  \url{https://www.prisma-solutions.com/}
-
-  \item Bentley Superload Routing
-  \url{https://www.bentley.com/en/products/product-line/asset-performance/superload-routing}
-
-\end{itemize}
