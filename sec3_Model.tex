@@ -80,7 +80,7 @@ In that sense, the auxiliary variables $x_{ij}$, $(i,j) \in \mathcal{V}$
 is set to $1$ if and only if node $j$ is visited directly after node $i$, and to $0$ otherwise.
 A standard IP formulation to determine the shortest path between $s$ and $t$ can be given as follows
 \begin{align}
-  \min \quad &\sum_{(i,j)\in \mathcal{E}}  \c_{ij} x_{ij} \label{obj} \\
+  \min \quad &\sum_{(i,j)\in \mathcal{E}}  c_{ij} x_{ij} \label{obj} \\
   \text{s.t.}\quad &
   \sum_{(i,j)\in \delta^{+} (i)} x_{ji} - \sum_{(i,j)\in \delta^{-}(i)} x_{ij} =
   \begin{cases}
