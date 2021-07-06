@@ -1,0 +1,258 @@
+\mode<presentation>
+\usepackage{xcolor}
+\usepackage{pgf}
+
+
+
+\newcommand{\llabs}{./logos/lakeside-labs-logo.png}
+\newcommand{\aau}{./logos/fig_aau.png}
+
+\newcommand{\lucstacked}{./logos/LUC_stacked.png}
+\newcommand{\lucVert}{./logos/LUC_vertical.png}
+
+\newcommand{\efre}{./logos/EFRE2014-4c-Logo2000px_freigestellt.png}
+
+
+
+%defaul color
+\newcommand{\colorsAAU}{
+\definecolor{primarycolor}{cmyk}{0.60 0.10 0.00 0.20}
+\setbeamercolor*{title}{bg=white,fg=darkgray}
+\setbeamercolor*{subtitle}{bg=white,fg=darkgray}
+\setbeamercolor*{author}{bg=white,fg=primarycolor}
+\setbeamercolor{structure}{fg=primarycolor}
+\setbeamercolor{date}{fg=darkgray}
+\setbeamercolor*{block title}{fg=black,bg=primarycolor!75}
+\setbeamercolor*{block body}{parent=normal text,use=block title,bg=lightgrey!25}
+\setbeamercolor*{footlinecolor}{fg=darkgray,bg=primarycolor}
+\setbeamercolor*{palette tertiary}{use=darkgray,fg=darkgray,bg=primarycolor}
+}
+
+\newcommand{\colorsLlabs}{
+\definecolor{primarycolor}{HTML}{0d80d1}
+\definecolor{secondarycolor}{HTML}{25004f}
+\setbeamercolor*{title}{bg=white,fg=secondarycolor}
+\setbeamercolor*{subtitle}{bg=white,fg=secondarycolor}
+\setbeamercolor*{author}{bg=white,fg=primarycolor}
+\setbeamercolor{structure}{fg=primarycolor}
+\setbeamercolor{date}{fg=darkgray}
+\setbeamercolor*{block title}{fg=black,bg=primarycolor!75}
+\setbeamercolor*{block body}{parent=normal text,use=block title,bg=lightgrey!25}
+\setbeamercolor*{footlinecolor}{fg=white,bg=primarycolor}
+\setbeamercolor*{palette tertiary}{use=darkgray,fg=white,bg=primarycolor}
+}
+
+
+
+
+
+
+%\setbeamercolor*{sidebar}{bg=black!20}
+
+\newcommand { \titlelogoAAU}{
+
+\titlegraphic{\vspace*{0.5cm}
+\includegraphics[height=1cm]{\aau}}
+}
+
+
+\newcommand {\titlelogoAAULLabs}{
+\titlegraphic{\vspace*{-0.2cm}\vspace*{0.5cm}
+\includegraphics[height=1cm]{\aau}
+\\
+\vspace*{0.2cm}
+\includegraphics[height=0.5cm]{\llabs}
+}
+}
+
+
+\newcommand {\titlelogoLLabsLUC}{
+\titlegraphic{\vspace*{-0.2cm}\vspace*{0.5cm}
+\includegraphics[height=0.5cm]{\llabs}
+\\
+\vspace*{0.2cm}
+\includegraphics[height=2cm]{\lucVert}
+}
+}
+
+
+\newcommand {\titlelogoLLabsLUCEFRE}{
+\titlegraphic{\vspace*{-0.5cm}\vspace*{0.5cm}
+\includegraphics[height=0.35cm]{\llabs}
+\\
+\vspace*{0.2cm}
+\includegraphics[height=1.6cm]{\lucVert}
+\\
+\vspace*{0.2cm}
+\includegraphics[height=1.2cm]{\efre}
+}
+}
+
+\newcommand {\titlelogoLLabsEFRE}{
+\titlegraphic{\vspace*{-0.5cm}\vspace*{0.5cm}
+\includegraphics[height=0.35cm]{\llabs}
+\\
+\vspace*{0.2cm}
+\includegraphics[height=1.2cm]{\efre}
+}
+}
+
+
+
+\newcommand { \titlelogoNONE}{
+\titlegraphic{}
+}
+
+%default
+\titlelogoAAU
+
+
+%Commad to switch on/off logos
+
+
+\newcommand{\logoLlabsLUC}{
+\logo{\pgfputat{\pgfxy(0,8.1)}{\pgfbox[right,base]{\includegraphics[height=0.35cm]{\llabs}}}
+\pgfputat{\pgfxy(-2.4,8)}{\pgfbox[right,base]{\includegraphics[height=0.45cm]{\lucstacked}}}}
+}
+
+\newcommand{\logoLlabs}{
+\logo{\pgfputat{\pgfxy(0,8.1)}{\pgfbox[right,base]{\includegraphics[height=0.35cm]{\llabs}}}
+}
+}
+
+
+\newcommand{\logoAAULlabs}{
+\logo{
+\pgfputat{\pgfxy(-2.4,8)}{\pgfbox[right,base]{\includegraphics[height=0.5cm]{\aau}}}
+\pgfputat{\pgfxy(0,8.1)}{\pgfbox[right,base]{\includegraphics[height=0.35cm]{\llabs}}}
+}
+}
+
+
+
+\newcommand{\logoAAU}{
+\logo{
+\pgfputat{\pgfxy(0,8)}{\pgfbox[right,base]{\includegraphics[height=0.5cm]{\aau}}}}
+}
+
+
+
+\newcommand{\logoNONE}{\setbeamertemplate{logo}{}} % command to set the logo to nothing
+
+%activate logo on default
+\logoAAU
+
+%remove navigationbar
+\beamertemplatenavigationsymbolsempty  %remove navigationbar
+
+
+
+\setbeamertemplate{blocks}[shadow=true]  %Style of boxes
+
+
+
+%Move frametitle down
+\addtobeamertemplate{frametitle}{  \hspace*{0.5cm} }{ } %increase horizontal distance
+\addtobeamertemplate{frametitle}{  \vspace*{0.5cm} }{ }% increase vertical distance from top
+\addtobeamertemplate{frametitle}{  }{ \vspace*{0.5cm} }% increase vertical distance to txt
+
+
+\newlength\sectionsep
+\setlength\sectionsep{100pt}% default 1.875ex plus 1fill
+%Define Style of Headline
+\newcommand{\headlineLEFT}{
+\setbeamertemplate{headline}{%
+\leavevmode%
+\hbox{%
+\begin{beamercolorbox}[wd=\paperwidth,ht=3ex,dp=1.125ex]{palette tertiary}%
+  \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+
+  \end{beamercolorbox}%
+  }
+  }
+  }
+  \newcommand{\headlineCENTER}{
+
+  %Define Style of Headline
+  \setbeamertemplate{headline}{%
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3ex,dp=1.125ex]{palette tertiary}%
+    \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt }
+    \end{beamercolorbox}%
+    }
+    }
+    }
+
+    %default
+    \headlineCENTER
+
+
+    %Define style of Footline
+    \newcommand{\footlineNONUMBER}{
+
+    \setbeamertemplate{footline}
+    {
+    \leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{footlinecolor}%
+      \usebeamerfont{author in head/foot}\insertshortauthor
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{footlinecolor}%
+        \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{1em}
+        \end{beamercolorbox}}%
+        \vskip0pt%
+        }
+
+        }
+
+
+        \newcommand{\footlineNUMBER}{
+
+        \setbeamertemplate{footline}
+        {
+        \leavevmode%
+        \hbox{%
+        \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{footlinecolor}%
+          \usebeamerfont{author in head/foot}\insertshortauthor
+          \end{beamercolorbox}%
+          \begin{beamercolorbox}[wd=.56\paperwidth,ht=2.25ex,dp=1ex,center]{footlinecolor}%
+            \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{1em}
+            \end{beamercolorbox}}%
+            \begin{beamercolorbox}[wd=.04\paperwidth,ht=2.25ex,dp=1ex,right]{footlinecolor}%
+              \usebeamerfont{title in head/foot}\insertframenumber\hspace*{0.7em}
+              \end{beamercolorbox}}%
+              \vskip0pt%
+
+
+              }
+
+
+
+              \newcommand{\footlineNUMBERTOTAL}{
+
+              \setbeamertemplate{footline}
+              {
+              \leavevmode%
+              \hbox{%
+              \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{footlinecolor}%
+                \usebeamerfont{author in head/foot}\insertshortauthor
+                \end{beamercolorbox}%
+                \begin{beamercolorbox}[wd=.51\paperwidth,ht=2.25ex,dp=1ex,center]{footlinecolor}%
+                  \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{1em}
+                  \end{beamercolorbox}}%
+                  \begin{beamercolorbox}[wd=.09\paperwidth,ht=2.25ex,dp=1ex,right]{footlinecolor}%
+                    \usebeamerfont{title in head/foot}\insertframenumber{} / \inserttotalframenumber\ \hspace*{0.7em}
+                    \end{beamercolorbox}}%
+                    \vskip0pt%
+
+                    }
+
+
+
+
+
+                    %default
+                    \footlineNUMBER
+
+                    \mode <all>

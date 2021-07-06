@@ -1,0 +1,473 @@
+% \documentclass[notes]{beamer}       % print frame + notes
+\documentclass{beamer}   % only notes
+%\documentclass{beamer}              % only frames
+\usepackage{LlabsTheme}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[german, english]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{url}
+\usepackage{comment}
+\usepackage{caption}
+
+\usepackage{memhfixc}
+\usepackage{hyphenat}
+\usepackage{xcolor}
+
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{abbrvnat}
+
+\usepackage{afterpage}
+\usepackage{refcount}
+\usepackage{graphicx}
+
+\usepackage{tikz}
+
+\usepackage{url}
+\usepackage{comment}
+\usepackage{xspace}
+\usepackage{siunitx}
+\sisetup{locale = US}
+\DeclareSIUnit{\mph}{mph}
+\setlength\abovecaptionskip{2pt}
+
+\captionsetup[figure]{font=tiny,labelfont=tiny}
+
+%% to propeerly type 1st 2nd 3rd, usw
+\newcommand\nd{\textsuperscript{nd}\xspace}
+\newcommand\rd{\textsuperscript{rd}\xspace}
+\newcommand\st{\textsuperscript{st}\xspace}
+
+\newcommand\nth{\textsuperscript{th}\xspace} %\th is taken already
+
+
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+
+% \usepackage{algorithm2e}
+% \usepackage{algorithmic}
+
+%\usepackage{ngerman}      % language set to new-german
+\usepackage[utf8]{inputenc}   % coding of german special characters
+\usepackage[absolute,overlay]{textpos}
+\usepackage{array}
+\usepackage{setspace}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\meth}[1]{\texttt{\textbf{#1}}}
+
+\newcommand{\csharp}{C\#\xspace}
+
+\newcommand{\HL}[1]{{\color{primarycolor} #1}}
+
+\usepackage{tikz}
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\newcommand{\coo}{\ensuremath{\mathrm{CO_2}}}
+
+\newcounter{thmcount}
+\newtheoremstyle{break}% name
+{}%         Space above, empty = `usual value'
+{}%         Space below
+{}% Body font
+{}%         Indent amount (empty = no indent, \parindent = para indent)
+{\bfseries}% Thm head font
+{}%        Punctuation after thm head
+{\newline}% Space after thm head: \newline = linebreak
+{}%         Thm head spec
+
+\usepackage{etoolbox}
+
+
+\theoremstyle{break}
+\newtheorem{exmp}{Example}[thmcount]
+\newtheorem{obs}{Observation}[thmcount]
+\newtheorem{cor}{Corollary}[thmcount]
+\newtheorem{defn}{Definition}[thmcount]
+\newtheorem{lem}{Lemma}[thmcount]
+
+\usepackage{adjustbox}
+
+\newcommand{\outgoing}{\emph{outgoing}\xspace}
+\newcommand{\return}{\emph{return}\xspace}
+
+\newcommand{\punctual}{\emph{punctual}\xspace}
+\newcommand{\tardy}{\emph{tardy}\xspace}
+
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+
+
+\title[Route selection for oversize and heavyweight
+cargo transportation]{
+\large
+Optimal route selection for oversize and heavyweight
+cargo transportation considering bridge carrying capacity
+}
+% \thanks{This work is supported by Lakeside Labs GmbH, Klagenfurt, Austria and funding from
+% the European Regional Development Fund and the Carinthian Economic Promotion Fund (KWF) under grant 20214/31942/45906.}
+% }
+
+\author[Christian Wankm\"uller]{\small
+Christian Wankm\"uller  \inst{1}
+\and
+Andreas Felsberger \inst{1}
+\and
+Christian Truden \inst{2}
+}
+
+\institute[LLabs]{\footnotesize
+\inst{1} Department of Operations Management and Logistics, Alpen-Adria-Universit\"at Klagenfurt,
+Klagenfurt, Austria
+\inst{2} Lakeside Labs GmbH, Klagenfurt, Austria
+}
+
+\date{\footnotesize
+31\st European Conference on Operational Research,\\
+University of West Attica, Athens, Greece,\\
+July 11-16, 2021
+}
+
+
+
+
+
+%Customized settings to define the style of the presentation
+
+%%%%COLORS %%%%
+%defines the used color scheme
+\colorsAAU
+
+%\titlelogoAAU  %%AAU logo on title frame
+% \titlelogoLLabsLUC  %%LLAbs and LUC logo on title frame
+% \titlelogoLLabsEFRE
+\titlelogoAAULLabs
+
+%%%%LOGOS ON FRAMES %%%
+%defines which logos are displayed on the frame, if you want to change the logos
+%for certain frames, just apply the command before the \begin{frame} command
+%all following frames will have the defines appearance
+% \logoAAU
+% \logoLlabsLUC
+\logoAAULlabs
+%\logoNONE
+
+%%%HEADLINE
+\headlineLEFT  %aligns the section overview in the headline LEFT
+%\headlineCENTER %spreads the  section overview in the headline evenly
+
+
+%%%FOOTLINE
+%Define the appearance of the footline
+%\footlineNUMBER  % show number of current slide
+\footlineNUMBERTOTAL  % also shows the total number of slides
+%\footlineNONUMBER  %no number displays
+
+%%%%AVAILABLE COLORS%%%
+%the following colors are predefined for use with the \color{col} command
+%-   primarycolor
+%-  secondarycolor
+
+\begin{document}
+
+
+\begin{frame}[plain]{\titlepage}\end{frame}
+%
+%
+%
+%
+%
+%   \section{Introduction}
+%
+%
+  \begin{frame}
+\frametitle{Intro}
+\begin{itemize}
+  \item
+\end{itemize}
+\end{frame}
+%     \frametitle{Motivation - Passenger Transportation in Rural Areas}
+%
+%     \begin{itemize}
+%       \item Transportation demand arises from the need to reach urban centers (work, school, etc.).
+%       \item Demand peaks around particular times due to low population density.
+%       \item Lack of transport provision for the first/last mile to/from public transport system corridors (timetabled services).
+%       \item Need for sustainable and reliable form of rural passenger mobility.
+%       \item Individual car use is (often) the only means of transportation.
+%       \item Major source of \coo-emissions (besides industry).
+%     \end{itemize}
+%   \end{frame}
+%
+%
+%   \begin{frame}
+%     \frametitle{Micro-Transit Systems}
+%     \begin{itemize}
+%       \item Demand-responsive ride-sharing options that are flexible in their service provision.
+%       \item Service provider's perspective
+%       \begin{itemize}
+%         \item \HL{Usage behavior} of passengers that use the system.
+%         \item \HL{Service provision}, service may vary in terms of modality, purpose, flexibility.
+%       \end{itemize}
+%       \item Customers may request transports
+%       \begin{itemize}
+%         \item \HL{Pre-booked}, well ahead of journey start time.
+%         \item \HL{Ad-hoc}, close to actual required travel time.
+%       \end{itemize}
+%       \item A successful service must find a balance between
+%       \begin{itemize}
+%         \item Convenience: all transport requests (including delayed) are serviced.
+%         \item Reliability: destinations are reached in time.
+%       \end{itemize}
+%
+%     \end{itemize}
+%   \end{frame}
+%
+%
+%
+%
+%   \section{Approach}
+%
+%
+%
+%
+%   \begin{frame}
+%     \frametitle{Transport Demand}
+%     \begin{itemize}
+%       \item \HL{Characteristics of a Transport Request}
+%       \begin{itemize}
+%         \item \textit{Origin / Destination}.
+%         \item \textit{Arrival Time Window} for transferring to time-tabled services.
+%         \item \textit{Pick-Up Time} at which passenger must be ready at location (given by Optimization).
+%       \end{itemize}
+%       \item
+%       \HL{Transport Request Chain}
+%       \begin{itemize}
+%         \item Several transport requests, which together define a sequence of journey legs, are scheduled in an "all or nothing" fashion by a provider.
+%         \item A transport chain is regarded as ``broken'' when a passenger misses the pick-up time, and ceases to be serviced.
+%       \end{itemize}
+%
+%       \item Commuter requests
+%       \begin{itemize}
+%         \item \textit{Outgoing request}: towards train/bus stations in the morning.
+%         \item \textit{Return request}: in the evening.
+%       \end{itemize}
+%
+%     \end{itemize}
+%   \end{frame}
+%
+%
+%
+%   \begin{frame}
+%     \frametitle{Challenges for the Service Provider}
+%
+%     \begin{itemize}
+%       \item How does the \HL{punctuality} of the passengers affect service provision?
+%       \vspace*{0.4cm}
+%       \item Should drivers wait for late passengers? For how long?
+%       \vspace*{0.4cm}
+%       \item How can the service provider identify a reasonable policy for how to deal with late (unpunctual) passengers?
+%     \end{itemize}
+%   \end{frame}
+%
+%
+%   \begin{frame}
+%     \frametitle{Overall Approach}
+%     \vspace*{-1cm}
+%     \begin{adjustbox}{max totalsize={.9\textwidth}{.7\textheight},center}
+%       \input{./figures/flow.tex}
+%     \end{adjustbox}
+%     \begin{enumerate}
+%       \item Create transport schedules using \textit{Large Neighborhood Search} [Ropke \& Pisinger 2006] for
+%       a multi-objective variant of the \textit{Dial-a-ride problem} (DARP).
+%       \item Use Agent-based Modeling (ABM) and Simulation to analyze the influence of external factors on the execution of transport schedules.
+%       \item Fine-tune parameters of service provision based on the simulation results.
+%     \end{enumerate}
+%   \end{frame}
+%
+%
+%   \begin{frame}
+%     \frametitle{Agent-based Model}
+%
+%     \begin{itemize}
+%       \item \HL{Cycle.} \textit{Event} (time) $\rightarrow$ \textit{Activity} (randomness) $\rightarrow$ \textit{Event}.
+%       \item \HL{Vehicle Agents}
+%       \begin{itemize}
+%         \item Encapsulate vehicles and assigned drivers.
+%         \item Mission: follow the transport schedule.
+%         \item Activities: (i) transfer between stops, (ii) arrive (leave) at (from) stop, (iii) wait for passengers, etc.
+%       \end{itemize}
+%       \item \HL{Passenger Agents}
+%       \begin{itemize}
+%       \item Mission: complete their trip plan (derived from vehicle schedules).
+%       \item Activities: (i) walk to location, (ii) arrive at location,
+%       (iii) (un)board vehicle, (iv) wait for vehicle, etc.
+%       \end{itemize}
+%       \item \HL{Stop Agents}
+%       \begin{itemize}
+%         \item Passive role, serve as ``interface'' between passengers and vehicles.
+%       \end{itemize}
+%     \end{itemize}
+%   \end{frame}
+%
+%
+%   \section{Analysis}
+%
+%   \begin{frame}
+%     \frametitle{Passenger Types}
+%
+%     \vspace*{-0.8cm}
+%     \begin{itemize}
+%       \item Two types of passengers
+%       \begin{itemize}
+%         \item \HL{Punctual}, show up at pick-up location mostly ahead of pick-up time.
+%         \item \HL{Tardy}, arrive closer to or even later than at the scheduled pick-up time.
+%       \end{itemize}
+%       \item Sources of randomness
+%       \begin{itemize}
+%         \item  Departure from home (or last destination) towards pick-up location (Normal Distribution).
+%         \item Walking time (Truncated Normal Distribution).
+%       \end{itemize}
+%       % \item Population types
+%       %   \begin{itemize}
+%       %     \item \si{80\,\percent} punctual passengers.
+%       %     \item \si{50\,\percent} punctual passengers.
+%       %     \item \si{20\,\percent} punctual passengers.
+%       %   \end{itemize}
+%     \end{itemize}
+%     \begin{figure}
+%       \includegraphics[width=0.9\textwidth]{./figures/passengerProfiles.png}
+%
+%     \end{figure}
+%   \end{frame}
+%
+%
+%   \begin{frame}
+%     \frametitle{Experimentation}
+% %Implementation of simulations in  \csharp.
+% We used the following setup for our simulation runs:
+%     \begin{itemize}
+%       \item \num{100} commuters, \num{10} vehicles.
+%       \vspace*{0.2cm}
+%       \item \num{10} samples, consider all vehicle transport schedules where all transport chains have been accepted.
+%       \vspace*{0.2cm}
+%
+%       \item \num{100} simulation runs each ($\sim$ \num{5}\,seconds).
+%       \vspace*{0.2cm}
+%
+%       \item Varying waiting time for late passengers $\omega$.
+%     \end{itemize}
+%   \end{frame}
+%
+%
+%   \begin{frame}
+%     \frametitle{Results: $\omega=0$ (no waiting for late passengers)  \RNum{1}}
+%     \vspace*{-1cm}
+%     \begin{figure}
+%       \includegraphics[width=0.9\textwidth]{./figures/both.pdf}
+%       % \caption{}
+%       % \label{}
+%     \end{figure}
+%     \vspace*{-0.2cm}
+%         \begin{itemize}
+%     \item  More punctual passengers $\rightarrow$ earlier arrival.
+%     \item  Good portion of the passengers arrive within the arrival time window.
+%     \item  Arrival at destination is rarely more than $5$\,min later than planned arrival time window (given experimental population).
+%     \end{itemize}
+%   \end{frame}
+%
+%
+%   \begin{frame}
+%     \frametitle{Results: $\omega=0$ (no waiting for late passengers) \RNum{2}}
+%     \footnotesize
+%     \centering
+%     \input{./tables/tab_lateness_no_wait.tex}
+%     \vspace*{1cm}
+%     \input{./tables/tab_aborted_no_wait.tex}
+%   \end{frame}
+%
+%
+%   \begin{frame}
+%     \frametitle{Results: $\omega=0,\ldots,10$\,min   \RNum{1}}
+%     \vspace*{-0.4cm}
+%
+%     \begin{figure}
+%       \includegraphics[width=1\textwidth]{./figures/aborted_differentWaitTimes.pdf}
+%       % \caption{}
+%       % \label{}
+%     \end{figure}
+%       \begin{itemize}
+%     \item  Percentage of aborted requests goes down when introducing a waiting policy.
+%     \item  Extensive waiting time $\omega$ leads to raising numbers again.
+%     \item  Effect of  \HL{punctuality} is consistent over all experiments.
+%     \end{itemize}
+%   \end{frame}
+%
+%
+%   \begin{frame}
+%  %   \frametitle{Results: $\omega=0,\ldots,10$\,min   \RNum{2}}
+% %\vspace*{-1.5cm}
+% \vspace*{0.2cm}
+%     \begin{figure}
+%       \includegraphics[width=0.9\textwidth]{./figures/quantiles_h5.pdf}
+%       % \caption{}
+%       % \labelq{}
+%     \end{figure}
+%         \begin{itemize}
+%     \item  Quantile values move (increase) with increasing waiting time $\omega$.
+%     \item  This effect is rather weak.  Values do not increase by more than $1$\,min ($99\,\%$ quantile).
+%     \end{itemize}
+%   \end{frame}
+%
+%
+%   \section{Conclusion}
+%   \begin{frame}
+%     % \frametitle{Conclusion}
+%     \vspace*{1cm}
+%     \HL{Conclusion}
+%     \begin{itemize}
+%       \item Analysis of real-world performance of transport schedules for
+%       \textit{dial-a-ride} problem.
+%       \item Agent-based modeling and simulation to execute the schedules under the influence
+%       of disturbances.
+%
+%       \item Punctuality of passengers affects service provision.
+%       \item Introducing a waiting policy can improve service.
+%       \item Service providers can use the presented approach to fine-tune their policies.
+%     \end{itemize}
+%     \HL{Future Work}
+%
+%     \begin{itemize}
+%       \item Explore relationship between late arrival of \HL{vehicles} and aborted requests
+%       in more detail.
+%       \item Apply approach to urban settings.
+%     \end{itemize}
+%   \end{frame}
+
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+  %%%REFERENCES
+  %if no references used, comment this section
+
+  % \appendix
+  % \begin{frame}[allowframebreaks]
+  %   \frametitle{References}
+  %   \vspace*{-1cm}
+  %   \tiny
+  %   \bibliographystyle{abbrvnat}
+  %   \bibliography{references}
+  % \end{frame}
+
+
+  \begin{frame}[plain]{\titlepage}\end{frame}
+    \end{document}
