@@ -26,6 +26,9 @@
 \usepackage{graphicx}
 
 \usepackage{tikz}
+\usetikzlibrary{decorations.text}
+\usepackage{xcolor}
+\usetikzlibrary{shapes}
 
 \usepackage{url}
 \usepackage{comment}
@@ -105,15 +108,12 @@
 
 
 
-\title[Route selection for oversize and heavyweight
-cargo transportation]{
+\title[Oversize and heavyweight
+cargo transportation considering bridge carrying capacity]{
 \large
 Optimal route selection for oversize and heavyweight
 cargo transportation considering bridge carrying capacity
 }
-% \thanks{This work is supported by Lakeside Labs GmbH, Klagenfurt, Austria and funding from
-% the European Regional Development Fund and the Carinthian Economic Promotion Fund (KWF) under grant 20214/31942/45906.}
-% }
 
 \author[Christian Wankm\"uller]{\small
 Christian Wankm\"uller  \inst{1}
@@ -148,7 +148,7 @@ July 11-16, 2021
 %\titlelogoAAU  %%AAU logo on title frame
 % \titlelogoLLabsLUC  %%LLAbs and LUC logo on title frame
 % \titlelogoLLabsEFRE
-\titlelogoAAULLabs
+\titlelogoAAULLabsSweet
 
 %%%%LOGOS ON FRAMES %%%
 %defines which logos are displayed on the frame, if you want to change the logos
@@ -179,276 +179,386 @@ July 11-16, 2021
 
 
 \begin{frame}[plain]{\titlepage}\end{frame}
-%
-%
-%
-%
-%
-%   \section{Introduction}
-%
-%
+  %
+  %
+  %
+  %
+  %
+  %   \section{Introduction}
+  %
+  %
   \begin{frame}
-\frametitle{Intro}
-\begin{itemize}
-  \item
-\end{itemize}
-\end{frame}
-%     \frametitle{Motivation - Passenger Transportation in Rural Areas}
-%
-%     \begin{itemize}
-%       \item Transportation demand arises from the need to reach urban centers (work, school, etc.).
-%       \item Demand peaks around particular times due to low population density.
-%       \item Lack of transport provision for the first/last mile to/from public transport system corridors (timetabled services).
-%       \item Need for sustainable and reliable form of rural passenger mobility.
-%       \item Individual car use is (often) the only means of transportation.
-%       \item Major source of \coo-emissions (besides industry).
-%     \end{itemize}
-%   \end{frame}
-%
-%
-%   \begin{frame}
-%     \frametitle{Micro-Transit Systems}
-%     \begin{itemize}
-%       \item Demand-responsive ride-sharing options that are flexible in their service provision.
-%       \item Service provider's perspective
-%       \begin{itemize}
-%         \item \HL{Usage behavior} of passengers that use the system.
-%         \item \HL{Service provision}, service may vary in terms of modality, purpose, flexibility.
-%       \end{itemize}
-%       \item Customers may request transports
-%       \begin{itemize}
-%         \item \HL{Pre-booked}, well ahead of journey start time.
-%         \item \HL{Ad-hoc}, close to actual required travel time.
-%       \end{itemize}
-%       \item A successful service must find a balance between
-%       \begin{itemize}
-%         \item Convenience: all transport requests (including delayed) are serviced.
-%         \item Reliability: destinations are reached in time.
-%       \end{itemize}
-%
-%     \end{itemize}
-%   \end{frame}
-%
-%
-%
-%
-%   \section{Approach}
-%
-%
-%
-%
-%   \begin{frame}
-%     \frametitle{Transport Demand}
-%     \begin{itemize}
-%       \item \HL{Characteristics of a Transport Request}
-%       \begin{itemize}
-%         \item \textit{Origin / Destination}.
-%         \item \textit{Arrival Time Window} for transferring to time-tabled services.
-%         \item \textit{Pick-Up Time} at which passenger must be ready at location (given by Optimization).
-%       \end{itemize}
-%       \item
-%       \HL{Transport Request Chain}
-%       \begin{itemize}
-%         \item Several transport requests, which together define a sequence of journey legs, are scheduled in an "all or nothing" fashion by a provider.
-%         \item A transport chain is regarded as ``broken'' when a passenger misses the pick-up time, and ceases to be serviced.
-%       \end{itemize}
-%
-%       \item Commuter requests
-%       \begin{itemize}
-%         \item \textit{Outgoing request}: towards train/bus stations in the morning.
-%         \item \textit{Return request}: in the evening.
-%       \end{itemize}
-%
-%     \end{itemize}
-%   \end{frame}
-%
-%
-%
-%   \begin{frame}
-%     \frametitle{Challenges for the Service Provider}
-%
-%     \begin{itemize}
-%       \item How does the \HL{punctuality} of the passengers affect service provision?
-%       \vspace*{0.4cm}
-%       \item Should drivers wait for late passengers? For how long?
-%       \vspace*{0.4cm}
-%       \item How can the service provider identify a reasonable policy for how to deal with late (unpunctual) passengers?
-%     \end{itemize}
-%   \end{frame}
-%
-%
-%   \begin{frame}
-%     \frametitle{Overall Approach}
-%     \vspace*{-1cm}
-%     \begin{adjustbox}{max totalsize={.9\textwidth}{.7\textheight},center}
-%       \input{./figures/flow.tex}
-%     \end{adjustbox}
-%     \begin{enumerate}
-%       \item Create transport schedules using \textit{Large Neighborhood Search} [Ropke \& Pisinger 2006] for
-%       a multi-objective variant of the \textit{Dial-a-ride problem} (DARP).
-%       \item Use Agent-based Modeling (ABM) and Simulation to analyze the influence of external factors on the execution of transport schedules.
-%       \item Fine-tune parameters of service provision based on the simulation results.
-%     \end{enumerate}
-%   \end{frame}
-%
-%
-%   \begin{frame}
-%     \frametitle{Agent-based Model}
-%
-%     \begin{itemize}
-%       \item \HL{Cycle.} \textit{Event} (time) $\rightarrow$ \textit{Activity} (randomness) $\rightarrow$ \textit{Event}.
-%       \item \HL{Vehicle Agents}
-%       \begin{itemize}
-%         \item Encapsulate vehicles and assigned drivers.
-%         \item Mission: follow the transport schedule.
-%         \item Activities: (i) transfer between stops, (ii) arrive (leave) at (from) stop, (iii) wait for passengers, etc.
-%       \end{itemize}
-%       \item \HL{Passenger Agents}
-%       \begin{itemize}
-%       \item Mission: complete their trip plan (derived from vehicle schedules).
-%       \item Activities: (i) walk to location, (ii) arrive at location,
-%       (iii) (un)board vehicle, (iv) wait for vehicle, etc.
-%       \end{itemize}
-%       \item \HL{Stop Agents}
-%       \begin{itemize}
-%         \item Passive role, serve as ``interface'' between passengers and vehicles.
-%       \end{itemize}
-%     \end{itemize}
-%   \end{frame}
-%
-%
-%   \section{Analysis}
-%
-%   \begin{frame}
-%     \frametitle{Passenger Types}
-%
-%     \vspace*{-0.8cm}
-%     \begin{itemize}
-%       \item Two types of passengers
-%       \begin{itemize}
-%         \item \HL{Punctual}, show up at pick-up location mostly ahead of pick-up time.
-%         \item \HL{Tardy}, arrive closer to or even later than at the scheduled pick-up time.
-%       \end{itemize}
-%       \item Sources of randomness
-%       \begin{itemize}
-%         \item  Departure from home (or last destination) towards pick-up location (Normal Distribution).
-%         \item Walking time (Truncated Normal Distribution).
-%       \end{itemize}
-%       % \item Population types
-%       %   \begin{itemize}
-%       %     \item \si{80\,\percent} punctual passengers.
-%       %     \item \si{50\,\percent} punctual passengers.
-%       %     \item \si{20\,\percent} punctual passengers.
-%       %   \end{itemize}
-%     \end{itemize}
-%     \begin{figure}
-%       \includegraphics[width=0.9\textwidth]{./figures/passengerProfiles.png}
-%
-%     \end{figure}
-%   \end{frame}
-%
-%
-%   \begin{frame}
-%     \frametitle{Experimentation}
-% %Implementation of simulations in  \csharp.
-% We used the following setup for our simulation runs:
-%     \begin{itemize}
-%       \item \num{100} commuters, \num{10} vehicles.
-%       \vspace*{0.2cm}
-%       \item \num{10} samples, consider all vehicle transport schedules where all transport chains have been accepted.
-%       \vspace*{0.2cm}
-%
-%       \item \num{100} simulation runs each ($\sim$ \num{5}\,seconds).
-%       \vspace*{0.2cm}
-%
-%       \item Varying waiting time for late passengers $\omega$.
-%     \end{itemize}
-%   \end{frame}
-%
-%
-%   \begin{frame}
-%     \frametitle{Results: $\omega=0$ (no waiting for late passengers)  \RNum{1}}
-%     \vspace*{-1cm}
-%     \begin{figure}
-%       \includegraphics[width=0.9\textwidth]{./figures/both.pdf}
-%       % \caption{}
-%       % \label{}
-%     \end{figure}
-%     \vspace*{-0.2cm}
-%         \begin{itemize}
-%     \item  More punctual passengers $\rightarrow$ earlier arrival.
-%     \item  Good portion of the passengers arrive within the arrival time window.
-%     \item  Arrival at destination is rarely more than $5$\,min later than planned arrival time window (given experimental population).
-%     \end{itemize}
-%   \end{frame}
-%
-%
-%   \begin{frame}
-%     \frametitle{Results: $\omega=0$ (no waiting for late passengers) \RNum{2}}
-%     \footnotesize
-%     \centering
-%     \input{./tables/tab_lateness_no_wait.tex}
-%     \vspace*{1cm}
-%     \input{./tables/tab_aborted_no_wait.tex}
-%   \end{frame}
-%
-%
-%   \begin{frame}
-%     \frametitle{Results: $\omega=0,\ldots,10$\,min   \RNum{1}}
-%     \vspace*{-0.4cm}
-%
-%     \begin{figure}
-%       \includegraphics[width=1\textwidth]{./figures/aborted_differentWaitTimes.pdf}
-%       % \caption{}
-%       % \label{}
-%     \end{figure}
-%       \begin{itemize}
-%     \item  Percentage of aborted requests goes down when introducing a waiting policy.
-%     \item  Extensive waiting time $\omega$ leads to raising numbers again.
-%     \item  Effect of  \HL{punctuality} is consistent over all experiments.
-%     \end{itemize}
-%   \end{frame}
-%
-%
-%   \begin{frame}
-%  %   \frametitle{Results: $\omega=0,\ldots,10$\,min   \RNum{2}}
-% %\vspace*{-1.5cm}
-% \vspace*{0.2cm}
-%     \begin{figure}
-%       \includegraphics[width=0.9\textwidth]{./figures/quantiles_h5.pdf}
-%       % \caption{}
-%       % \labelq{}
-%     \end{figure}
-%         \begin{itemize}
-%     \item  Quantile values move (increase) with increasing waiting time $\omega$.
-%     \item  This effect is rather weak.  Values do not increase by more than $1$\,min ($99\,\%$ quantile).
-%     \end{itemize}
-%   \end{frame}
-%
-%
-%   \section{Conclusion}
-%   \begin{frame}
-%     % \frametitle{Conclusion}
-%     \vspace*{1cm}
-%     \HL{Conclusion}
-%     \begin{itemize}
-%       \item Analysis of real-world performance of transport schedules for
-%       \textit{dial-a-ride} problem.
-%       \item Agent-based modeling and simulation to execute the schedules under the influence
-%       of disturbances.
-%
-%       \item Punctuality of passengers affects service provision.
-%       \item Introducing a waiting policy can improve service.
-%       \item Service providers can use the presented approach to fine-tune their policies.
-%     \end{itemize}
-%     \HL{Future Work}
-%
-%     \begin{itemize}
-%       \item Explore relationship between late arrival of \HL{vehicles} and aborted requests
-%       in more detail.
-%       \item Apply approach to urban settings.
-%     \end{itemize}
-%   \end{frame}
+    \frametitle{Intro}
+    \begin{itemize}
+      \item \citet{Palsaitis.2012}
+      \item \cite{Palsaitis.2012}
+
+    \end{itemize}
+  \end{frame}
+
+  %
+  \begin{frame}
+
+    \begin{figure}[!ht]
+      \centering
+      \includegraphics[width=1.0\textwidth]{../manuscript/figures/map.jpg}
+      \caption{Overview of the higher level road network in Carinthia.}
+      \label{fig:higher level}
+    \end{figure}
+  \end{frame}
+
+  %
+  %
+  % A simple toy example, see Figure \ref{fig_toy_example_1}, shall illustrate these definitions.
+
+
+
+  \begin{frame}
+    \frametitle{Mathematical Model \RNum{1}}
+    \begin{itemize}
+
+      \item Classically,  the considered network $\mathcal{N}=(\mathcal{V},\mathcal{E})$ consists of
+      \begin{itemize}
+        \item \emph{Nodes} (vertices) $\mathcal{V}=\{1,\ldots, n\}$, which represent the intersections of road
+        well as the start (end) points of the roads, and
+
+        \item \emph{Links} (edges) $\mathcal{E} \subseteq \mathcal{L} \times \mathcal{L}$,
+        correspond to the roads (road segements) connecting the vertices.
+      \end{itemize}
+
+      \item  Road links $e \in \mathcal{E}$ have a length $\ell(e)\in \mathbb{R}^{+}$ representing their road length.
+      Further, they have a weights $c(e) \in C$ giving their \emph{classification} according to {\color{red} ??}.
+
+      \item
+      % Bridges have \emph{weight limits} (measured in metric tons) which are determined by civil engineers.
+      Each road link $e \in \mathcal{E}$ contains a nonnegative number of bridges, where each has a weight limit.
+      For each link $e$, we set a \emph{weight limit} $w(e) \in \mathbb{R}^{+}$ which is the
+      minimum over all bridges on this link and the \emph{number of bridges} $b(e) \in \mathbb{N}^{0}$.
+
+      \item Also  nodes $v \in \mathcal{V}$ can have weight limits.
+    \end{itemize}
+
+  \end{frame}
+
+
+
+  \begin{frame}
+    \frametitle{Mathematical Model \RNum{2}}
+
+    \begin{itemize}
+      \item
+      A \emph{transport request} $r=(o,d,w) \in \mathcal{V} \times \mathcal{V} \times \mathbb{R}^{+}$
+      has an \emph{origin} $s$, a \emph{destination} $t$, a \emph{total weight} $w$.
+
+      \item A transport $r$ can only pass through nodes $v \in \mathcal{V}$ with
+      $w(r) \leq w(v)$ and traverse road links $e \in \mathcal{E}$ for which $w(r) \leq w(e)$ holds.
+
+      \item We define the sub-network $\mathcal{N}_{\omega}$ that contains only the vertices and edges from $\mathcal{N}$ that have a weight limit larger than $\omega \in \mathbb{R}^{+}$.
+
+      \item We set $\mathcal{N}=\mathcal{N}_{\omega=w(r)}$.
+    \end{itemize}
+
+  \end{frame}
+
+
+
+  \begin{frame}
+    \frametitle{Mathematical Model \RNum{3}}
+    \begin{align}
+      \min \quad &\sum_{(i,j)\in \mathcal{E}}  c_{ij} x_{ij} \label{obj} \\
+      \text{s.t.}\quad &
+      \sum_{(i,j)\in \delta^{+} (i)} x_{ji} - \sum_{(i,j)\in \delta^{-}(i)} x_{ij} =
+      \begin{cases}
+        1 \quad& \text{if}~ i=s, \\
+        -1 \quad& \text{if}~ i=t \\
+        0 \quad&\text{else}
+      \end{cases}
+      \qquad \forall i \in \mathcal{E}
+      \\
+      &  \sum_{(i,j)\in \delta^{+} (i)} x_{ij}   x_ {ij} \leq 1     \qquad \forall i \in \mathcal{E}\\
+      &  x_{ij} \in \{0,1\}   \qquad \forall (i,j) \in \mathcal{V}
+    \end{align}
+  \end{frame}
+
+
+  \begin{frame}
+    \frametitle{Objectives}
+    We consider three different objectives, i.e., different assignment of $c_{ij}$.
+    \begin{enumerate}
+      \item \emph{Classic shortest path}, where $c_{ij}=\ell_{ij}$. \label{obj_short}
+      \item \emph{Minimal number of surpassed briges}, where  $c_{ij}=b_{ij}$.  \label{obj_minBridge}
+      \item \emph{Prefer high level roads}, where we assign an exponential weighting to the road classes (in ascending order of preference) $C$, $c_0=2^0,c_1=2^1, \ldots$.  \label{obj_highLevelRoad}
+    \end{enumerate}
+  \end{frame}
+  \begin{frame}
+
+    \begin{figure}[!ht]
+      \centering
+      \scalebox{0.7}{
+      \input{../manuscript/figures/toy_network.tex}
+      }
+      % \caption{Toy Example 1.}
+      % \label{fig_toy_example_1}
+    \end{figure}
+  \end{frame}
+
+
+  %     \frametitle{Motivation - Passenger Transportation in Rural Areas}
+  %
+  %     \begin{itemize}
+  %       \item Transportation demand arises from the need to reach urban centers (work, school, etc.).
+  %       \item Demand peaks around particular times due to low population density.
+  %       \item Lack of transport provision for the first/last mile to/from public transport system corridors (timetabled services).
+  %       \item Need for sustainable and reliable form of rural passenger mobility.
+  %       \item Individual car use is (often) the only means of transportation.
+  %       \item Major source of \coo-emissions (besides industry).
+  %     \end{itemize}
+  %   \end{frame}
+  %
+  %
+  %   \begin{frame}
+  %     \frametitle{Micro-Transit Systems}
+  %     \begin{itemize}
+  %       \item Demand-responsive ride-sharing options that are flexible in their service provision.
+  %       \item Service provider's perspective
+  %       \begin{itemize}
+  %         \item \HL{Usage behavior} of passengers that use the system.
+  %         \item \HL{Service provision}, service may vary in terms of modality, purpose, flexibility.
+  %       \end{itemize}
+  %       \item Customers may request transports
+  %       \begin{itemize}
+  %         \item \HL{Pre-booked}, well ahead of journey start time.
+  %         \item \HL{Ad-hoc}, close to actual required travel time.
+  %       \end{itemize}
+  %       \item A successful service must find a balance between
+  %       \begin{itemize}
+  %         \item Convenience: all transport requests (including delayed) are serviced.
+  %         \item Reliability: destinations are reached in time.
+  %       \end{itemize}
+  %
+  %     \end{itemize}
+  %   \end{frame}
+  %
+  %
+  %
+  %
+  %   \section{Approach}
+  %
+  %
+  %
+  %
+  %   \begin{frame}
+  %     \frametitle{Transport Demand}
+  %     \begin{itemize}
+  %       \item \HL{Characteristics of a Transport Request}
+  %       \begin{itemize}
+  %         \item \textit{Origin / Destination}.
+  %         \item \textit{Arrival Time Window} for transferring to time-tabled services.
+  %         \item \textit{Pick-Up Time} at which passenger must be ready at location (given by Optimization).
+  %       \end{itemize}
+  %       \item
+  %       \HL{Transport Request Chain}
+  %       \begin{itemize}
+  %         \item Several transport requests, which together define a sequence of journey legs, are scheduled in an "all or nothing" fashion by a provider.
+  %         \item A transport chain is regarded as ``broken'' when a passenger misses the pick-up time, and ceases to be serviced.
+  %       \end{itemize}
+  %
+  %       \item Commuter requests
+  %       \begin{itemize}
+  %         \item \textit{Outgoing request}: towards train/bus stations in the morning.
+  %         \item \textit{Return request}: in the evening.
+  %       \end{itemize}
+  %
+  %     \end{itemize}
+  %   \end{frame}
+  %
+  %
+  %
+  %   \begin{frame}
+  %     \frametitle{Challenges for the Service Provider}
+  %
+  %     \begin{itemize}
+  %       \item How does the \HL{punctuality} of the passengers affect service provision?
+  %       \vspace*{0.4cm}
+  %       \item Should drivers wait for late passengers? For how long?
+  %       \vspace*{0.4cm}
+  %       \item How can the service provider identify a reasonable policy for how to deal with late (unpunctual) passengers?
+  %     \end{itemize}
+  %   \end{frame}
+  %
+  %
+  %   \begin{frame}
+  %     \frametitle{Overall Approach}
+  %     \vspace*{-1cm}
+  %     \begin{adjustbox}{max totalsize={.9\textwidth}{.7\textheight},center}
+  %       \input{./figures/flow.tex}
+  %     \end{adjustbox}
+  %     \begin{enumerate}
+  %       \item Create transport schedules using \textit{Large Neighborhood Search} [Ropke \& Pisinger 2006] for
+  %       a multi-objective variant of the \textit{Dial-a-ride problem} (DARP).
+  %       \item Use Agent-based Modeling (ABM) and Simulation to analyze the influence of external factors on the execution of transport schedules.
+  %       \item Fine-tune parameters of service provision based on the simulation results.
+  %     \end{enumerate}
+  %   \end{frame}
+  %
+  %
+  %   \begin{frame}
+  %     \frametitle{Agent-based Model}
+  %
+  %     \begin{itemize}
+  %       \item \HL{Cycle.} \textit{Event} (time) $\rightarrow$ \textit{Activity} (randomness) $\rightarrow$ \textit{Event}.
+  %       \item \HL{Vehicle Agents}
+  %       \begin{itemize}
+  %         \item Encapsulate vehicles and assigned drivers.
+  %         \item Mission: follow the transport schedule.
+  %         \item Activities: (i) transfer between stops, (ii) arrive (leave) at (from) stop, (iii) wait for passengers, etc.
+  %       \end{itemize}
+  %       \item \HL{Passenger Agents}
+  %       \begin{itemize}
+  %       \item Mission: complete their trip plan (derived from vehicle schedules).
+  %       \item Activities: (i) walk to location, (ii) arrive at location,
+  %       (iii) (un)board vehicle, (iv) wait for vehicle, etc.
+  %       \end{itemize}
+  %       \item \HL{Stop Agents}
+  %       \begin{itemize}
+  %         \item Passive role, serve as ``interface'' between passengers and vehicles.
+  %       \end{itemize}
+  %     \end{itemize}
+  %   \end{frame}
+  %
+  %
+  %   \section{Analysis}
+  %
+  %   \begin{frame}
+  %     \frametitle{Passenger Types}
+  %
+  %     \vspace*{-0.8cm}
+  %     \begin{itemize}
+  %       \item Two types of passengers
+  %       \begin{itemize}
+  %         \item \HL{Punctual}, show up at pick-up location mostly ahead of pick-up time.
+  %         \item \HL{Tardy}, arrive closer to or even later than at the scheduled pick-up time.
+  %       \end{itemize}
+  %       \item Sources of randomness
+  %       \begin{itemize}
+  %         \item  Departure from home (or last destination) towards pick-up location (Normal Distribution).
+  %         \item Walking time (Truncated Normal Distribution).
+  %       \end{itemize}
+  %       % \item Population types
+  %       %   \begin{itemize}
+  %       %     \item \si{80\,\percent} punctual passengers.
+  %       %     \item \si{50\,\percent} punctual passengers.
+  %       %     \item \si{20\,\percent} punctual passengers.
+  %       %   \end{itemize}
+  %     \end{itemize}
+  %     \begin{figure}
+  %       \includegraphics[width=0.9\textwidth]{./figures/passengerProfiles.png}
+  %
+  %     \end{figure}
+  %   \end{frame}
+  %
+  %
+  %   \begin{frame}
+  %     \frametitle{Experimentation}
+  % %Implementation of simulations in  \csharp.
+  % We used the following setup for our simulation runs:
+  %     \begin{itemize}
+  %       \item \num{100} commuters, \num{10} vehicles.
+  %       \vspace*{0.2cm}
+  %       \item \num{10} samples, consider all vehicle transport schedules where all transport chains have been accepted.
+  %       \vspace*{0.2cm}
+  %
+  %       \item \num{100} simulation runs each ($\sim$ \num{5}\,seconds).
+  %       \vspace*{0.2cm}
+  %
+  %       \item Varying waiting time for late passengers $\omega$.
+  %     \end{itemize}
+  %   \end{frame}
+  %
+  %
+  %   \begin{frame}
+  %     \frametitle{Results: $\omega=0$ (no waiting for late passengers)  \RNum{1}}
+  %     \vspace*{-1cm}
+  %     \begin{figure}
+  %       \includegraphics[width=0.9\textwidth]{./figures/both.pdf}
+  %       % \caption{}
+  %       % \label{}
+  %     \end{figure}
+  %     \vspace*{-0.2cm}
+  %         \begin{itemize}
+  %     \item  More punctual passengers $\rightarrow$ earlier arrival.
+  %     \item  Good portion of the passengers arrive within the arrival time window.
+  %     \item  Arrival at destination is rarely more than $5$\,min later than planned arrival time window (given experimental population).
+  %     \end{itemize}
+  %   \end{frame}
+  %
+  %
+  %   \begin{frame}
+  %     \frametitle{Results: $\omega=0$ (no waiting for late passengers) \RNum{2}}
+  %     \footnotesize
+  %     \centering
+  %     \input{./tables/tab_lateness_no_wait.tex}
+  %     \vspace*{1cm}
+  %     \input{./tables/tab_aborted_no_wait.tex}
+  %   \end{frame}
+  %
+  %
+  %   \begin{frame}
+  %     \frametitle{Results: $\omega=0,\ldots,10$\,min   \RNum{1}}
+  %     \vspace*{-0.4cm}
+  %
+  %     \begin{figure}
+  %       \includegraphics[width=1\textwidth]{./figures/aborted_differentWaitTimes.pdf}
+  %       % \caption{}
+  %       % \label{}
+  %     \end{figure}
+  %       \begin{itemize}
+  %     \item  Percentage of aborted requests goes down when introducing a waiting policy.
+  %     \item  Extensive waiting time $\omega$ leads to raising numbers again.
+  %     \item  Effect of  \HL{punctuality} is consistent over all experiments.
+  %     \end{itemize}
+  %   \end{frame}
+  %
+  %
+  %   \begin{frame}
+  %  %   \frametitle{Results: $\omega=0,\ldots,10$\,min   \RNum{2}}
+  % %\vspace*{-1.5cm}
+  % \vspace*{0.2cm}
+  %     \begin{figure}
+  %       \includegraphics[width=0.9\textwidth]{./figures/quantiles_h5.pdf}
+  %       % \caption{}
+  %       % \labelq{}
+  %     \end{figure}
+  %         \begin{itemize}
+  %     \item  Quantile values move (increase) with increasing waiting time $\omega$.
+  %     \item  This effect is rather weak.  Values do not increase by more than $1$\,min ($99\,\%$ quantile).
+  %     \end{itemize}
+  %   \end{frame}
+  %
+  %
+  %   \section{Conclusion}
+  %   \begin{frame}
+  %     % \frametitle{Conclusion}
+  %     \vspace*{1cm}
+  %     \HL{Conclusion}
+  %     \begin{itemize}
+  %       \item Analysis of real-world performance of transport schedules for
+  %       \textit{dial-a-ride} problem.
+  %       \item Agent-based modeling and simulation to execute the schedules under the influence
+  %       of disturbances.
+  %
+  %       \item Punctuality of passengers affects service provision.
+  %       \item Introducing a waiting policy can improve service.
+  %       \item Service providers can use the presented approach to fine-tune their policies.
+  %     \end{itemize}
+  %     \HL{Future Work}
+  %
+  %     \begin{itemize}
+  %       \item Explore relationship between late arrival of \HL{vehicles} and aborted requests
+  %       in more detail.
+  %       \item Apply approach to urban settings.
+  %     \end{itemize}
+  %   \end{frame}
 
 
 
@@ -459,14 +569,14 @@ July 11-16, 2021
   %%%REFERENCES
   %if no references used, comment this section
 
-  % \appendix
-  % \begin{frame}[allowframebreaks]
-  %   \frametitle{References}
-  %   \vspace*{-1cm}
-  %   \tiny
-  %   \bibliographystyle{abbrvnat}
-  %   \bibliography{references}
-  % \end{frame}
+  \appendix
+  \begin{frame}[allowframebreaks]
+    \frametitle{References}
+    \vspace*{-1cm}
+    \tiny
+    \bibliographystyle{abbrvnat}
+    \bibliography{../manuscript/bibliography}
+  \end{frame}
 
 
   \begin{frame}[plain]{\titlepage}\end{frame}
