@@ -204,6 +204,16 @@ July 11-16, 2021
   \section{Introduction}
 
 
+ \begin{frame}
+    \frametitle{Agenda}
+\begin{itemize}
+	\item Introduction
+	\item Mathematical Model
+	\item Example of Application 
+	\item Next Steps and Conclusion
+    \end{itemize}
+  \end{frame}
+
   \begin{frame}
     \frametitle{Motivation \RNum{1}}
     \begin{itemize}
@@ -236,7 +246,7 @@ July 11-16, 2021
       \item Technical, administrative and organizational criteria are subject of detailed analysis to reduce technical, economic, social and political risks \cite{Palsaitis.2012}.
       \item Granular planning is further dependent on national standards and legislations.
       \item Road turning radius, transportation corridor width and road-side obstacles, such as traffic lights or power lines \cite{PETRASKA.2018}.
-      \item Maximum bridge carrying capacity, which must not be surpassed by the weight of total OHC transport when passing over
+      \item Maximum bridge carrying capacity, which must not be surpassed by the weight of total OHC transport when passing over.
     \end{itemize}
   \end{frame}
 
@@ -272,7 +282,7 @@ July 11-16, 2021
       \item Unexperienced users have problems in defining initial route design.
       \item Development of the initial route design is conducted primarily based on commercial GIS applications that are limited in terms of data accuracy.
       \item No information regarding road turning radius, maximum bridge carrying capacity etc. included.
-      \item Costly and time-consuming process needs to supported by adequate decision support.
+      \item Costly and time-consuming process needs to be supported by adequate decision support.
       \item SWEET (Single Window for Exceptional Transport) has the objective to harmonize cross-border OHC transportation between Austria and Italy \cite{Sweet}.
     \end{itemize}
   \end{frame}
@@ -315,7 +325,7 @@ July 11-16, 2021
     \begin{itemize}
       \item
       A \emph{transport request} $r=(o,d,w) \in \mathcal{V} \times \mathcal{V} \times \mathbb{R}^{+}$
-      has an \emph{origin} $s$, a \emph{destination} $t$, a \emph{total weight} $w$.
+      has an \emph{origin} $o$, a \emph{destination} $d$, a \emph{total weight} $w$.
 
       \item A transport $r$ can only pass through nodes $v \in \mathcal{V}$ with
       $w(r) \leq w(v)$ and traverse road links $e \in \mathcal{E}$ for which $w(r) \leq w(e)$ holds.
@@ -336,13 +346,13 @@ July 11-16, 2021
       \text{s.t.}\quad &
       \sum_{(i,j)\in \delta^{+} (i)} x_{ji} - \sum_{(i,j)\in \delta^{-}(i)} x_{ij} =
       \begin{cases}
-        1 \quad& \text{if}~ i=s, \\
-        -1 \quad& \text{if}~ i=t \\
+        1 \quad& \text{if}~ i=o, \\
+        -1 \quad& \text{if}~ i=d \\
         0 \quad&\text{else}
       \end{cases}
       \qquad \forall i \in \mathcal{E}
       \\
-      &  \sum_{(i,j)\in \delta^{+} (i)} x_{ij}   x_ {ij} \leq 1     \qquad \forall i \in \mathcal{E}\\
+      &  \sum_{(i,j)\in \delta^{+} (i)} x_ {ij} \leq 1     \qquad \forall i \in \mathcal{E}\\
       &  x_{ij} \in \{0,1\}   \qquad \forall (i,j) \in \mathcal{V}
     \end{align}
   \end{frame}
@@ -395,6 +405,8 @@ July 11-16, 2021
     \begin{itemize}
       \item Data on maximum carrying capacities of bridges on highway network is under process.
       \item Scenario development considering different truck load specifications.
+	\item First step in providing decision-making support. 
+	\item Include also other restricting factors such as road turning radius. 
     \end{itemize}
 
   \end{frame}

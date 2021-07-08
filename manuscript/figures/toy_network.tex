@@ -42,22 +42,22 @@
 
   %  A links
 
-  \draw[A_path,postaction={decorate,decoration={text along path,text align=center,text={$d=3, ~w=10$},raise=-10pt}}](n_4)--  (n_5)  node [midway, above, sloped] {$[10t]$};
-  \draw[A_path,postaction={decorate,decoration={text along path,text align=center,text={$d=3.7, ~w=10$},raise=-10pt}}] (n_6) to[bend left]   node [midway, above, sloped]  {$[10t]$} (n_5)  ;
-  \draw[A_path, postaction={decorate,decoration={text along path,text align=center,text={$d=4, ~w=10$},raise=-10pt}}] (n_1) -- (n_4)  node [midway, above, sloped]  {$[10t]~[10t]$};
+  \draw[A_path,postaction={decorate,decoration={text along path,text align=center,text={$l=3, ~w=10$},raise=-10pt}}](n_4)--  (n_5)  node [midway, above, sloped] {$[10t]$};
+  \draw[A_path,postaction={decorate,decoration={text along path,text align=center,text={$l=3.7, ~w=10$},raise=-10pt}}] (n_6) to[bend left]   node [midway, above, sloped]  {$[10t]$} (n_5)  ;
+  \draw[A_path, postaction={decorate,decoration={text along path,text align=center,text={$l=4, ~w=10$},raise=-10pt}}] (n_1) -- (n_4)  node [midway, above, sloped]  {$[10t]~[10t]$};
 
 
   % S links
-  \draw[S_path, postaction={decorate,decoration={text along path,text align=center,text={$d=8, ~w=10$},raise=-10pt}}] (n_4) to node [midway, above, sloped] {$[10t]$} (n_6);
+  \draw[S_path, postaction={decorate,decoration={text along path,text align=center,text={$l=8, ~w=10$},raise=-10pt}}] (n_4) to node [midway, above, sloped] {$[10t]$} (n_6);
 
   %  L lines
-  \draw[L_path, postaction={decorate,decoration={text along path,text align=center,text={$d=4, ~w=10$},raise=-10pt}}] (n_1) --  (n_2)  node [midway, above, sloped] (TextNode) {$[10t]$};
+  \draw[L_path, postaction={decorate,decoration={text along path,text align=center,text={$l=4, ~w=10$},raise=-10pt}}] (n_1) --  (n_2)  node [midway, above, sloped] (TextNode) {$[10t]$};
 
-  \draw[L_path, postaction={decorate,decoration={text along path,text align=center,text={$d=5$},raise=-10pt}}] (n_2)--  (n_3)  node [midway, above, sloped] (TextNode) {};
+  \draw[L_path, postaction={decorate,decoration={text along path,text align=center,text={$l=5$},raise=-10pt}}] (n_2)--  (n_3)  node [midway, above, sloped] (TextNode) {};
   % \draw[L_path] (n_3) to[out=-20,in=-20]  (n_5)  node [midway, above, sloped] (TextNode) {$l=3, b=2$};
-  \draw[L_path,postaction={decorate,decoration={text along path,text align=center,text={$d=3, ~w=10$},raise=-10pt}}] (n_3) to[bend left] node [midway, above, sloped]   {$[10t]$}    (n_5);
+  \draw[L_path,postaction={decorate,decoration={text along path,text align=center,text={$l=3, ~w=10$},raise=-10pt}}] (n_3) to[bend left] node [midway, above, sloped]   {$[10t]$}    (n_5);
 
-  \draw[L_path, postaction={decorate,decoration={text along path,text align=center,text={$d=4.5$},raise=-10pt}}] (n_5) to[bend left]  node [midway, above, sloped] {} (n_6);
+  \draw[L_path, postaction={decorate,decoration={text along path,text align=center,text={$l=4.5$},raise=-10pt}}] (n_5) to[bend left]  node [midway, above, sloped] {} (n_6);
 
   % B links
   % \draw[B_path] (n_6) to node [midway, above, sloped] {$7; 2$} (n_2_1);
