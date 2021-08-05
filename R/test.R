@@ -9,10 +9,10 @@ library(mapview) # interactive geometry viewing
 library(ggiraph)
 library(ggplot2)
 library(leaflet)
+library(htmlwidgets)
 
-
-DISTANCE= units::set_units(10, m)
-#Set working directory to location of git
+DISTANCE <- units::set_units(10, m)
+# Set working directory to location of git
 setwd("C:\\Git\\BridgeCapacities\\")
 
 # Relative File Paths
@@ -20,7 +20,7 @@ roadnetwork_file <- ".\\Data\\Verkehrsnetz Kärnten\\Verkehrsnetz inkl. Autobahn
 bridges_file <- ".\\Data\\Brücken\\Bruecken_Point_14042021.dbf"
 focus_file <- ".\\Data\\Verkehrsnetz Kärnten\\Verkehrsnetz inkl. Autobahnen\\EVIS_Fokusstreckennetz.dbf"
 segmente_file <- ".\\Data\\Verkehrsnetz Kärnten\\Verkehrsnetz inkl. Autobahnen\\Verkehrslagesegmente.dbf"
-
+asfinag_file <- ".\\Data\\Brücken\\Bruecken_Asfinag.csv"
 
 # Load Files
 roadnetwork <- st_read(roadnetwork_file, layer = "Strassennetz")
@@ -29,8 +29,13 @@ segmente <- st_read(segmente_file)
 bridgesP <- st_read(bridges_file)
 
 
-#filter Bridges next to "roadnetwork"
-z <- st_join(roadnetwork, st_zm(bridgesP), st_is_within_distance, dist = DISTANCE , suffix = c(".road", ".bridge"), left = TRUE)
+bridgesAsfinag <- as_tibble(read.csv2(asfinag_file)) %>%
+  rename(longitude = WGS_X) %>%
+  rename(latitude = WGS_Y)
+
+
+# filter Bridges next to "roadnetwork"
+z <- st_join(roadnetwork, st_zm(bridgesP), st_is_within_distance, dist = DISTANCE, suffix = c(".road", ".bridge"), left = TRUE)
 z %>%
   select(FEATURENAM, OBJECTID.road, BR_NAME, OBJECTID.bridge, MAXLAST) %>%
   filter(!is.na(OBJECTID.bridge))
@@ -52,24 +57,31 @@ ggplot() +
 
 
 # Plot with leaflet
-leaflet() %>%
+f<- leaflet() %>%
   # addProviderTiles("BasemapAT.grau") %>%
   # addProviderTiles("Stamen.TerrainBackground") %>%
   addProviderTiles("Stamen.TonerBackground") %>%
-      # addTiles() %>%
+  # addTiles() %>%
   setView(14.3122, 46.636, zoom = 9) %>%
   addMeasure() %>%
   addScaleBar() %>%
-      addPolylines(data = st_transform(roadnetwork, crs = 4326), fill = NA, color = "red") %>%
-      addPolylines(data = st_transform(segmente, crs = 4326), fill = NA, color = "green") %>%
-      addPolylines(data = st_transform(focus, crs = 4326), fill = NA, color = "blue") %>%
-      addCircleMarkers(data = st_transform(BridgesP_AS, crs = 4326), color = "yellow", radius = 3, opacity = 1) %>%
-      addCircleMarkers(
-        data =  st_transform(bridgesP, crs = 4326), color = "orange", radius = 3, opacity = 0.8, label = ~ as.character(MAXLAST),
-        popup =paste0(bridgesP$BR_NAME, ": ", as.character(bridgesP$MAXLAST)),
-        labelOptions = labelOptions(noHide = TRUE, offset = c(0, -12), textOnly = TRUE)
-      )
+  addPolylines(data = st_transform(roadnetwork, crs = 4326), fill = NA, color = "red") %>%
+  addPolylines(data = st_transform(segmente, crs = 4326), fill = NA, color = "green") %>%
+  addPolylines(data = st_transform(focus, crs = 4326), fill = NA, color = "blue") %>%
+  addCircleMarkers(data = st_transform(BridgesP_AS, crs = 4326), color = "yellow", radius = 3, opacity = 1) %>%
+  addCircleMarkers(
+    data = st_transform(bridgesP, crs = 4326), color = "orange", radius = 3, opacity = 0.8, 
+    popup = paste0(bridgesP$BR_NAME, ": ", as.character(bridgesP$MAXLAST)),
+    labelOptions = labelOptions(noHide = TRUE, offset = c(0, -12), textOnly = TRUE)
+  ) %>%
+  addCircleMarkers(
+    data = bridgesAsfinag, color = "green", radius = 3, opacity = 0.8,
+    popup = paste0(bridgesAsfinag$Objektbezeichnung, ": ", as.character(bridgesAsfinag$Lastbeschraenkung_qualitativ)),
+    labelOptions = labelOptions(noHide = TRUE, offset = c(0, -12), textOnly = TRUE)
+  )
 
+
+saveWidget(f,  "bridges.html",  selfcontained = TRUE)
 
 # http://postgis.net/workshops/postgis-intro/spatial_relationships.html
 # https://stackoverflow.com/questions/43463150/print-label-on-circle-markers-in-leaflet-in-rshiny
