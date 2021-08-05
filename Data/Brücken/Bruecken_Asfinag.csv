@@ -1,0 +1,669 @@
+Objektklasse;Objektkurzbezeichnung;Objektbezeichnung;Strecke;Richtung;KM_Station;Lastbeschraenkung;Lastbeschraenkung_qualitativ;WGS_X;WGS_Y
+Brcke;P01;Bachdurchlaá;A02;0;231,101;max. Gesamtlast;6000;14,964629;46,959949
+Brcke;P02/L;Fuchsbrcke;A02;2;231,482;max. Gesamtlast;6000;14,959779;46,960849
+Brcke;P02-1;Fastlbauerbrcke;A02;0;231,483;max. Gesamtlast;6000;14,959799;46,961248
+Brcke;P02/R;Fuchsbrcke;A02;1;231,488;max. Gesamtlast;6000;14,959787;46,961001
+Brcke;P02-2/L;Unterfhrung Vier Tore;A02;0;231,523;max. Gesamtlast;6000;14,959925;46,963874
+Brcke;P02-2/R;Unterfhrung Vier Tore;A02;0;231,525;max. Gesamtlast;6000;14,959911;46,963954
+Brcke;P02-2A;Bachdurchlaá;A02;0;231,559;max. Gesamtlast;6000;14,959625;46,963912
+Brcke;P02,1/Rampe 1;šberf.des Zubr.Packsattel;A02;0;231,671;max. Gesamtlast;6000;14,957418;46,961275
+Brcke;P02,1/Rampe 2;šberf.des Zubr.Packsattel;A02;0;231,680;max. Gesamtlast;6000;14,957304;46,961292
+Brcke;P02,2;Bachdurchlaá;A02;0;232,125;;;14,951574;46,961848
+Brcke;P03/L;Straáenunterfhrung;A02;2;232,589;max. Gesamtlast;6000;14,945484;46,962219
+Brcke;P03/R;Straáenunterfhrung;A02;1;232,590;max. Gesamtlast;6000;14,945498;46,962345
+Brcke;P04;Stahlrohrdurchlaá;A02;0;233,013;max. Gesamtlast;6000;14,940038;46,962216
+Brcke;P05;Weg- und Bachunterfhrung;A02;0;233,321;max. Gesamtlast;6000;14,936166;46,961487
+Brcke;P06/Li.;Auerlingbachbrcke;A02;2;234,045;max. Gesamtlast;6000;14,927329;46,958978
+Brcke;P06/Re.;Auerlingbachbrcke;A02;1;234,047;max. Gesamtlast;6000;14,927275;46,959098
+Brcke;P07;Wegberfhrung Schratter;A02;0;234,784;max. Gesamtlast;6000;14,917805;46,958255
+Brcke;P08/L;Bach- und Straáenunterfhrung;A02;2;235,366;max. Gesamtlast;6000;14,910266;46,957501
+Brcke;P08/R;Bach- und Straáenunterfhrung;A02;1;235,368;max. Gesamtlast;6000;14,910203;46,957632
+Brcke;P09/L;Starrybrcke;A02;2;236,077;max. Gesamtlast;6000;14,901285;46,956188
+Brcke;P09/R;Starrybrcke;A02;1;236,078;max. Gesamtlast;6000;14,901231;46,956307
+Brcke;P11/1/L;Schwarzbachbrcke;A02;2;236,719;max. Gesamtlast;6000;14,893778;46,953498
+Brcke;P11/1/R;Schwarzbachbrcke;A02;1;236,724;max. Gesamtlast;6000;14,89369;46,953624
+Brcke;P11/2/L;Schwarzbachbrcke;A02;2;237,043;max. Gesamtlast;6000;14,889877;46,95216
+Brcke;P11/2/R;Schwarzbachbrcke;A02;1;237,048;max. Gesamtlast;6000;14,889798;46,952289
+Brcke;P13/R;Bernbachbrcke;A02;1;238,039;max. Gesamtlast;6000;14,877496;46,95061
+Brcke;P13/L;Bernbachbrcke;A02;2;238,050;max. Gesamtlast;6000;14,877615;46,950494
+Brcke;P14/R;Bach- und Wegdurchlaá;A02;1;239,017;max. Gesamtlast;6000;14,87044;46,943552
+Brcke;P14/L;Bach- und Wegdurchlaá;A02;2;239,030;max. Gesamtlast;6000;14,870796;46,943475
+Brcke;P15/L;Grabenbrcke;A02;2;239,422;max. Gesamtlast;6000;14,871181;46,939953
+Brcke;P15/R;Grabenbrcke;A02;1;239,423;max. Gesamtlast;6000;14,870978;46,939934
+Brcke;P15,1/R;Grabenbrcke Tilz;A02;1;239,675;max. Gesamtlast;6000;14,871178;46,937679
+Brcke;P15,1/L;Grabenbrcke Tilz;A02;2;239,676;max. Gesamtlast;6000;14,87138;46,937662
+Brcke;P16;Bachdurchlaá;A02;0;240,403;max. Gesamtlast;6000;14,864579;46,933867
+Brcke;P17-5A;Bachdurchlaá;A02;0;241,113;max. Gesamtlast;6000;14,855344;46,937142
+Brcke;P17-5;Bach- und Straáenunterf.;A02;0;241,119;max. Gesamtlast;6000;14,855389;46,937218
+Brcke;P17/R;Unterf.Zubr.Oberes Lavanttal;A02;1;241,145;max. Gesamtlast;6000;14,855049;46,935061
+Brcke;P17/L;Unterf.Zubr.Oberes Lavanttal;A02;2;241,153;max. Gesamtlast;6000;14,855064;46,934907
+Brcke;P17-4;Lasserusbrcke;A02;0;241,379;max. Gesamtlast;6000;14,850471;46,937301
+Brcke;P17,1/R;Hangbrcke Schaller;A02;1;241,840;max. Gesamtlast;6000;14,846596;46,933246
+Brcke;P17,1/L;Hangbrcke Schaller;A02;2;241,840;max. Gesamtlast;6000;14,846733;46,93314
+Brcke;P17-3A;Brcke Ankerfeld (Nebenanlage);A02;3;242,150;;;14,838476;46,932517
+Brcke;P17-3;Wegdurchlaá Herk;A02;0;242,206;max. Gesamtlast;6000;14,839157;46,932224
+Brcke;P18;Wegberfhrung Lorenz;A02;0;242,213;max. Gesamtlast;6000;14,843611;46,930611
+Brcke;P17-1;Wegunterf.Moosbauer;A02;0;242,307;max. Gesamtlast;6000;14,829652;46,933606
+Brcke;P17-2;Schieflingbachbrcke;A02;0;242,473;max. Gesamtlast;6000;14,834848;46,929619
+Brcke;P19/R;Talbergang Lavant;A02;1;243,290;max. Gesamtlast;15000;14,83987;46,921399
+Brcke;P19/L;Talbergang Lavant;A02;2;243,360;max. Gesamtlast;6000;14,839968;46,920689
+Brcke;P20/L;Kogljahrerbrcke;A02;2;244,086;max. Gesamtlast;6000;14,837039;46,914579
+Brcke;P20/R;Kogljahrerbrcke;A02;1;244,099;;;14,836617;46,914654
+Brcke;P22;Bachdurchlaá;A02;0;246,490;max. Gesamtlast;6000;14,819708;46,896655
+Brcke;P23/L;Grabenbrcke Ragger;A02;2;247,191;max. Gesamtlast;6000;14,823335;46,890948
+Brcke;P23/R;Grabenbrcke Ragger;A02;1;247,193;max. Gesamtlast;15000;14,823108;46,890824
+Brcke;P24/L;Grabenbrcke H”dl;A02;2;247,753;max. Gesamtlast;6000;14,827307;46,886715
+Brcke;P24/R;Grabenbrcke H”dl;A02;1;247,754;max. Gesamtlast;15000;14,82704;46,886674
+Brcke;G31-1;Grafenbachbrcke (Nebenanlage);A02;0;247,800;;;14,720729;46,697169
+Brcke;P25/L;Ertlbrcke;A02;2;248,089;max. Gesamtlast;6000;14,829297;46,884027
+Brcke;P25/R;Ertlbrcke;A02;1;248,090;max. Gesamtlast;20000;14,829039;46,883954
+Brcke;P26/R;Timmererbrcke;A02;1;248,460;max. Gesamtlast;20000;14,830304;46,880789
+Brcke;P27/R;Stanglbrcke;A02;1;248,878;max. Gesamtlast;20000;14,831712;46,877175
+Brcke;P27/L;Stanglbrcke;A02;2;248,878;max. Gesamtlast;6000;14,83197;46,877226
+Brcke;P28/R;Grabenbrcke Rampitsch;A02;1;249,265;max. Gesamtlast;20000;14,833204;46,873886
+Brcke;P28/L;Grabenbrcke Rampitsch;A02;2;249,274;max. Gesamtlast;6000;14,833492;46,873875
+Brcke;P29/L;Lenzbrcke;A02;2;249,720;max. Gesamtlast;6000;14,835428;46,870112
+Brcke;P29/R;Lenzbrcke;A02;2;249,722;max. Gesamtlast;20000;14,835172;46,870055
+Brcke;P30/R;Talbergang Auenbach;A02;1;250,506;max. Gesamtlast;15000;14,835046;46,863647
+Brcke;P30/L;Talbergang Auenbach;A02;2;250,517;max. Gesamtlast;6000;14,835306;46,863598
+Brcke;P31;Bachdurchlaá;A02;0;251,100;;6000;14,834685;46,858022
+Brcke;P32;Wegunterfhrung Pr”dl;A02;0;251,499;max. Gesamtlast;6000;14,835834;46,854568
+Brcke;P32A/L;Unterf.Zubr.Wolfsberg Nord;A02;2;252,264;max. Gesamtlast;6000;14,835037;46,847705
+Brcke;P32A/R;Unterf.Zubr.Wolfsberg Nord;A02;1;252,265;max. Gesamtlast;6000;14,834859;46,847746
+Brcke;P33/R;Weiáenbachbrcke;A02;1;252,838;max. Gesamtlast;6000;14,830002;46,843995
+Brcke;P33/L;Weiáenbachbrcke;A02;2;252,839;max. Gesamtlast;6000;14,830104;46,843879
+Brcke;P34/R;Hattendorferbachbrcke;A02;1;253,823;max. Gesamtlast;6000;14,821343;46,837785
+Brcke;P34/L;Hattendorferbachbrcke;A02;2;253,823;max. Gesamtlast;6000;14,82151;46,837728
+Brcke;P35/R;Unterf.Michaelerstraáe;A02;1;254,404;max. Gesamtlast;6000;14,81867;46,832932
+Brcke;P35/L;Unterf.Michaelerstraáe;A02;2;254,407;max. Gesamtlast;6000;14,818838;46,832865
+Brcke;P36;Unterf.Wirtschaftsweg;A02;0;254,968;max. Gesamtlast;6000;14,818275;46,827914
+Brcke;G01/L;Unterf.Zubringer;A02;2;255,432;max. Gesamtlast;6000;14,819739;46,823906
+Brcke;G01/R;Unterf.Zubringer;A02;1;255,435;max. Gesamtlast;6000;14,819561;46,823844
+Brcke;G02/R;Unterf.Gem.Str.u.Betriebsumk.;A02;1;256,057;max. Gesamtlast;6000;14,821862;46,818482
+Brcke;G02/L;Unterf.Gem.Str.u.Betriebsumk.;A02;2;256,059;max. Gesamtlast;6000;14,82205;46,818514
+Brcke;G03/R;Unterf.St.Mareinerstraáe;A02;1;256,850;max. Gesamtlast;6000;14,822956;46,811443
+Brcke;G03/L;Unterf.St.Mareinerstraáe;A02;2;256,850;max. Gesamtlast;6000;14,823141;46,811441
+Brcke;G03,1;Unterf.Kirchenweg;A02;0;257,049;max. Gesamtlast;6000;14,822961;46,809654
+Brcke;G04/R;Unterf.Zipfschmiedstraáe;A02;1;257,548;max. Gesamtlast;6000;14,821993;46,80524
+Brcke;G04/L;Unterf.Zipfschmiedstraáe;A02;2;257,548;max. Gesamtlast;6000;14,822177;46,805216
+Brcke;G05;Unterf.Frauenbach;A02;0;257,642;max. Gesamtlast;6000;14,821811;46,804361
+Brcke;G06/R;Unterf.Pichlingerstraáe;A02;1;258,547;max. Gesamtlast;6000;14,818019;46,79667
+Brcke;G06/L;Unterf.Pichlingerstraáe;A02;2;258,549;max. Gesamtlast;6000;14,818194;46,796628
+Brcke;G07;Unterfhrung Woisbach;A02;0;259,083;max. Gesamtlast;6000;14,815742;46,792156
+Brcke;G08/R;Unterf.P”llingerstraáe;A02;1;259,314;max. Gesamtlast;6000;14,814619;46,790226
+Brcke;G08/L;Unterf.P”llingerstraáe;A02;2;259,315;max. Gesamtlast;6000;14,814792;46,790183
+Brcke;G09,1;Unterfhrung Pirk-Kolleg;A02;0;260,323;max. Gesamtlast;6000;14,810892;46,781568
+Brcke;G10/L;Unterf.Kolleggerstraáe;A02;2;261,035;max. Gesamtlast;6000;14,810691;46,775216
+Brcke;G10/R;Unterf.Kolleggerstraáe;A02;1;261,036;max. Gesamtlast;6000;14,810508;46,775201
+Brcke;G11;Unterf.Ziegelbach;A02;0;261,379;max. Gesamtlast;6000;14,811168;46,772159
+Brcke;G12/R;Unterf.Agsdorferstraáe;A02;1;261,574;max. Gesamtlast;6000;14,811552;46,770435
+Brcke;G12/L;Unterf.Agsdorferstraáe;A02;2;261,575;max. Gesamtlast;6000;14,811732;46,770459
+Brcke;G12,1;šberf.Langenstraáe;A02;0;262,282;max. Gesamtlast;6000;14,81371;46,764256
+Brcke;G13;Unterf.Burgstallstraáe;A02;0;262,690;max. Gesamtlast;6000;14,814906;46,760682
+Brcke;G16/R;Talbergang Burgstall;A02;1;263,617;max. Gesamtlast;6000;14,815684;46,752233
+Brcke;G16/L;Talbergang Burgstall;A02;2;263,617;max. Gesamtlast;6000;14,815854;46,752235
+Brcke;G17-2;Unterf.Framracherstraáe;A02;0;264,023;max. Gesamtlast;6000;14,817185;46,747448
+Brcke;G17-3;Unterf.Marrweg;A02;0;264,299;max. Gesamtlast;6000;14,810897;46,74738
+Brcke;G17-1;P”llingbachbrcke;A02;0;264,312;max. Gesamtlast;6000;14,809076;46,747974
+Brcke;G17/R;Talbergang P”llingbach;A02;1;264,359;max. Gesamtlast;6000;14,810971;46,746776
+Brcke;G17/L;Talbergang P”llingbach;A02;2;264,359;max. Gesamtlast;6000;14,811122;46,746693
+Brcke;G18/R;Unterfhrung Zubringer;A02;1;264,712;max. Gesamtlast;6000;14,807985;46,744373
+Brcke;G18/L;Unterfhrung Zubringer;A02;2;264,714;max. Gesamtlast;6000;14,808114;46,744285
+Brcke;G19/R;Talbergang Judenbach;A02;1;265,046;max. Gesamtlast;6000;14,80591;46,74209
+Brcke;G19/L;Talbergang Judenbach;A02;2;265,046;max. Gesamtlast;6000;14,806088;46,742053
+Brcke;G21/L;Granitztalbergang;A02;2;267,093;max. Gesamtlast;6000;14,798787;46,723674
+Brcke;G21/R;Granitztalbergang;A02;1;267,122;max. Gesamtlast;6000;14,798228;46,723578
+Brcke;G23;Wegberf.G”nitz;A02;0;268,407;max. Gesamtlast;6000;14,786381;46,71635
+Brcke;G23,1/L;Trattnigbrcke;A02;2;269,229;max. Gesamtlast;6000;14,778665;46,711955
+Brcke;G23,1/R;Trattnigbrcke;A02;1;269,236;max. Gesamtlast;6000;14,778503;46,712001
+Brcke;G25/L;Kramerbrcke;A02;2;270,710;max. Gesamtlast;6000;14,770203;46,701993
+Brcke;G25/R;Kramerbrcke;A02;1;270,712;max. Gesamtlast;6000;14,770132;46,702094
+Brcke;G26/L;St.Kollmannbrcke;A02;2;271,492;max. Gesamtlast;6000;14,761038;46,699898
+Brcke;G26/R;St.Kollmannbrcke;A02;1;271,517;max. Gesamtlast;6000;14,760703;46,700082
+Brcke;G27/L;Betriebsumk.St.Kollmann;A02;2;272,398;;;14,7506;46,697592
+Brcke;G27/R;Betriebsumk.St.Kollmann;A02;1;272,403;;;14,750338;46,697828
+Brcke;G28/L;W”lfnitzbachbrcke;A02;2;272,733;max. Gesamtlast;6000;14,746733;46,696158
+Brcke;G28/R;W”lfnitzbachbrcke;A02;1;272,735;max. Gesamtlast;6000;14,746627;46,696273
+Brcke;G29;šberf.Lippitzbacher L127;A02;0;273,728;;6000;14,733999;46,695437
+Brcke;G30/R;Weg-und Bachdurchlaá;A02;1;274,476;;6000;14,724863;46,697772
+Brcke;G30/L;Weg-und Bachdurchlaá;A02;2;274,481;;6000;14,724788;46,697661
+Brcke;G31/R;Grafenbachbrcke;A02;1;274,790;;6000;14,720786;46,697559
+Brcke;G31/L;Grafenbachbrcke;A02;2;274,795;;6000;14,720762;46,697443
+Brcke;G32/L;Feldwegunterfhrung;A02;2;276,022;max. Gesamtlast;6000;14,707768;46,6913
+Brcke;G32/R;Feldwegunterfhrung;A02;1;276,023;max. Gesamtlast;6000;14,707672;46,691391
+Brcke;G33/R;Unterf.Gletschacherbach;A02;1;276,801;max. Gesamtlast;6000;14,699059;46,687675
+Brcke;G33/L;Unterf.Gletschacherbach;A02;2;276,801;max. Gesamtlast;6000;14,699148;46,687549
+Brcke;G34/L;Unterf.Packer Bundesstr.B70;A02;2;278,291;max. Gesamtlast;6000;14,680583;46,683222
+Brcke;G34/R;Unterf.Packer Bundesstr.B70;A02;1;278,293;max. Gesamtlast;6000;14,680685;46,683348
+Brcke;G36;šberf. Feldweg F11;A02;0;279,021;max. Gesamtlast;6000;14,671275;46,683034
+Brcke;G37,1/L;Wilddurchlaá;A02;2;279,318;max. Gesamtlast;6000;14,66693;46,683292
+Brcke;G37,1/R;Wilddurchlaá;A02;1;279,353;max. Gesamtlast;6000;14,666962;46,683412
+Brcke;G37;šberf.Kabonhofstraáe;A02;0;279,435;max. Gesamtlast;6000;14,665914;46,683488
+Brcke;G38/L;Unterf.Haimburgerbach;A02;2;280,107;max. Gesamtlast;6100;14,65706;46,685097
+Brcke;G38/R;Unterf.Haimburgerbach;A02;1;280,144;max. Gesamtlast;6000;14,656993;46,685227
+Brcke;G39;šberf.Diexerstr. L113;A02;0;280,457;;6000;14,652904;46,68514
+Brcke;G39,1/L;Unterf.St.Stefaner Gem.Str.;A02;2;280,816;max. Gesamtlast;6000;14,648179;46,683928
+Brcke;G39,1/R;Unterf.St.Stefaner Gem.Str.;A02;1;280,855;max. Gesamtlast;6000;14,648056;46,684007
+Brcke;G40/L;Talbergang Wurlabach;A02;2;281,175;max. Gesamtlast;6000;14,644153;46,682565
+Brcke;G40/R;Talbergang Wurlabach;A02;1;281,194;max. Gesamtlast;6000;14,644091;46,682669
+Brcke;G40,1;šberf.W 30 u.Betriebsumkehr;A02;0;281,871;max. Gesamtlast;6000;14,636204;46,679945
+Brcke;G41;Unterf. Arlsdorf;A02;0;282,312;max. Gesamtlast;6000;14,630733;46,678745
+Brcke;G43/L;Unterf.Seebergstr. B82;A02;2;283,577;max. Gesamtlast;6000;14,613788;46,678092
+Brcke;G43/R;Unterf.Seebergstr. B82;A02;1;283,616;max. Gesamtlast;6000;14,613758;46,678203
+Brcke;G44/1/L;Unterf. Rammersdorf;A02;2;284,611;max. Gesamtlast;6000;14,600354;46,678689
+Brcke;G44/2;Unterf. Rammersdorf;A02;0;284,641;max. Gesamtlast;6000;14,600354;46,679001
+Brcke;G44/1/R;Unterf. Rammersdorf;A02;1;284,644;max. Gesamtlast;6000;14,600354;46,67881
+Brcke;G44,1;šberfhrung Spur 10;A02;0;284,728;max. Gesamtlast;6000;14,599242;46,678708
+Brcke;G45;Unterf.Hafendorferstraáe;A02;0;285,084;max. Gesamtlast;6000;14,594849;46,677931
+Brcke;G45,1;Gew”lbter Wilddurchlaá;A02;0;285,247;;;14,593106;46,677143
+Brcke;G46;šberf. Krenobitscherweg;A02;0;285,736;max. Gesamtlast;6000;14,58873;46,673971
+Brcke;G47/L;Unterf.T”llerbergerstr.L111;A02;2;287,025;;6000;14,575043;46,667137
+Brcke;G47/R;Unterf.T”llerbergerstr.L111;A02;1;287,065;;6000;14,574964;46,667286
+Brcke;G48/L;Wegunterf.T”llerberg;A02;2;288,135;max. Gesamtlast;6000;14,568893;46,658228
+Brcke;G48/R;Wegunterf.T”llerberg;A02;1;288,184;max. Gesamtlast;6000;14,568768;46,658303
+Brcke;G49/LRFB;Unterf. Packer Str. B70;A02;2;288,764;;;14,563823;46,653786
+Brcke;G49/RRFB;Unterf. Packer Str. B70;A02;1;288,826;;;14,563601;46,653747
+Brcke;G49,1/2;Schutzbauwerk Erdgasleitung;A02;2;288,939;;;14,562734;46,652288
+Brcke;G49,1/1;Schutzbauwerk Erdgasleitung;A02;1;289,005;;;14,562801;46,652389
+Brcke;G50;šberf. Ladratschen;A02;0;289,309;;;14,561532;46,649664
+Brcke;G51/LRFB;Krebsenbachbrcke;A02;2;289,964;;;14,555397;46,644981
+Brcke;G51/RRFB;Krebsenbachbrcke;A02;1;290,022;;;14,555346;46,645089
+Brcke;G52;šberf. H”henbergener Str. L112;A02;0;290,588;;6000;14,548276;46,645458
+Brcke;G52,1;Bachdurchlaá;A02;0;291,801;;;14,536884;46,652936
+Brcke;G54;šberf. Feldweg  Kreuzergegend;A02;0;293,289;;;14,518841;46,65145
+Brcke;G55,3;Wilddurchlaá Straáenkogel;A02;0;295,160;;;14,497506;46,644582
+Brcke;G55,6-1;Feldwegbrcke Thoner Moos;A02;0;295,735;;;14,490194;46,643714
+Brcke;G55,6;Gerinnedurchlaá Thoner Moos;A02;0;295,738;;;14,490103;46,643935
+Brcke;G56;šberf. Thoner Str. L102;A02;0;296,187;;6000;14,484431;46,642922
+Brcke;G57;Wilddurchlaá Thoner Wald;A02;0;297,190;;;14,471777;46,640627
+Brcke;G58;šberfhrung Weg31, Betreibsumkehr Dolina;A02;0;297,814;;;14,463882;46,639198
+Brcke;G60;šberf. Poggersdorfer Str. L87;A02;0;298,893;;6000;14,449995;46,637766
+Brcke;G62;Wegunterf. Replach;A02;0;299,740;;;14,439537;46,640041
+Brcke;G64,1;Kanalbrcke;A02;0;301,200;;;14,422129;46,645056
+Brcke;G64/LRFB;Oberwasserkanalbrcke;A02;2;301,229;;;14,420938;46,644433
+Brcke;G64/RRFB;Oberwasserkanalbrcke;A02;1;301,269;;;14,421091;46,644517
+Brcke;G65/LRFB;Gurkbrcke;A02;2;301,395;;;14,418714;46,644844
+Brcke;G65/RRFB;Gurkbrcke;A02;1;301,455;;;14,418736;46,644953
+Brcke;G67;šberf. Tauschitzgrube;A02;0;303,148;;;14,39713;46,644152
+Brcke;G70;šberf. Farchenhofweg;A02;0;304,781;;;14,377475;46,644569
+Brcke;G72;Rababrcke A2;A02;0;305,271;;;14,372241;46,642006
+Brcke;G73/LRFB;Unterf. G”rtschitztal Str. B92;A02;2;305,352;;;14,371255;46,641617
+Brcke;G73/RRFB;Unterf. G”rtschitztal Str. B92;A02;1;305,355;;;14,371256;46,641769
+Brcke;KN02;Unterf.Pischeldorferstr.;A02;0;314,843;max. Gesamtlast;6000;14,360102;46,641057
+Brcke;KN05/L;Glanbrcke;A02;2;320,607;max. Gesamtlast;6000;14,294242;46,658123
+Brcke;KN05/R;Glanbrcke;A02;1;320,621;max. Gesamtlast;6000;14,294404;46,658298
+Brcke;KN06,1;Gerinneunterf. W”lfnitz-UT Lendorf;A02;0;322,327;max. Gesamtlast;6000;14,275287;46,654591
+Brcke;KN07;Bachunterfhrung;A02;0;322,643;max. Gesamtlast;6000;14,271258;46,653827
+Brcke;KN08;šberf. Betriebsumkehr;A02;0;322,950;max. Gesamtlast;6000;14,267549;46,652793
+Brcke;KN09;Stahlrohrdurchlaá;A02;0;323,365;max. Gesamtlast;6000;14,263;46,650807
+Brcke;KW06/Re.;Unterf.Kohldorferstraáe;A02;1;327,585;max. Gesamtlast;6000;14,258426;46,62412
+Brcke;KW06/Li.;Unterf.Kohldorferstraáe;A02;2;327,611;max. Gesamtlast;6000;14,258417;46,623962
+Brcke;KN24;Unterf. AS. Klgf.;A02;2;328,002;max. Gesamtlast;6000;14,240685;46,631389
+Brcke;KN25;Unterf. AS. Klgf.;A02;0;328,003;max. Gesamtlast;6000;14,239974;46,631987
+Brcke;K02/Re.;Unterf.der Zillh”henstraáe;A02;1;328,006;max. Gesamtlast;6000;14,247491;46,625704
+Brcke;K02/Li.;Unterf.der Zillh”henstraáe;A02;2;328,016;max. Gesamtlast;6000;14,247394;46,625601
+Brcke;K03,2;Rampenbrcke;A02;0;328,046;max. Gesamtlast;6000;14,24265;46,628809
+Brcke;K03/Re.;Hangbrcke Schrottenburg;A02;1;328,055;max. Gesamtlast;6000;14,242428;46,628777
+Brcke;K03/Li.;Hangbrcke Schrottenburg;A02;2;328,055;max. Gesamtlast;6000;14,242166;46,628771
+Brcke;K03,1;Rampenbrcke;A02;0;328,066;max. Gesamtlast;6000;14,241953;46,628697
+Brcke;K04/RE.;Talbrcke Gurlitsch;A02;1;328,165;max. Gesamtlast;6000;14,238087;46,630683
+Brcke;K04,1;Rampenbrcke;A02;1;328,181;max. Gesamtlast;6000;14,238391;46,63109
+Brcke;K04/LI.;Talbrcke Gurlitsch;A02;2;328,182;max. Gesamtlast;6000;14,238028;46,630567
+Brcke;K05,1;Rampenbrcke;A02;2;328,431;max. Gesamtlast;6000;14,23536;46,630489
+Brcke;K05/Li.;Hangbrcke Heinrichshof;A02;2;328,549;max. Gesamtlast;6000;14,232557;46,630746
+Brcke;K05,2;Verbreitung Hangbrcke Heinrichshof;A02;2;328,569;max. Gesamtlast;6000;14,232349;46,630925
+Brcke;K05/RE.;Hangbrcke Heinrichshof;A02;1;328,646;max. Gesamtlast;6000;14,232379;46,630841
+Brcke;K06/Re.;Wegunterfhrung Hornstein;A02;1;329,427;max. Gesamtlast;6000;14,222512;46,628853
+Brcke;K06/Li.;Wegunterfhrung Hornstein;A02;2;329,427;max. Gesamtlast;6000;14,222492;46,628732
+Brcke;K07/Re.;Unterfhrung Almweg;A02;1;330,458;max. Gesamtlast;6000;14,209973;46,631955
+Brcke;K07/Li.;Unterfhrung Almweg;A02;2;330,458;max. Gesamtlast;6000;14,209958;46,631835
+Brcke;K08/Li.;Talbrcke Drasing;A02;2;331,028;max. Gesamtlast;6000;14,203071;46,630721
+Brcke;K08/Re.;Talbrcke Drasing;A02;1;331,029;max. Gesamtlast;6000;14,202992;46,630828
+Brcke;K08-1B;Wegunterf.im Zubr.(Auffahrt);A02;0;331,154;max. Gesamtlast;6000;14,202494;46,629147
+Brcke;K08-1A;Wegunterf.im Zubr.(Abfahrt);A02;0;331,177;max. Gesamtlast;6000;14,202452;46,62888
+Brcke;K09/Li.;Wegunterfhrung;A02;2;331,697;max. Gesamtlast;6000;14,195827;46,627152
+Brcke;K09/Re.;Wegunterfhrung;A02;1;331,699;max. Gesamtlast;6000;14,195737;46,627286
+Brcke;K10/Re.;Wegunterfhrung;A02;1;332,326;max. Gesamtlast;6000;14,187911;46,62768
+Brcke;K10/Li.;Wegunterfhrung;A02;2;332,326;max. Gesamtlast;6000;14,187839;46,627569
+Brcke;K11/Li.;Wegunterfhrung;A02;2;332,556;max. Gesamtlast;6000;14,185204;46,628558
+Brcke;K11/Re.;Wegunterfhrung;A02;1;332,557;max. Gesamtlast;6000;14,185299;46,628662
+Brcke;K12/Re.;Talbrcke Sallach;A02;1;333,332;max. Gesamtlast;6000;14,176911;46,632655
+Brcke;K12/Li.;Talbrcke Sallach;A02;2;333,336;max. Gesamtlast;6000;14,176831;46,632544
+Brcke;K13/Re.;Wegunterfhrung;A02;1;333,585;max. Gesamtlast;6000;14,173795;46,633289
+Brcke;K13/Li.;Wegunterfhrung;A02;2;333,596;max. Gesamtlast;6000;14,173611;46,633169
+Brcke;K13-1B;Wegunterf.St.Oswalderw.(Auff.);A02;0;334,142;;6000;14,165452;46,632807
+Brcke;K13-1A;Wegunterf.St.Oswalderw.(Abf.);A02;0;334,153;;6000;14,165268;46,632811
+Brcke;K13,1/Re.;Unterf.der Abfahrtsspur;A02;1;334,229;max. Gesamtlast;6000;14,165734;46,634775
+Brcke;K13,1/Li.;Unterf.der Abfahrtsspur;A02;2;334,240;max. Gesamtlast;6000;14,165536;46,634708
+Brcke;K15/Re.;Straáenunterfhrung;A02;1;334,776;max. Gesamtlast;6000;14,159378;46,637181
+Brcke;K15/Li.;Straáenunterfhrung;A02;2;334,778;max. Gesamtlast;6000;14,159252;46,637091
+Brcke;K16/Li.;Straáenunterfhrung;A02;2;335,258;max. Gesamtlast;6000;14,153638;46,639081
+Brcke;K16/Re.;Straáenunterfhrung;A02;1;335,259;max. Gesamtlast;6000;14,153708;46,639191
+Brcke;K18/Li.;Wegunterfhrung Bannwaldstrasse;A02;2;336,036;;6000;14,143773;46,64016
+Brcke;K18/Re.;Wegunterfhrung Bannwaldstrasse;A02;1;336,039;max. Gesamtlast;6000;14,143819;46,640283
+Brcke;K19/Li.;Wegunterfhrung Rumpeleweg;A02;2;336,408;max. Gesamtlast;6000;14,138979;46,640498
+Brcke;K19/Re.;Wegunterfhrung Rumpeleweg;A02;1;336,409;max. Gesamtlast;6000;14,139027;46,640616
+Brcke;K20/Li.;Unterf.Mitterteicherstr.L73;A02;2;336,911;max. Gesamtlast;6000;14,132633;46,640932
+Brcke;K20/Re.;Unterf.Mitterteicherstr.L73;A02;1;336,913;max. Gesamtlast;6000;14,132601;46,641052
+Brcke;K21/Re.;Wegunterfhrung;A02;1;337,138;max. Gesamtlast;6000;14,129838;46,640425
+Brcke;K21/Li.;Wegunterfhrung;A02;2;337,140;max. Gesamtlast;6000;14,129849;46,640285
+Brcke;K23/Li.;Wegunterfhrung;A02;2;337,563;max. Gesamtlast;6000;14,124941;46,638595
+Brcke;K23/Re.;Wegunterfhrung;A02;1;337,564;max. Gesamtlast;6000;14,124868;46,638717
+Brcke;V01/Li.;Talbrcke T”schling;A02;2;338,769;max. Gesamtlast;6000;14,110352;46,634981
+Brcke;V01/Re.;Talbrcke T”schling;A02;1;338,770;;6000;14,110271;46,635089
+Brcke;V02/Re.;Unterf.Abf.Sp.P”rtschach West;A02;1;339,125;max. Gesamtlast;6000;14,106052;46,633896
+Brcke;V02/Li.;Unterf.Abf.Sp.P”rtschach West;A02;2;339,131;max. Gesamtlast;6000;14,105988;46,633754
+Brcke;V03;Wegunterfhrung;A02;0;339,731;max. Gesamtlast;6000;14,098461;46,632297
+Brcke;V04,1/Li.;Talbrcke Forstsee;A02;2;340,377;max. Gesamtlast;6000;14,091179;46,62941
+Brcke;V04,1/Re.;Talbrcke Forstsee;A02;1;340,378;max. Gesamtlast;6000;14,09108;46,629521
+Brcke;V04,2/Li.;Talbrcke Forstsee;A02;2;340,551;max. Gesamtlast;6000;14,089259;46,628579
+Brcke;V04,2/Re.;Talbrcke Forstsee;A02;1;340,553;max. Gesamtlast;6000;14,089168;46,628683
+Brcke;V05/4/01;Gerinnequerung - Nebenanlage;A02;0;341,111;;;14,08287;46,626034
+Brcke;V05/1/Re.;Hangbrcke Saag;A02;1;341,765;max. Gesamtlast;6000;14,074681;46,623877
+Brcke;V05/1/Li.;Hangbrcke Saag;A02;2;341,777;max. Gesamtlast;6000;14,074541;46,623727
+Brcke;V05/3/01;Querung Druckrohrltg - Nebenanlage;A02;0;341,934;;;14,07279;46,623612
+Brcke;V05/2;Hangbrcke Saag;A02;0;342,142;max. Gesamtlast;6000;14,068698;46,622962
+Brcke;V05-2/Re.;Unterf.Zubr.Velden Ost;A02;0;342,586;;;14,064156;46,621742
+Brcke;V05-2/Li.;Unterf.Zubr.Velden Ost;A02;0;342,586;;;14,064151;46,621692
+Brcke;V07/Re.;Unterf.R”merbach u.Weg;A02;1;343,354;max. Gesamtlast;6000;14,054824;46,624626
+Brcke;V07/Li.;Unterf.R”merbach u.Weg;A02;2;343,354;max. Gesamtlast;6000;14,054796;46,624448
+Brcke;V08/Li.;Unterf.G”riacherweg;A02;2;343,722;max. Gesamtlast;6000;14,050183;46,623742
+Brcke;V08/Re.;Unterf.G”riacherweg;A02;1;343,736;max. Gesamtlast;6000;14,050057;46,623914
+Brcke;V08,1/Li.;Wegunterfhrung;A02;2;344,135;max. Gesamtlast;6000;14,045265;46,622286
+Brcke;V08,1/Re.;Wegunterfhrung;A02;1;344,144;max. Gesamtlast;6000;14,045223;46,622475
+Brcke;V10/Li.;Wegunterf.Kranzlhofen;A02;2;344,958;max. Gesamtlast;6000;14,034641;46,621941
+Brcke;V10/Re.;Wegunterf.Kranzlhofen;A02;1;344,966;max. Gesamtlast;6000;14,03461;46,622075
+Brcke;V12-1;šberf.Gemeindestr.Marienhof;A02;0;345,628;max. Gesamtlast;6000;14,026216;46,617166
+Brcke;V11,1;Feldwegbrcke Damtschacherbach;A02;3;345,651;;;14,025606;46,621935
+Brcke;V11/Li.;Unterf.L47 u.Damtschacherbach;A02;2;345,658;max. Gesamtlast;6000;14,025519;46,621925
+Brcke;V11/Re.;Unterf.L47 u.Damtschacherbach;A02;1;345,666;max. Gesamtlast;6000;14,025448;46,622063
+Brcke;V12-2A;Unterf.™BB Velden West(Abf.);A02;0;345,960;max. Gesamtlast;6000;14,022791;46,613066
+Brcke;V12-2B;Unterf.™BB Velden West(Auff.);A02;0;345,960;max. Gesamtlast;6000;14,022905;46,613107
+Brcke;V12-3;Wegunterf.Auff.Velden-Klgf.;A02;0;346,030;max. Gesamtlast;6000;14,020682;46,620851
+Brcke;V12/Li.;Unterf.AB-Zubr.Velden West;A02;2;346,089;max. Gesamtlast;6000;14,019918;46,621304
+Brcke;V12/Re.;Unterf.AB-Zubr.Velden West;A02;1;346,093;max. Gesamtlast;6000;14,019862;46,621434
+Brcke;V13/Li.;Unterfhrung Feldweg;A02;2;346,675;max. Gesamtlast;6000;14,012219;46,621167
+Brcke;V13/Re.;Unterfhrung Feldweg;A02;1;346,682;max. Gesamtlast;6000;14,012185;46,621297
+Brcke;V14/Li.;Unterf. Gemeindestraáe;A02;2;347,639;max. Gesamtlast;6000;14,000418;46,618384
+Brcke;V14/Re.;Unterf. Gemeindestraáe;A02;1;347,640;max. Gesamtlast;6000;14,000355;46,618514
+Brcke;V15/Re.;Unterf. Gemeindestraáe;A02;1;348,547;max. Gesamtlast;6000;13,988778;46,617874
+Brcke;V15/Li.;Unterf. Gemeindestraáe;A02;2;348,547;max. Gesamtlast;6000;13,988739;46,617741
+Brcke;V16/Re.;Unterf. Gemeindestraáe;A02;1;349,540;max. Gesamtlast;6000;13,977062;46,621639
+Brcke;V16/Li.;Unterf. Gemeindestraáe;A02;2;349,546;max. Gesamtlast;6000;13,976892;46,621547
+Brcke;V18/Li.;Weg- u. Bachunterf.;A02;2;350,559;max. Gesamtlast;6000;13,964405;46,624096
+Brcke;V18/Re.;Weg- u. Bachunterf.;A02;1;350,563;max. Gesamtlast;6000;13,964336;46,624236
+Brcke;V19,1;Wegberfhrung;A02;0;351,312;max. Gesamtlast;6000;13,954586;46,623729
+Brcke;V20;Fuág„ngerunterfhrung;A02;0;351,798;max. Gesamtlast;6000;13,948463;46,622675
+Brcke;V20,1;Unterf.Umkehrspur;A02;0;352,159;max. Gesamtlast;6000;13,943918;46,621825
+Brcke;V21/Li.;Unterfhrung B83;A02;2;352,244;max. Gesamtlast;6000;13,942869;46,621641
+Brcke;V21/Re.;Unterfhrung B83;A02;1;352,260;max. Gesamtlast;6000;13,942591;46,621763
+Brcke;V22,1/Re.;Wegunterfhrung;A02;1;352,756;max. Gesamtlast;6000;13,936224;46,62209
+Brcke;V22,1/Li.;Wegunterfhrung;A02;2;352,758;max. Gesamtlast;6000;13,936144;46,621947
+Brcke;V23,1;šberf.Ortsweg Schloá Wernberg;A02;0;353,280;max. Gesamtlast;6000;13,929691;46,623485
+Brcke;V26/Li.;Unterf.Ortsweg Drautschen;A02;2;354,296;max. Gesamtlast;6000;13,916698;46,62291
+Brcke;V26/Re.;Unterf.Ortsweg Drautschen;A02;1;354,302;max. Gesamtlast;6000;13,916555;46,623037
+Brcke;V27/01;Durchlass Michaeler Bach;A02;0;354,720;;;13,911771;46,621281
+Brcke;V27,1/Re.;Unterf.Ortsweg Zauchen;A02;1;354,877;max. Gesamtlast;6000;13,909838;46,620745
+Brcke;V27,1/Li.;Unterf.Ortsweg Zauchen;A02;2;354,877;max. Gesamtlast;6000;13,909997;46,620554
+Brcke;V28;Unterfhrung Spur 700;A02;0;355,388;max. Gesamtlast;6000;13,904319;46,61821
+Brcke;V29A;šberfhrung Spur 1000;A02;0;355,396;max. Gesamtlast;6000;13,904149;46,618252
+Brcke;R52;Unterf.Spur 900 u.200;A02;2;355,570;max. Gesamtlast;6000;13,903709;46,616428
+Brcke;R53/Li.;Unterf.Spur 900 u.200;A02;2;355,570;max. Gesamtlast;6000;13,902437;46,617124
+Brcke;R53/Re.;Unterf.Spur 900 u.200;A02;1;355,572;max. Gesamtlast;6000;13,902283;46,617228
+Brcke;V30/Li.;Unterf.™BB u.St.Magdalenerstr.;A02;2;356,163;max. Gesamtlast;6000;13,897012;46,613402
+Brcke;V30/Re.;Unterf.™BB u.St.Magdalenerstr.;A02;1;356,178;max. Gesamtlast;6000;13,896661;46,613383
+Brcke;V31/Li.;Draubrcke;A02;2;356,924;max. Gesamtlast;6000;13,891695;46,607636
+Brcke;V31/Re.;Draubrcke;A02;1;356,936;max. Gesamtlast;6000;13,891434;46,607601
+Brcke;V32;UNTRF.GROáSATTELSTR.L58;A02;0;357,554;max. Gesamtlast;6000;13,887629;46,602762
+Brcke;V33-7A;Unterf.Gem.Str.M.Gail-Prossow.;A02;0;357,829;max. Gesamtlast;6000;13,884348;46,601113
+Brcke;V33-6;Unterf.Gemeindestr.(Auff.Ital);A02;0;357,865;max. Gesamtlast;6000;13,884297;46,600782
+Brcke;V33/Li.;Unterf.Faakerseestr. B84;A02;2;358,010;max. Gesamtlast;6000;13,883863;46,598679
+Brcke;V33/Re.;Unterf.Faakerseestr. B84;A02;1;358,076;max. Gesamtlast;6000;13,883749;46,598874
+Brcke;V34/Re.;Unterf. Gemeindestr. Dobrova;A02;1;358,475;max. Gesamtlast;6000;13,880379;46,596101
+Brcke;V34/Li.;Unterf. Gemeindestr. Dobrova;A02;2;358,478;max. Gesamtlast;6000;13,880509;46,595952
+Brcke;V35;Unterf.Gemeindestr.Bogen;A02;0;359,910;max. Gesamtlast;6000;13,864982;46,588907
+Brcke;V36,1/1;Feldwegbrcke;A02;3;360,162;;;13,861976;46,587995
+Brcke;V36/Re.;Unterf.Bach und Weg;A02;1;360,166;max. Gesamtlast;6000;13,861924;46,58797
+Brcke;V36/Li.;Unterf.Bach und Weg;A02;2;360,168;max. Gesamtlast;6000;13,862011;46,587843
+Brcke;V37,1/Re.;Unterf.Gemeindestraáe;A02;1;360,524;max. Gesamtlast;6000;13,857715;46,586607
+Brcke;V37,1/Li.;Unterf.Gemeindestraáe;A02;2;360,527;max. Gesamtlast;6000;13,857753;46,586463
+Brcke;V38/1/Re.;Unterf.™BB u.Finkensteiner L51;A02;1;362,149;max. Gesamtlast;6000;13,840796;46,578082
+Brcke;V38/1/Li.;Unterf.™BB u.Finkensteiner L51;A02;2;362,149;max. Gesamtlast;6000;13,840955;46,577995
+Brcke;V38/2/Re.;Unterf.™BB u.Finkensteiner L51;A02;1;362,258;max. Gesamtlast;6000;13,839915;46,577327
+Brcke;V38/2/Li.;Unterf.™BB u.Finkensteiner L51;A02;2;362,258;max. Gesamtlast;6000;13,840072;46,577235
+Brcke;V38/3/Li.;Unterf.™BB u.Finkensteiner L51;A02;2;362,526;max. Gesamtlast;6000;13,837883;46,575358
+Brcke;V38/3/Re.;Unterf.™BB u.Finkensteiner L51;A02;1;362,527;max. Gesamtlast;6000;13,837709;46,575432
+Brcke;V40-1A;Unterfhrung Zubringer;A02;0;363,536;;6000;13,826375;46,572088
+Brcke;V40/Re.;Unterf.Zubr.Spur 1100 u.1200;A02;1;363,940;;6000;13,821634;46,570903
+Brcke;V40/Li.;Unterf.Zubr.Spur 1100 u.1200;A02;2;363,948;;6000;13,821531;46,570746
+Brcke;V41/1/Re.;Talbergang Federaun;A02;1;364,496;max. Gesamtlast;6000;13,814567;46,569844
+Brcke;V41/1/Li.;Talbergang Federaun;A02;2;364,497;max. Gesamtlast;6000;13,814595;46,569705
+Brcke;V41/2/Re.;Talbergang Federaun;A02;1;364,671;max. Gesamtlast;6000;13,812298;46,569728
+Brcke;V41/2/Li.;Talbergang Federaun;A02;2;364,675;max. Gesamtlast;6000;13,812303;46,569588
+Brcke;V42/Re.;Unterfhrung L 30;A02;1;366,853;max. Gesamtlast;6000;13,784328;46,56747
+Brcke;V42/Li.;Unterfhrung L 30;A02;2;366,856;max. Gesamtlast;6000;13,784318;46,567328
+Brcke;V43/Li.;Unterfhrung L 30;A02;2;368,480;max. Gesamtlast;6000;13,765961;46,560618
+Brcke;V43/Re.;Unterfhrung L 30;A02;1;368,485;max. Gesamtlast;6000;13,765751;46,560684
+Brcke;V44/Li.;Gailbrcke;A02;2;368,739;;6000;13,763228;46,559234
+Brcke;V44/Re.;Gailbrcke;A02;1;368,746;max. Gesamtlast;6000;13,763032;46,559319
+Brcke;V45/Li.;Unterfhrung L 30;A02;2;368,910;max. Gesamtlast;6000;13,761287;46,558485
+Brcke;V45/Re.;Unterfhrung L 30;A02;1;368,913;max. Gesamtlast;6000;13,761139;46,558591
+Brcke;V45A;Pipeline-Durchlaá;A02;0;369,095;max. Gesamtlast;6000;13,758974;46,557979
+Brcke;V46;Wilddurchlaá;A02;0;370,596;max. Gesamtlast;6000;13,74172;46,562589
+Brcke;V47/Re.;Wegunterf.u.Wilddurchlaá;A02;1;372,126;max. Gesamtlast;6000;13,724175;46,568405
+Brcke;V47/Li.;Wegunterf.u.Wilddurchlaá;A02;2;372,127;max. Gesamtlast;6000;13,72416;46,568265
+Brcke;V48;Unterf. AWP (Durchlaá);A02;0;373,089;max. Gesamtlast;6000;13,711664;46,568785
+Brcke;V48A/Li.;Unterf.der Rampe 200;A02;2;373,861;max. Gesamtlast;6000;13,701902;46,570261
+Brcke;V48A/Re.;Unterf.der Rampe 200;A02;1;373,862;max. Gesamtlast;6000;13,701916;46,570402
+Brcke;V49/Re.;Unterfhrung ™BB und B111;A02;1;374,507;max. Gesamtlast;6000;13,693755;46,569258
+Brcke;V49/Li.;Unterfhrung ™BB und B111;A02;2;374,507;max. Gesamtlast;6000;13,693852;46,569131
+Brcke;V49A/2;Pipeline - Durchlaá;A02;0;374,738;max. Gesamtlast;6000;13,691603;46,567735
+Brcke;V49A/1;Pipeline - Durchlaá;A02;0;374,749;max. Gesamtlast;6000;13,691146;46,568063
+Brcke;V49A/3;Pipeline - Durchlaá;A02;0;374,749;max. Gesamtlast;6000;13,690788;46,568318
+Brcke;V50/Li.;Gailitzbrcke;A02;2;374,994;max. Gesamtlast;6000;13,68898;46,566459
+Brcke;V50/Re.;Gailitzbrcke;A02;1;374,995;max. Gesamtlast;6000;13,688815;46,566541
+Brcke;V51;Wegberfhrung;A02;0;376,695;max. Gesamtlast;6000;13,683118;46,552138
+Brcke;V52-1;Unterf.™BB u.B83 (Abfahrt);A02;0;376,934;max. Gesamtlast;6000;13,680942;46,549775
+Brcke;V52/Li.;Unterf. ™BB u. B83;A02;2;376,983;max. Gesamtlast;6000;13,681598;46,549783
+Brcke;V52/Re.;Unterf. ™BB u. B83;A02;1;376,990;max. Gesamtlast;6000;13,68137;46,549772
+Brcke;V52-2/R;Krebsenbachbrcke;A02;0;377,023;max. Gesamtlast;6000;13,676657;46,550542
+Brcke;V52-2/L;Krebsenbachbrcke;A02;0;377,023;;;13,676482;46,550585
+Brcke;V52-3;Feldwegbrcke - Nebenanlage;A02;0;377,023;;;13,678328;46,55021
+Brcke;V53/Li.;Gailitzbrcke Greuth;A02;2;377,337;max. Gesamtlast;6000;13,680232;46,546449
+Brcke;V53/Re.;Gailitzbrcke Greuth;A02;1;377,340;max. Gesamtlast;6000;13,679984;46,546332
+Brcke;V54/Re.;Unterf.Zuf.Amtsplatz I;A02;1;377,529;max. Gesamtlast;6000;13,679034;46,544783
+Brcke;V54/Li.;Unterf.Zuf.Amtsplatz I;A02;2;377,529;max. Gesamtlast;6000;13,679216;46,544712
+Brcke;V55-2;Schauschachbachunterf.Sp.20;A02;0;377,709;max. Gesamtlast;6000;13,678091;46,543159
+Brcke;V55/Li.;Unterf.Gterspur 20;A02;2;377,738;max. Gesamtlast;6000;13,677623;46,543193
+Brcke;V55/Re.;Unterf.Gterspur 20;A02;1;377,747;max. Gesamtlast;6000;13,677376;46,543207
+Brcke;V55-3;Schauschachbachunterf.Sp.20;A02;0;377,802;max. Gesamtlast;6000;13,677253;46,542525
+Brcke;V55,1;Kollektor Amtsplatz;A02;0;378,147;;;13,67282;46,54154
+Brcke;V55,2/Re.;Unterf.Gterspur 40;A02;1;378,792;max. Gesamtlast;6000;13,665559;46,53876
+Brcke;V55,2/Li.;Unterf.Gterspur 40;A02;2;378,801;max. Gesamtlast;6000;13,665499;46,538615
+Brcke;V55,3;Unterf.Zainerbach;A02;0;378,906;max. Gesamtlast;6000;13,664178;46,538562
+Brcke;V55,5;Unterf.Zainerbach;A02;0;378,931;max. Gesamtlast;6000;13,663957;46,537768
+Brcke;V55,4;šberfhrung Maurerweg;A02;0;379,124;max. Gesamtlast;6000;13,661353;46,538127
+Brcke;V56,2/1;Feldwegbrcke;A02;0;379,333;;;13,65864;46,538569
+Brcke;V56/Re.;Gailitzbrcke Th”rl;A02;1;379,500;max. Gesamtlast;6000;13,656496;46,538483
+Brcke;V56/Li.;Gailitzbrcke Th”rl;A02;2;379,501;max. Gesamtlast;6000;13,656478;46,538281
+Brcke;V56,1;Oberth”rlerbachunterfhrung;A02;0;379,938;max. Gesamtlast;6000;13,651037;46,538548
+Brcke;V57/Re.;Unterf.Betriebsumk.u.Leykamweg;A02;1;380,000;max. Gesamtlast;6000;13,649984;46,538643
+Brcke;V57/Li.;Unterf.Betriebsumk.u.Leykamweg;A02;2;380,000;max. Gesamtlast;6000;13,650028;46,538444
+Brcke;V58;Fuáwegunterf.Spur 50;A02;0;380,687;max. Gesamtlast;6000;13,641497;46,535914
+Brcke;V59;Grenzbachdurchlaá;A02;0;380,819;max. Gesamtlast;6000;13,641617;46,534523
+Brcke;A010.240/L;L1 Unterfhrung Verbindungsstraáe;A10;2;112,117;;;13,601553;47,028975
+Brcke;A010.240/R;L1 Unterfhrung Verbindungsstraáe;A10;1;112,119;;;13,601385;47,028894
+Brcke;A010.241;L2 Durchlaá Katschberg;A10;0;112,669;;;13,606021;47,025146
+Brcke;A010.242;L3 Wellblechdurchl. Kuchelsbach;A10;0;112,905;;;13,608333;47,023657
+Brcke;A010.243/L;L9 Unterfhrung Katschberg Bundesstraáe;A10;2;113,102;;;13,610325;47,022563
+Brcke;A010.243/R;L9 Unterfhrung Katschberg Bundesstraáe;A10;1;113,120;;;13,610402;47,022343
+Brcke;A010.244;L10 Wellblechdurchl. St. Georgenbach;A10;0;113,338;;;13,612336;47,02091
+Brcke;A010.245;L11 Wellblechdurchl. Frankenbergweg;A10;0;113,862;;;13,616143;47,017018
+Brcke;A010.246;L11/1 Wellblechdurchl. Lientscherbach;A10;0;113,877;;;13,616116;47,016848
+Brcke;A010.248/L;L13 Brcke ber den Lauánitzbach;A10;2;114,859;;;13,619911;47,008435
+Brcke;A010.248/R;L13 Brcke ber den Lauánitzbach;A10;1;114,865;;;13,619748;47,008352
+Brcke;A010.249;L14/1 Bruggerbachweg;A10;2;115,512;;;13,621263;47,002546
+Brcke;A010.250;L14 Wellbelchdurchlass  Bruggerbach;A10;0;115,559;;;13,620501;47,002129
+Brcke;A010.251;L15 Wellblechdurchl. Wirtschaftsweg;A10;0;115,696;;;13,62056;47,000941
+Brcke;A010.252/R;L16 Brcke ber den Riederbach;A10;1;116,111;;;13,619824;46,997265
+Brcke;A010.252/L;L16 Brcke ber den Riederbach;A10;2;116,111;;;13,620006;46,997264
+Brcke;A010.253;L17 Wellblechdurchl. Wirtschaftsweg;A10;0;116,907;;;13,622697;46,990411
+Brcke;A010.254/R;L21 Brcke ber Hochfeldbach;A10;1;117,818;;;13,62356;46,982311
+Brcke;A010.254/L;L21 Brcke ber Hochfeldbach;A10;2;117,822;;;13,623733;46,982263
+Brcke;A010.254a;L21/1 Begleitweg;A10;0;117,827;;;13,624441;46,982015
+Brcke;A010.255;L22 Hangbrcke Rauchenkatsch;A10;0;118,870;;;13,622859;46,969763
+Brcke;A010.255a;L22/2 Feldwegbrcke;A10;0;119,065;;;13,621296;46,971144
+Brcke;A010.256;L22/1 Betriebsumkehr Kremsbrcke;A10;1;119,813;;;13,620889;46,963933
+Brcke;A010.257;L23 Talbergang Kremsbrcke;A10;0;120,782;;;13,616944;46,958409
+Brcke;A010.258;L25 Hangbrcke Pressingberg;A10;0;122,087;;;13,611214;46,9459
+Brcke;A010.259/R;L26 Talbergang Leoben;A10;1;123,134;;;13,606357;46,936893
+Brcke;A010.259/L;L26 Talbergang Leoben;A10;2;123,134;;;13,606495;46,936823
+Brcke;A010.260/R;L27 Hangbrcke Hammerboden;A10;1;123,866;;;13,600065;46,931953
+Brcke;A010.260/L;L27 Hangbrcke Hammerboden;A10;2;123,866;;;13,600179;46,931866
+Brcke;A010.261;L27/1 Hangbrcke Pirkeggen;A10;1;124,316;;;13,595369;46,92971
+Brcke;A010.262/L;L28 Hangbrcke Keuschenbauer;A10;2;124,627;;;13,592043;46,928117
+Brcke;A010.262/R;L28 Hangbrcke Keuschenbauer;A10;1;124,628;;;13,591944;46,928211
+Brcke;A010.263/L;L30 Hangbrcke Gamschitz;A10;2;125,605;;;13,582503;46,922172
+Brcke;A010.263/R;L30 Hangbrcke Gamschitz;A10;1;125,606;;;13,581879;46,92203
+Brcke;A010.264/L 31/1;L31/1 Rampenbrcke zur Rastst„tte;A10;1;125,907;;;13,580329;46,9216
+Brcke;A010.265/R;L31 Talbergang Eisentratten;A10;1;126,103;;;13,576685;46,920194
+Brcke;A010.265/L;L31 Talbergang Eisentratten;A10;2;126,103;;;13,576755;46,920089
+Brcke;A010.266/R;L32 Hangbrcke Puchreith;A10;1;127,175;;;13,56438;46,916906
+Brcke;A010.266/L;L32 Hangbrcke Puchreith;A10;2;127,175;;;13,564468;46,916808
+Brcke;A010.267/R;L34 Hangbrcke Galgenbichl;A10;1;128,726;;;13,547487;46,908545
+Brcke;A010.267/L;L34 Hangbrcke Galgenbichl;A10;2;128,726;;;13,547585;46,908451
+Brcke;A010.268/L;L35 Fuág„ngerdurchlaá;A10;2;129,590;max. Gesamtlast;6000;13,54172;46,901844
+Brcke;A010.268/R;L35 Fuág„ngerdurchlaá;A10;1;129,596;max. Gesamtlast;6000;13,541529;46,901929
+Brcke;A010.270/R;L36 Unterfhrung des Zubringers;A10;1;130,036;;;13,536817;46,89988
+Brcke;A010.270/L;L36 Unterfhrung des Zubringers;A10;2;130,038;;;13,536822;46,899755
+Brcke;A010.269;M01 Unterf.d.Trefflinger Ldsstr.(Zubr.);A10;0;130,399;max. Gesamtlast;6000;13,531729;46,900693
+Brcke;A010.271/R;L37 Talbergang Gmnd;A10;1;130,600;;;13,529913;46,899247
+Brcke;A010.271/L;L37 Talbergang Gmnd;A10;2;130,641;;;13,529687;46,89903
+Brcke;A010.272;L37/1 šberf. der Trebesinger L10;A10;0;131,835;;6000;13,519443;46,890752
+Brcke;L38/L;Radelgrabenbrcke;A10;2;132,204;max. Gesamtlast;6000;13,517321;46,887613
+Brcke;L38/R;Radelgrabenbrcke;A10;1;132,205;max. Gesamtlast;6000;13,517169;46,887683
+Brcke;L38,1/Li.;Unterfhrung Trebesing;A10;2;133,054;max. Gesamtlast;6000;13,511417;46,881459
+Brcke;L38,1/Re.;Unterfhrung Trebesing;A10;1;133,063;max. Gesamtlast;6000;13,511224;46,881477
+Brcke;L39/Li.;Rachenbachbrcke;A10;2;133,939;max. Gesamtlast;6000;13,506601;46,874112
+Brcke;L39/Re.;Rachenbachbrcke;A10;1;133,943;max. Gesamtlast;6000;13,506413;46,874138
+Brcke;L39,1/Li.;Unterfhrung Waltlwirt;A10;2;134,692;max. Gesamtlast;6000;13,505507;46,867821
+Brcke;L39,1/Re.;Unterfhrung Waltlwirt;A10;1;134,695;max. Gesamtlast;6000;13,505319;46,867813
+Brcke;L40;Hangbrcke Altersberg;A10;0;135,516;max. Gesamtlast;6000;13,50265;46,859854
+Brcke;L41/R;Hangbrcke;A10;1;136,085;;;13,499934;46,855945
+Brcke;L41/L;Hangbrcke;A10;2;136,085;max. Gesamtlast;6000;13,500108;46,855903
+Brcke;L42;Wegberfhrung Altersberg;A10;0;136,871;max. Gesamtlast;6000;13,498166;46,849024
+Brcke;L43/Re.;Talbergang Steinbrckenbach;A10;1;137,276;max. Gesamtlast;6000;13,498084;46,843365
+Brcke;L43/Li.;Talbergang Steinbrckenbach;A10;2;137,277;max. Gesamtlast;6000;13,498274;46,843377
+Brcke;L45/Re.;Hangbrcke;A10;1;138,011;max. Gesamtlast;6000;13,49561;46,839173
+Brcke;L45/Li.;Hangbrcke;A10;2;138,012;max. Gesamtlast;6000;13,495755;46,839074
+Brcke;L46/Re.;Lieserhofener Grabenbrcke;A10;1;138,781;max. Gesamtlast;6000;13,489306;46,833844
+Brcke;L46/Li.;Lieserhofener Grabenbrcke;A10;2;138,788;max. Gesamtlast;6000;13,489489;46,833672
+Brcke;L54,2;Unterf.Karlsdorfer L9;A10;2;139,301;max. Gesamtlast;6000;13,486605;46,829551
+Brcke;L54,1;Unterf.Karlsdorfer L9;A10;1;139,305;max. Gesamtlast;6000;13,485411;46,830018
+Brcke;L47;Unterfhrung der Spur 50;A10;1;139,568;max. Gesamtlast;6000;13,48474;46,827693
+Brcke;L48-1;šberf.Spur 50;A10;0;139,685;max. Gesamtlast;6000;13,486106;46,826031
+Brcke;L49-1;šberf.Spur 20;A10;0;139,685;max. Gesamtlast;6000;13,48665;46,82591
+Brcke;L49;šberf.Spur 200;A10;2;139,700;max. Gesamtlast;6000;13,48631;46,825996
+Brcke;L48;šberf.Spur 10 u.100;A10;1;139,716;max. Gesamtlast;6000;13,484678;46,826388
+Brcke;L50;Unterf.Spur 30;A10;2;139,913;max. Gesamtlast;6000;13,486915;46,82412
+Brcke;L51;Unterf.Gem.Str.Lurnbichl;A10;2;140,151;max. Gesamtlast;6000;13,488157;46,822157
+Brcke;L51-1;Unterf.Gemeindestr.Lurnbichl;A10;0;140,250;max. Gesamtlast;6000;13,488484;46,822284
+Brcke;L52;Unterf.Gem.Str.Lurnbichl;A10;1;140,266;max. Gesamtlast;6000;13,487224;46,821768
+Brcke;L53/L;Brcke .d.Lieserschlucht;A10;2;140,967;max. Gesamtlast;6000;13,495114;46,816684
+Brcke;L53/R;Brcke .d.Lieserschlucht;A10;1;141,097;max. Gesamtlast;6000;13,494989;46,816575
+Brcke;D01-R;Wegunterfhrung;A10;1;142,904;max. Gesamtlast;6000;13,515599;46,808801
+Brcke;D01-L;Wegunterfhrung;A10;2;142,904;max. Gesamtlast;6000;13,515565;46,808999
+Brcke;D05;Hangbrcke Edling;A10;2;144,680;max. Gesamtlast;6000;13,518318;46,793736
+Brcke;D04;Hangbrcke Edling;A10;1;144,775;max. Gesamtlast;6000;13,518293;46,793453
+Brcke;D07;Bachdurchlass Zgurn;A10;0;145,904;;;13,529306;46,787461
+Brcke;D08/L;Talbrcke Zgurn;A10;2;146,229;max. Gesamtlast;6000;13,534406;46,785606
+Brcke;D08/R;Talbrcke Zgurn;A10;1;146,346;max. Gesamtlast;6000;13,534285;46,785469
+Brcke;D09/L;Unterf.der Anschluárampen;A10;2;146,920;max. Gesamtlast;6000;13,541432;46,781671
+Brcke;D09-1A;Unterf. B100 (Abfahrt);A10;0;147,035;max. Gesamtlast;6000;13,538372;46,779254
+Brcke;D09/R;Unterf.der Anschluárampen;A10;1;147,036;max. Gesamtlast;6000;13,54128;46,781559
+Brcke;D09-1B;Unterf. B100 (Auffahrt);A10;0;147,043;max. Gesamtlast;6000;13,538475;46,779205
+Brcke;D10/L;Unterf. Baldersdorferweg;A10;2;147,408;max. Gesamtlast;6000;13,546111;46,77876
+Brcke;D10/R;Unterf. Baldersdorferweg;A10;1;147,517;max. Gesamtlast;6000;13,545962;46,778659
+Brcke;D11/L;Unterf.Zufahrt Molzbichl;A10;2;148,019;max. Gesamtlast;6000;13,550557;46,774261
+Brcke;D11/R;Unterf.Zufahrt Molzbichl;A10;1;148,112;max. Gesamtlast;6000;13,550296;46,774307
+Brcke;D12/L;Unterf.™BB u. B100;A10;2;148,345;max. Gesamtlast;6000;13,552481;46,771627
+Brcke;D12/R;Unterf.™BB u. B100;A10;1;148,438;max. Gesamtlast;6000;13,552203;46,771683
+Brcke;D13,1;Unterfhrung Beleitgerinne;A10;0;149,621;max. Gesamtlast;6000;13,561564;46,763268
+Brcke;D13/L;Unterf.Betriebsumkehr;A10;2;150,876;max. Gesamtlast;6000;13,57158;46,753248
+Brcke;D13/R;Unterf.Betriebsumkehr;A10;1;150,987;max. Gesamtlast;6000;13,571437;46,753147
+Brcke;D14/L;Draubrcke Mauthbrcken;A10;2;151,450;max. Gesamtlast;6000;13,575891;46,749106
+Brcke;D14-2;Schwarzenbachdurchlaá;A10;0;151,511;max. Gesamtlast;6000;13,576257;46,749589
+Brcke;D14/R;Draubrcke Mauthbrcken;A10;1;151,535;max. Gesamtlast;6000;13,575604;46,749188
+Brcke;D14,1/L;Unterfhrung Waldweg;A10;2;152,151;max. Gesamtlast;6000;13,581467;46,744226
+Brcke;D14,1/R;Unterfhrung Waldweg;A10;1;152,261;max. Gesamtlast;6000;13,581347;46,744114
+Brcke;D15;Durchlaá Zieblerbach;A10;0;152,512;max. Gesamtlast;6000;13,58426;46,742789
+Brcke;D16/L;Unterf.Zlanerstr.L31;A10;2;153,158;max. Gesamtlast;6000;13,591379;46,738334
+Brcke;D16/R;Unterf.Zlanerstr.L31;A10;1;153,268;max. Gesamtlast;6000;13,59122;46,738241
+Brcke;D18/1/L;Unterf.Druckrohrleit.Kamering;A10;2;153,301;max. Gesamtlast;6000;13,592803;46,737505
+Brcke;D17;Bachdurchlaá Griesgraben;A10;0;153,345;max. Gesamtlast;6000;13,591909;46,737737
+Brcke;D18/2;Unterf.Druckrohrleit.Kamering;A10;0;153,407;max. Gesamtlast;6000;13,592528;46,737267
+Brcke;D18/1/R;Unterf.Druckrohrleit.Kamering;A10;1;153,416;max. Gesamtlast;6000;13,592684;46,737394
+Brcke;D19;Durchlaá Tragailerbach;A10;0;154,248;max. Gesamtlast;6000;13,600306;46,732162
+Brcke;D20/L;Unterfhrung Tragailerweg;A10;2;154,341;max. Gesamtlast;6000;13,602579;46,731125
+Brcke;D20/R;Unterfhrung Tragailerweg;A10;1;154,448;max. Gesamtlast;6000;13,602353;46,731061
+Brcke;D22/L;Weg u. Bachdurchl. Manichbach;A10;2;155,194;max. Gesamtlast;6000;13,610919;46,726076
+Brcke;D22/R;Weg u. Bachdurchl. Manichbach;A10;1;155,306;max. Gesamtlast;6000;13,610766;46,725984
+Brcke;D23/L;Weg+Bachdurchl.Aifersdorferb.;A10;2;156,029;max. Gesamtlast;6000;13,617449;46,72011
+Brcke;D23/R;Weg+Bachdurchl.Aifersdorferb.;A10;1;156,137;max. Gesamtlast;6000;13,617278;46,720033
+Brcke;D24/L;Unterf.Forstweg;A10;2;156,729;max. Gesamtlast;6000;13,622288;46,714765
+Brcke;D24/R;Unterf.Forstweg;A10;1;156,841;max. Gesamtlast;6000;13,622132;46,714677
+Brcke;D25/L;Unterf.Betriebsumkehr;A10;2;157,572;max. Gesamtlast;6000;13,630801;46,709994
+Brcke;D25/R;Unterf.Betriebsumkehr;A10;1;157,687;max. Gesamtlast;6000;13,630663;46,709891
+Brcke;D26/L;Hangbrcke Nikelsdorf;A10;2;158,564;;6000;13,638403;46,702877
+Brcke;D26/R;Hangbrcke Nikelsdorf;A10;1;158,678;max. Gesamtlast;6000;13,638327;46,702727
+Brcke;D27/L;Grabenbrcke P”llan;A10;2;159,263;max. Gesamtlast;6000;13,644958;46,698517
+Brcke;D27/R;Grabenbrcke P”llan;A10;1;159,375;max. Gesamtlast;6000;13,64477;46,698446
+Brcke;D28/L;Unterf.Kreuznerstr. L33;A10;2;159,575;max. Gesamtlast;6000;13,646596;46,696012
+Brcke;D28/R;Unterf.Kreuznerstr. L33;A10;1;159,680;max. Gesamtlast;6000;13,646406;46,695965
+Brcke;D29;šberf.Brilissenweg;A10;0;160,154;max. Gesamtlast;6000;13,649186;46,692154
+Brcke;D30;šberf.Waldweg;A10;0;161,376;max. Gesamtlast;6000;13,661138;46,685102
+Brcke;D31/L;Koflachgrabenbrcke;A10;2;161,487;max. Gesamtlast;6000;13,663999;46,684378
+Brcke;D31/R;Koflachgrabenbrcke;A10;1;161,608;max. Gesamtlast;6000;13,663933;46,684247
+Brcke;D32;šberf. Rubl„nderstraáe;A10;0;161,856;max. Gesamtlast;6000;13,667031;46,683789
+Brcke;D33/L;Unterf. Zufahrt Rasthaus;A10;2;162,252;max. Gesamtlast;6000;13,673371;46,6821
+Brcke;D33/R;Unterf. Zufahrt Rasthaus;A10;1;162,359;max. Gesamtlast;6000;13,673238;46,68199
+Brcke;D34/2;Bachdurchlaá;A10;0;162,947;max. Gesamtlast;6000;13,680605;46,680213
+Brcke;D34/1;Bachdurchlaá;A10;0;162,949;max. Gesamtlast;6000;13,680726;46,680773
+Brcke;D35A/L;Unterf.Weg-u.Wilddurchlaá;A10;2;164,758;max. Gesamtlast;6000;13,703129;46,672896
+Brcke;D35A/R;Unterf.Weg-u.Wilddurchlaá;A10;1;164,869;max. Gesamtlast;6000;13,703028;46,672776
+Brcke;D35/L;Grabenbrcke Kellerberg;A10;2;165,059;max. Gesamtlast;6000;13,706706;46,671736
+Brcke;D35/R;Grabenbrcke Kellerberg;A10;1;165,173;max. Gesamtlast;6000;13,706633;46,671605
+Brcke;D36/L;Unterf. Waldweg Kroisler;A10;2;165,985;max. Gesamtlast;6000;13,716623;46,667079
+Brcke;D36/R;Unterf. Waldweg Kroisler;A10;1;166,093;max. Gesamtlast;6000;13,716459;46,666985
+Brcke;D38/L;Stadelbachbrcke;A10;2;167,203;max. Gesamtlast;6000;13,728427;46,659817
+Brcke;D38/R;Stadelbachbrcke;A10;1;167,296;max. Gesamtlast;6000;13,72797;46,659814
+Brcke;D39/L;Unterf.Weg u.Bach;A10;2;167,658;max. Gesamtlast;6000;13,73337;46,657526
+Brcke;D39/R;Unterf.Weg u.Bach;A10;1;167,778;max. Gesamtlast;6000;13,73325;46,657414
+Brcke;D40/L;Unterf.Weg- u.Bach;A10;2;168,649;max. Gesamtlast;6000;13,743954;46,65236
+Brcke;D40-1;Wirtschaftswegbrcke;A10;0;168,765;;;13,743676;46,652006
+Brcke;D40/R;Unterf.Weg- u.Bach;A10;1;168,771;max. Gesamtlast;6000;13,743858;46,652235
+Brcke;D41/L;Unterf.Weg-u.Bach;A10;2;169,328;max. Gesamtlast;6000;13,752239;46,650161
+Brcke;D41-2;Wirtschaftswegbrcke;A10;0;169,448;max. Gesamtlast;6000;13,75213;46,649862
+Brcke;D41/R;Unterf.Weg-u.Bach;A10;1;169,449;max. Gesamtlast;6000;13,752177;46,650029
+Brcke;D41-1;Maaswegbrcke;A10;0;169,504;max. Gesamtlast;6000;13,753219;46,650531
+Brcke;D42/L;Wegunterf. Kannweg;A10;2;170,197;max. Gesamtlast;6000;13,763258;46,648135
+Brcke;D42/R;Wegunterf. Kannweg;A10;1;170,327;max. Gesamtlast;6000;13,763221;46,647999
+Brcke;D42,1/L;Unterf.Druckrohrleitung BBU;A10;2;170,381;max. Gesamtlast;6000;13,765656;46,647866
+Brcke;D42,1/R;Unterf.Druckrohrleitung BBU;A10;1;170,509;max. Gesamtlast;6000;13,765558;46,647737
+Brcke;D43/L;Talbergang Weiáenbach;A10;2;171,549;max. Gesamtlast;6000;13,780171;46,644909
+Brcke;D43/R;Talbergang Weiáenbach;A10;1;171,674;max. Gesamtlast;6000;13,780098;46,644779
+Brcke;D44/L;Unterf. des Zubringers;A10;2;172,967;max. Gesamtlast;6000;13,798129;46,643017
+Brcke;D44,1;Stahlrohrdurchlaá;A10;0;173,088;max. Gesamtlast;6000;13,79798;46,642884
+Brcke;D44/R;Unterf. des Zubringers;A10;1;173,090;max. Gesamtlast;6000;13,798029;46,642892
+Brcke;D45/L;Draubrcke Wollanig;A10;2;173,553;max. Gesamtlast;6000;13,805376;46,641419
+Brcke;D45/R;Draubrcke Wollanig;A10;1;173,713;max. Gesamtlast;6000;13,805718;46,64119
+Brcke;D46/L;Unterf.T”bringerstraáe;A10;2;178,409;max. Gesamtlast;6000;13,866723;46,651974
+Brcke;D46/R;Unterf.T”bringerstraáe;A10;1;178,544;max. Gesamtlast;6000;13,866807;46,651626
+Brcke;D47/L;Unterf. B94;A10;2;178,836;max. Gesamtlast;6000;13,872034;46,650663
+Brcke;D47-4;Unterf.W2 unt.Sp.Sd;A10;0;178,851;max. Gesamtlast;6000;13,870718;46,650345
+Brcke;D47-3;Unterf.W2 unt.Sp.Nord;A10;0;178,912;max. Gesamtlast;6000;13,871787;46,651156
+Brcke;D47/R;Unterf. B94;A10;1;178,948;max. Gesamtlast;6000;13,871861;46,650564
+Brcke;D48/L;Unterf. ™BB;A10;2;179,149;max. Gesamtlast;6000;13,875616;46,64929
+Brcke;D48/R;Unterf. ™BB;A10;1;179,263;max. Gesamtlast;6000;13,875467;46,649171
+Brcke;D49;Unterf. W4;A10;0;179,459;max. Gesamtlast;6000;13,877609;46,648169
+Brcke;D49-1;Unterf.Treffnerbach;A10;0;179,485;max. Gesamtlast;6000;13,878402;46,648397
+Brcke;D51/L;Unterf.Treffnerbach u.Gehweg;A10;2;179,687;max. Gesamtlast;6000;13,881032;46,646247
+Brcke;D51/R;Unterf.Treffnerbach u.Gehweg;A10;1;179,803;max. Gesamtlast;6000;13,880955;46,646101
+Brcke;D52;Kollektor-Durchlass;A10;0;180,267;;;13,885177;46,643135
+Brcke;D53/L;Seebachbrcke;A10;2;180,312;max. Gesamtlast;6000;13,886626;46,64211
+Brcke;D53-1;Unterf. Seebach;A10;0;180,406;max. Gesamtlast;6000;13,886911;46,642293
+Brcke;D53/R;Seebachbrcke;A10;1;180,423;max. Gesamtlast;6000;13,886512;46,641999
+Brcke;D54,1;Wegberfhrung;A10;0;181,192;max. Gesamtlast;6000;13,892757;46,636531
+Brcke;D56,1;Unterf. Michaelerweg;A10;1;182,149;max. Gesamtlast;6000;13,897269;46,627518
+Brcke;D56,2;Unterf. Michaelerweg;A10;2;182,256;max. Gesamtlast;6000;13,896944;46,627387
+Brcke;D37KV/R;Unterf.der B83;A10;2;182,778;max. Gesamtlast;6000;13,900651;46,622331
+Brcke;D38KV;Unterf.der B83;A10;1;182,827;max. Gesamtlast;6000;13,898829;46,622466
+Brcke;D37KV/L;Unterf.der B83;A10;0;182,850;max. Gesamtlast;6000;13,900946;46,622325
+Brcke;D39KV;Unterf.Spur 900;A10;2;183,001;max. Gesamtlast;6000;13,902184;46,620558
+Brcke;R55/L;Unterf.Sp.900 unt.Sp.700 u.200;A10;2;183,163;max. Gesamtlast;6000;13,900665;46,619542
+Brcke;R55/R;Unterf.Sp.900 unt.Sp.700 u.200;A10;1;183,196;max. Gesamtlast;6000;13,900571;46,619349
+Brcke;L57;Seebachbrcke;A102;0;0,023;max. Gesamtlast;6000;13,500336;46,816489
+Brcke;L56/L;Wegunterf. Pfarrsiedlung;A102;2;0,666;max. Gesamtlast;6000;13,498323;46,821987
+Brcke;L56/R;Wegunterf. Pfarrsiedlung;A102;1;0,672;max. Gesamtlast;6000;13,498409;46,822075
+Brcke;L55/1/L;Lieserbrcke;A102;2;1,275;max. Gesamtlast;6000;13,493261;46,825925
+Brcke;L55/1/R;Lieserbrcke;A102;1;1,286;max. Gesamtlast;6000;13,493186;46,826064
+Brcke;L55/3/L;Lieserbrcke;A102;0;1,383;max. Gesamtlast;6000;13,491021;46,825666
+Brcke;L55/2/L;Lieserbrcke;A102;2;1,434;max. Gesamtlast;6000;13,491633;46,825889
+Brcke;L55/2/R;Lieserbrcke;A102;1;1,435;max. Gesamtlast;6000;13,491176;46,826002
+Brcke;L54/L;Unterf.Trebesinger Ldstr.L10;A102;1;2,389;max. Gesamtlast;6000;13,47915;46,827288
+Brcke;L54/R;Unterf.Trebesinger Ldstr.L10;A102;2;2,390;max. Gesamtlast;6000;13,4792;46,827449
+Brcke;L58;Wegberfhrung Karlsdorf;A102;0;2,907;max. Gesamtlast;6000;13,472569;46,828335
+Brcke;L58,1/L;Unterf.Zuf.z.AB-Meisterei;A102;1;3,183;max. Gesamtlast;6000;13,469013;46,828778
+Brcke;L58,1/R;Unterf.Zuf.z.AB-Meisterei;A102;2;3,183;max. Gesamtlast;6000;13,469053;46,828899
+Brcke;L59;Wegberf. Rojachhof;A102;0;4,125;max. Gesamtlast;6000;13,456893;46,829973
+Brcke;L60/L;Unterf. des Feichterweges;A102;1;4,975;max. Gesamtlast;6000;13,445822;46,829756
+Brcke;L60/R;Unterf. des Feichterweges;A102;2;4,978;max. Gesamtlast;6000;13,445765;46,829878
+Brcke;L61;Unterf.Drautal-Bundesstr.;A102;2;6,142;max. Gesamtlast;6000;13,430495;46,829004
+Brcke;L62;Fuág„nger- Rohrdurchlass;A102;1;6,156;;;13,430417;46,829307
+Brcke;V29B;šberbrckung der A002;A11;2;0,029;max. Gesamtlast;6000;13,904456;46,618251
+Brcke;R51;™BB-Unterfhrung;A11;0;0,817;max. Gesamtlast;6000;13,912199;46,614054
+Brcke;R51,1;Unterf.Wernberger Straáe;A11;0;1,033;max. Gesamtlast;6000;13,914708;46,61348
+Brcke;KA01;Draubrcke St.Ulrich;A11;0;1,536;max. Gesamtlast;6000;13,920677;46,611601
+Brcke;KA01,1;Wegunterf.u.Betriebsumk.;A11;0;2,454;max. Gesamtlast;6000;13,930825;46,607224
+Brcke;KA02;šberfhrung Spur 10;A11;0;3,281;max. Gesamtlast;6000;13,93597;46,600864
+Brcke;KA03;Unterf.Roseggerstr. L52;A11;0;8,169;max. Gesamtlast;6000;13,98963;46,583571
+Brcke;KA03,1;Unterf.Wirtschaftsw.u.Wildd.;A11;0;8,694;max. Gesamtlast;6000;13,994485;46,580317
+Brcke;KA03,2/Li.;šberf.Raststation Rosegg;A11;0;9,040;max. Gesamtlast;6000;13,998048;46,578393
+Brcke;KA03,2/Re.;šberf.Raststation Rosegg;A11;0;9,050;max. Gesamtlast;6000;13,998114;46,578326
+Brcke;KA04;šberf.Buchheim;A11;0;9,799;max. Gesamtlast;6000;14,00441;46,57323
+Brcke;KA05,1;šberf.Buchheim-Pirk;A11;0;10,141;max. Gesamtlast;6000;14,005925;46,570379
+Brcke;KA05,2A;Bachdurchlaá;A11;0;10,555;max. Gesamtlast;6000;14,006276;46,566712
+Brcke;KA05,3;Unterf.Melincweg;A11;0;10,918;max. Gesamtlast;6000;14,006418;46,563422
+Brcke;KA06;šberf.Raun - Pirk;A11;0;11,223;max. Gesamtlast;6000;14,006151;46,560684
+Brcke;KA07-4;Wilddurchlaá;A11;0;11,487;max. Gesamtlast;6000;14,013709;46,557989
+Brcke;KA07-1/1;Unterf.Mallenitzer Waldweg;A11;0;11,552;max. Gesamtlast;6000;14,008673;46,557538
+Brcke;KA07;Unterf.Zubringer St.Jakob;A11;0;11,574;max. Gesamtlast;6000;14,005941;46,557521
+Brcke;KA07-1/2;Unterf.Mallenitzer Waldweg;A11;0;11,582;max. Gesamtlast;6000;14,008685;46,557326
+Brcke;KA09,1;Wirtschaftswegbrcke Winkl - Nebenanlage;A11;0;12,162;;;14,008228;46,552421
+Brcke;KA09;Talbergang Winkl;A11;0;12,421;max. Gesamtlast;6000;14,011378;46,550191
+Brcke;KA07-2;Unterf.Wirtschaftsweg;A11;0;12,537;max. Gesamtlast;6000;14,018722;46,556326
+Brcke;KA07-3;Mhlbachbrcke;A11;0;12,846;max. Gesamtlast;6000;14,019618;46,554874
+Brcke;KA10/1;™BB-Unterfhrung;A11;0;13,392;max. Gesamtlast;6000;14,021094;46,546252
+Brcke;KA11;Unterf.Wirtschaftsw.u.Bet.Umk.;A11;0;13,844;max. Gesamtlast;6000;14,024209;46,542895
+Brcke;KA12;Unterf.Schlatten-Kanin;A11;0;14,351;max. Gesamtlast;6000;14,026116;46,53851
+Brcke;KA13;šberf.Wendeschleife Nord;A11;0;14,796;max. Gesamtlast;6000;14,02886;46,535012
+Brcke;KA13,1;šberf.Amtsplatz;A11;0;15,025;max. Gesamtlast;6000;14,030425;46,533278
+Brcke;KA13,2;Bachdurchlaá;A11;0;15,625;max. Gesamtlast;6000;14,030239;46,528061
+Brcke;KA14/Re.;Wegunterf.Wendeschl.Sd;A11;1;16,138;max. Gesamtlast;6000;14,028707;46,523707
+Brcke;KA14/Li.;Wegunterf.Wendeschl.Sd;A11;2;16,141;max. Gesamtlast;6000;14,028846;46,523625
+Brcke;KA15,1/01;Gerinnedurchlass;A11;0;16,329;;;14,026861;46,522538
+Brcke;KA15,2;Hangbrcke;A11;0;16,558;max. Gesamtlast;6000;14,024625;46,521184
+Brcke;KA14-2;Gratschtzenbachbr.BU-Ost;A11;0;16,641;max. Gesamtlast;6000;14,024398;46,520209
+Brcke;KA14-3;Unterf.Wirtschaftsweg;A11;0;16,641;max. Gesamtlast;6000;14,024093;46,520382
+Brcke;KA15,3/R;Talberg.Gratschtzenbach;A11;0;16,709;max. Gesamtlast;6000;14,023481;46,520081
+Brcke;KA14-1;Gratschtzenbachbr.BU-West;A11;0;16,747;max. Gesamtlast;6000;14,022483;46,519789
+Brcke;0500;UNTERF.ST.VEIT NORD;S37;0;283,455;max. Gesamtlast;6000;14,386365;46,790579
+Brcke;0501;WIMITZBACHBR.SIEBENAICH;S37;0;283,731;max. Gesamtlast;6000;14,38563;46,788045
+Brcke;0502;WEGUEBERF. SCHEIFLING;S37;0;284,239;max. Gesamtlast;6000;14,385706;46,783346
+Brcke;0503;WEGUNTERF. WURZERHOF;S37;0;284,892;max. Gesamtlast;6000;14,382393;46,777922
+Brcke;0504;WEGUEBERF. TAGGENBRUNN;S37;0;285,392;max. Gesamtlast;6000;14,38089;46,773937
+Brcke;0506A;Rohrdurchlass ASt St.Veit Mitte Rampe 1+2;S37;1;286,237;;;14,379096;46,766487
+Brcke;0506;UEBERF. DER B 82;S37;0;286,340;max. Gesamtlast;6000;14,38054;46,765701
+Brcke;0507;WEGUEBERF. GLANBOGEN;S37;0;287,554;max. Gesamtlast;6000;14,388641;46,756562
+Brcke;0508;ZIEGELBACHBRUECKE;S37;0;288,506;max. Gesamtlast;6000;14,388053;46,74818
+Brcke;0509;šBERF. ST.DONAT;S37;0;288,782;max. Gesamtlast;6000;14,387614;46,745733
+Brcke;0510;UNTERFUEHRUNG TRIEBWEG;S37;0;289,746;max. Gesamtlast;6000;14,386301;46,737319
+Brcke;0511;OEBB-UNTERF.STADELHOF;S37;0;290,359;max. Gesamtlast;6000;14,382016;46,732733
+Brcke;0511A;UF INDUSTRIEPARK St Veit;S37;0;290,615;;;14,380629;46,730651
+Brcke;0512;PFLUGENBACHBRUECKE;S37;0;291,014;max. Gesamtlast;6000;14,379297;46,727269
+Brcke;0513;WEGUEBERF. AICH;S37;0;291,627;max. Gesamtlast;6000;14,376885;46,722041
+Brcke;0514;MICHAELERBACHBRUECKE;S37;0;292,161;max. Gesamtlast;6000;14,373665;46,717729
+Brcke;0515;WEGUNTERF.WILLERSDORF;S37;0;292,550;max. Gesamtlast;6000;14,370904;46,714658
+Brcke;0516;WEGUEBERF. RAGGASAAL;S37;0;294,044;max. Gesamtlast;6000;14,360051;46,703955
+Brcke;0517;UEBERF.DER L 72;S37;0;294,759;max. Gesamtlast;6000;14,354342;46,698665
+Brcke;0100A;UNTERF.HERZOGSTUHL;S37;0;295,813;max. Gesamtlast;6000;14,345174;46,690339
+Brcke;0101A/01;Moosbrcke;S37;0;296,348;;;14,340781;46,686374
+Brcke;0102E;UEBERF.MARIA SAAL;S37;0;296,908;max. Gesamtlast;6000;14,336245;46,682506
+Brcke;0102B;UNTERF.RATZENDORF;S37;0;297,455;max. Gesamtlast;6000;14,331322;46,678976
+Brcke;0102F;UNTERF.WALDDORF(K1);S37;0;299,202;max. Gesamtlast;6000;14,316058;46,667513
+Brcke;0095B;WEGUNTERFUEHRUNG(K2);S37;0;299,516;max. Gesamtlast;6000;14,31252;46,666286
+Brcke;0095C;UEBERF.TESSENDORFERSTR.(K3);S37;0;300,416;max. Gesamtlast;6000;14,301031;46,663697
+Brcke;0095D;FLUTOEFFNUNG(K3-3);S37;0;300,676;max. Gesamtlast;6000;14,298134;46,662449
+Brcke;0095E;GLANBRUECKE(K4);S37;0;300,850;max. Gesamtlast;6000;14,296226;46,661548
+Brcke;0095F;GLANALTARMBRUECKE(K5);S37;0;301,069;max. Gesamtlast;6000;14,293914;46,660331
+Brcke;0095G;UNTERF.DER A2(K6);S37;0;301,150;max. Gesamtlast;6000;14,292177;46,659157
