@@ -11,9 +11,12 @@ library(ggplot2)
 library(leaflet)
 library(htmlwidgets)
 
+
 DISTANCE <- units::set_units(10, m)
 # Set working directory to location of git
 setwd("C:\\Git\\BridgeCapacities\\")
+
+source(".\\R\\helperFunctions.R")
 
 # Relative File Paths
 roadnetwork_file <- ".\\Data\\Verkehrsnetz Kärnten\\Verkehrsnetz inkl. Autobahnen\\Strassennetz.dbf"
@@ -21,6 +24,52 @@ bridges_file <- ".\\Data\\Brücken\\Bruecken_Point_14042021.dbf"
 focus_file <- ".\\Data\\Verkehrsnetz Kärnten\\Verkehrsnetz inkl. Autobahnen\\EVIS_Fokusstreckennetz.dbf"
 segmente_file <- ".\\Data\\Verkehrsnetz Kärnten\\Verkehrsnetz inkl. Autobahnen\\Verkehrslagesegmente.dbf"
 asfinag_file <- ".\\Data\\Brücken\\Bruecken_Asfinag.csv"
+
+
+
+# Boundary
+
+bound.land_kaernten <- getbb("Kärnten, Austria",
+                                     featuretype = "state",
+                                     format_out = "sf_polygon"
+)[1, 1]
+
+bound.veneto <- getbb("Veneto, Italy",
+                             featuretype = "state",
+                             format_out = "sf_polygon"
+)[1, 1]
+
+
+bound.fruili <- getbb("Friuli, Italy",
+                      featuretype = "state",
+                      format_out = "sf_polygon"
+)
+
+bound.texas <- getbb("McLennan County, Texas, USA",
+                      featuretype = "settelement",
+                      format_out = "sf_polygon"
+)
+
+
+### Roads from OSM
+
+highway.motorway<- query(key="highway", value="motorway", bbox=bound.land_kaernten)
+highway.trunk<- query(key="highway", value="trunk", bbox=bound.land_kaernten)
+
+highway.primary<- query(key="highway", value="primary", bbox=bound.land_kaernten)
+highway.secondary<- query(key="highway", value="secondary", bbox=bound.land_kaernten)
+highway.tertiary<- query(key="highway", value="tertiary", bbox=bound.land_kaernten)
+
+tunnel<- query(key="tunnel", value=available_tags("tunnel"), bbox=bound.land_kaernten)
+
+bridges.Veneto<- query(key="bridge", value=available_tags("bridge"), bbox=bound.veneto)
+bridges.Veneto.filtered <- bridges.Veneto$osm_lines %>% select(osm_id, name, highway, maxweight, maxweight.signed, maxweight.source, maxweightrating)
+bridges.Veneto.filtered %>%filter(!is.na(maxweight))  %>%filter(highway=="motorway")
+
+View(bridges.Veneto.filtered %>%filter(!is.na(maxweight)) )
+bridges.Texas<- query(key="bridge", value=available_tags("bridge"), bbox=bound.texas)
+
+bridgesP<- bridges$osm_points %>%  filter(!is.na(name))
 
 # Load Files
 roadnetwork <- st_read(roadnetwork_file, layer = "Strassennetz")
@@ -46,6 +95,7 @@ bide <- z %>%
 bridgeIds <- unique(bide$OBJECTID.bridge)
 BridgesP_AS <- bridgesP %>% filter(OBJECTID %in% bridgeIds)
 
+nrow(bridgesP %>% filter(!is.na(MAXLAST)))
 
 
 # plot with ggplot()
@@ -60,11 +110,12 @@ ggplot() +
 f<- leaflet() %>%
   # addProviderTiles("BasemapAT.grau") %>%
   # addProviderTiles("Stamen.TerrainBackground") %>%
-  addProviderTiles("Stamen.TonerBackground") %>%
-  # addTiles() %>%
+  # addProviderTiles("Stamen.TonerBackground") %>%
+  addTiles() %>%
   setView(14.3122, 46.636, zoom = 9) %>%
   addMeasure() %>%
   addScaleBar() %>%
+  addPolygons(data = bound.land_kaernten, fillOpacity = 0.3, weight = 1.2, color = "#444444", smoothFactor = 0.5) %>%
   addPolylines(data = st_transform(roadnetwork, crs = 4326), fill = NA, color = "red") %>%
   addPolylines(data = st_transform(segmente, crs = 4326), fill = NA, color = "green") %>%
   addPolylines(data = st_transform(focus, crs = 4326), fill = NA, color = "blue") %>%
@@ -81,7 +132,33 @@ f<- leaflet() %>%
   )
 
 
-saveWidget(f,  "bridges.html",  selfcontained = TRUE)
+
+
+
+#
+
+
+# Plot with leaflet
+roads<- leaflet() %>%
+  # addProviderTiles("BasemapAT.grau") %>%
+  # addProviderTiles("Stamen.TerrainBackground") %>%
+  # addProviderTiles("Stamen.TonerBackground") %>%
+  addTiles() %>%
+  setView(14.3122, 46.636, zoom = 9) %>%
+  addMeasure() %>%
+  addScaleBar() %>%
+  addPolygons(data = bound.texas, fillOpacity = 0.3, weight = 1.2, color = "#444444", smoothFactor = 0.5) %>%
+  addPolylines(data = highway.motorway$osm_lines, fill = NA, color = "red") %>%
+  addPolylines(data = highway.trunk$osm_lines, fill = NA, color = "blue") %>%
+  addPolylines(data = highway.primary$osm_lines, fill = NA, color = "orange") %>%
+  addPolylines(data = highway.secondary$osm_lines, fill = NA, color = "yellow") 
+  
+
+
+saveWidget(roads,  "bridges.html",  selfcontained = TRUE)
+
+
+
 
 # http://postgis.net/workshops/postgis-intro/spatial_relationships.html
 # https://stackoverflow.com/questions/43463150/print-label-on-circle-markers-in-leaflet-in-rshiny
