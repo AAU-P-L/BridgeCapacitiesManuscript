@@ -60,22 +60,25 @@ highway.primary<- query(key="highway", value="primary", bbox=bound.land_kaernten
 highway.secondary<- query(key="highway", value="secondary", bbox=bound.land_kaernten)
 highway.tertiary<- query(key="highway", value="tertiary", bbox=bound.land_kaernten)
 
-tunnel<- query(key="tunnel", value=available_tags("tunnel"), bbox=bound.land_kaernten)
-
-bridges.Veneto<- query(key="bridge", value=available_tags("bridge"), bbox=bound.veneto)
-bridges.Veneto.filtered <- bridges.Veneto$osm_lines %>% select(osm_id, name, highway, maxweight, maxweight.signed, maxweight.source, maxweightrating)
-bridges.Veneto.filtered %>%filter(!is.na(maxweight))  %>%filter(highway=="motorway")
+# tunnel<- query(key="tunnel", value=available_tags("tunnel"), bbox=bound.land_kaernten)
+# 
+# bridges.Veneto<- query(key="bridge", value=available_tags("bridge"), bbox=bound.veneto)
+# bridges.Veneto.filtered <- bridges.Veneto$osm_lines %>% select(osm_id, name, highway, maxweight, maxweight.signed, maxweight.source, maxweightrating)
+# bridges.Veneto.filtered %>%filter(!is.na(maxweight))  %>%filter(highway=="motorway")
 
 View(bridges.Veneto.filtered %>%filter(!is.na(maxweight)) )
-bridges.Texas<- query(key="bridge", value=available_tags("bridge"), bbox=bound.texas)
+bridges.all- query(key="bridge", value=available_tags("bridge"), bbox=bound.land_kaernten)
 
-bridgesP<- bridges$osm_points %>%  filter(!is.na(name))
+bridges.limited.osm<- bridges.all$osm_lines %>%  filter(!is.na(maxweight))
 
 # Load Files
 roadnetwork <- st_read(roadnetwork_file, layer = "Strassennetz")
 focus <- st_read(focus_file)
 segmente <- st_read(segmente_file)
 bridgesP <- st_read(bridges_file)
+
+
+bridges.limited.land<- bridgesP %>%  filter(!is.na(MAXLAST))
 
 
 bridgesAsfinag <- as_tibble(read.csv2(asfinag_file)) %>%
@@ -134,7 +137,7 @@ f<- leaflet() %>%
 
 
 
-
+bridges
 #
 
 
@@ -147,15 +150,20 @@ roads<- leaflet() %>%
   setView(14.3122, 46.636, zoom = 9) %>%
   addMeasure() %>%
   addScaleBar() %>%
-  addPolygons(data = bound.texas, fillOpacity = 0.3, weight = 1.2, color = "#444444", smoothFactor = 0.5) %>%
-  addPolylines(data = highway.motorway$osm_lines, fill = NA, color = "red") %>%
-  addPolylines(data = highway.trunk$osm_lines, fill = NA, color = "blue") %>%
-  addPolylines(data = highway.primary$osm_lines, fill = NA, color = "orange") %>%
-  addPolylines(data = highway.secondary$osm_lines, fill = NA, color = "yellow") 
-  
+  addPolygons(data = bound.land_kaernten, fillOpacity = 0.3, weight = 1.2, color = "#444444", smoothFactor = 0.5) %>%
+  addPolylines(data = highway.motorway$osm_lines, fill = NA, color = "gray", opacity=0.9) %>%
+  addPolylines(data = highway.trunk$osm_lines, fill = NA, color = "gray", opacity=0.9) %>%
+  addPolylines(data = highway.primary$osm_lines, fill = NA, color = "gray", opacity=0.9) %>%
+  addPolylines(data = highway.secondary$osm_lines, fill = NA, color = "gray", opacity=0.9)  %>%
+  addPolylines(data = bridges.all$osm_lines, fill = NA, color = "blue", opacity=0.9)  %>%
+  addPolylines(data=bridges.limited.osm, color="red", fill="red",opacity=0.9, label=as.character(bridges.limited.osm$maxweight)) %>%
+  addCircleMarkers(data= bridges.limited.land, color="red", label=as.character(bridges.limited.land$MAXLAST))
 
 
-saveWidget(roads,  "bridges.html",  selfcontained = TRUE)
+
+
+
+saveWidget(roads,  "roads.html",  selfcontained = TRUE)
 
 
 
