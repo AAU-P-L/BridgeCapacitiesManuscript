@@ -6,7 +6,7 @@ Since 2010, global freight volumes continuously increase with forecasts predicti
 Various transportation modes, including rail, maritime, air, and road, are available to cope with this rapid development and to satisfy future transportation needs.
 However, primary focus is generally placed on the road transport segment due to its dominating role for domestic transportation, with almost 80\% of the total volume of goods being carried by trucks in the European Union \cite{Eurostat}.
 The increase in demand for transportation also holds true for superheavy, bulky and extra-large goods \cite{gavrilova2021analysis}, referred to as oversized and heavyweight cargoes (OHC) in this article \cite{Luo.2021}.
-OHC is typically associated with the transportation of industry goods (e.g., generators, turbines, construction equipment) that exceed defined limits in terms of weight and/or size, many of which without permission, i.e, illegally \cite{fiorillo2016minimizing}. This is especially the case for cross-border activities where operators are frequently faced with different legal requirements. 
+OHC is typically associated with the transportation of industry goods (e.g., generators, turbines, construction equipment) that exceed defined limits in terms of weight and/or size, many of which without permission, i.e, illegally \cite{fiorillo2016minimizing}. This is especially the case for cross-border activities where operators are frequently faced with different legal requirements.
 \par In comparison with traditional freight transportation, OHC requires time-consuming and complex efforts with regard to planning, approval, and execution, as no two OHC transports are completely the same \cite{Wolnowska.2019}.
 Some OHC transports may require complete road closures or detours and escort by police or other law enforcement.
 Consequently, planning is usually conducted on an individual level, taking the respective specifications of each OHC transport into consideration \cite{Bazaras.2013}.
@@ -18,6 +18,10 @@ Critical incidents, such as the Genova bridge collapse in 2018 \cite{Morgese.202
 \par In practice, the route planning process for OHC transports involves several stakeholders, such as client companies, carriers, governmental institutions, and civil engineers.
 This labor intense planning procedure is described in \cite{Osegueda.1999} and \cite{ray2007web}. In the beginning, the client company or carrier drafts a first route design and submits this draft to the responsible authority for approval.
 Subsequently, a civil engineer is consulted to determine route feasibility based on statical calculations and on-site inspections of critical route sections. Apart from the route profile with its potential bottlenecks, ascents and descents, tolerances, technical specifications, and other structural parameters of bridge elements are examined in detail. In case a route is generally feasible, permits are often accompanied by speed restrictions on certain road segments. In the event of route infeasibility due to exceeding of permitted limits or for any other reason, the initial draft needs to be revised, adapted, and resubmitted by the applicant and subsequently re-evaluated by the civil engineer.
+
+{\color{red}
+The descent gradient is an important factor concerning brake wear as the dust emitted from  braking mechanisms \cite{Gerlofs2019}  contains highly toxic substances.
+}
 
 \begin{figure}[!ht]
   \centering
@@ -33,9 +37,8 @@ Therefore, there is a need of professional software that thoroughly takes weight
 \par In an attempt to simplify the cumbersome authorization process, we take an optimization approach.
 To this end, a mathematical model is used to determine the optimal path between two points within the road network while respecting certain constraints, e.g., in terms of road gradients and weight limits \cite{liedtke2012generation, zhu2014vehicle}.
 Under the assumption that the model results in more than one feasible routes, a study that compares several (possibly conflicting) objectives will be conducted.
-In doing so, we consider different types of vehicles and loads. The results should provide \textit{decision support} for reducing the complexity of OHC route planning. 
+In doing so, we consider different types of vehicles and loads. The results should provide \textit{decision support} for reducing the complexity of OHC route planning.
 \par
 The article continues in section 2 with a review of the existing body of knowledge in the respective field.
 In section 3, we provide the problem description and introduce notations along with the model assumptions. In section 4, the optimization model is presented and illustrated in an example of application.
 Finally, section 5 closes the article, summarizing the research implications, study limitations, and future lines of research.
-

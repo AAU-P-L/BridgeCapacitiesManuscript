@@ -3,7 +3,7 @@
 \input{imports/importsCommands.tex}
 
 
-\title{Optimal route selection for the transportation of oversized and heavyweight cargoes considering road gradients and bridge carrying capacities 
+\title{Optimal route selection for the transportation of oversized and heavyweight cargoes considering road gradients and bridge carrying capacities
 }
 %Finding the optimal fleet size and mix for
 %grocery home delivery services
@@ -12,14 +12,13 @@
 % }
 
 \author[1]{Christian Wankm\"uller}
-
 \author[2] {Christian Truden}
-\author[3]{Thomas Wurzer}
-\author[4]{Andreas Felsberger}
+\author[1]{Thomas Wurzer}
+\author[1]{Andreas Felsberger}
 % \affil[1]{Department of Mathematics, Alpen-Adria-Universit\"at Klagenfurt, Klagenfurt, Austria.}
-\affil[1,3,4]{Department of Operations Management and Logistics, Alpen-Adria-Universität Klagenfurt,
+\affil[1]{Department of Operations Management and Logistics, Alpen-Adria-Universität Klagenfurt,
 Klagenfurt, Austria}
-\affil[2]{Lakeside Labs, Klagenfurt, Austria}
+\affil[2]{Lakeside Labs GmbH, Klagenfurt, Austria}
 
 
 
@@ -33,6 +32,10 @@ Klagenfurt, Austria}
 \noindent%
 {\it Keywords: Oversized and Heavyweight Cargo, GIS-based Route Planning, Road Gradients, Maximum Bridge Carrying Capacity}
 
+{
+\color{red}
+Intergate the steepness issue more closely into the narrative by displaying it
+as a characteristic of the European Alps? Do we distinguish descent/ascent, elevation, if yes, we must assume a directed graph}
 
 \section{Introduction}
 \label{sec:intro}
@@ -44,6 +47,9 @@ Klagenfurt, Austria}
 
 \section{Model}\label{sec:model}
 \input{sec3_Model.tex}
+
+\section{Road Network Data Preparation}\label{sec:data}
+\input{datapre.tex}
 
 \section{Example of Application and Results}\label{sec:application}
 \input{sec4_Example of application and results.tex}

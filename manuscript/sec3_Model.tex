@@ -26,9 +26,10 @@ Classically,  the considered network $\mathcal{N}=(\mathcal{V},\mathcal{E})$ con
 \end{itemize}
 
 Road links $e \in \mathcal{E}$ have a length $\ell(e)\in \mathbb{R}^{+}$ representing their road length.
-Further, they have a weights $c(e) \in C$ giving their \emph{classification} according to {\color{red} ??}.
-The classes $C$ describe the level of the roads {\color{red} ??},
-while they have an ordering they are an dimensionless quantity.
+Further, they have a weights $c(e) \in C$ giving their \emph{classification} following \textit{Open Street Map} (OSM) \cite{OpenStreetMap}. Starting from the highest level, we classify the roads
+$C=\{0,1,2\,\ldots\}$ where these are regarded dimensionless units.
+
+For each road link  $e \in \mathcal{E}$ we know the \emph{maximum gradient} (descent and ascent). We denote them by $g^{+}(e) \in [0,1)$ and  $g^{-}(e) \in (-1,0]$ for the steepest ascent and descent, accordingly.
 
 Bridges (and other types of building structures that must be overpassed)
 have \emph{weight limits} (measured in metric tons) which are determined by civil engineers.
@@ -64,14 +65,30 @@ A simple toy example, see Figure \ref{fig_toy_example_1}, shall illustrate these
 Next, we give an exact problem formulation.
 
 \subsubsection{Feasible Subnetwork}
-A \emph{transport request} $r=(o,d,w) \in \mathcal{V} \times \mathcal{V} \times \mathbb{R}^{+}$
-has an \emph{origin} $s$, a \emph{destination} $t$, a \emph{total weight} $w$.
+A \emph{transport request} $r=(o,d,w,g^{-},g^{+}) \in \mathcal{V} \times \mathcal{V} \times \mathbb{R}^{+}$
+has an \emph{origin} $s$, a \emph{destination} $t$, a \emph{total weight} $w$,
+a \emph{maximal descent gradient} $g^{-}$, and a \emph{maximal ascent gradient} $g^{+}$.
+The maximal gradients define the gradient that is doable for the transport with
+creating a safety hazard.
 
 Clearly, a transport $r$ can only pass through nodes $v \in \mathcal{V}$ with
 $w(r) \leq w(v)$ and traverse road links $e \in \mathcal{E}$ for which $w(r) \leq w(e)$ holds.
+Further, $r$ can only travel on road links $e$ for which $g^{-}(r)\leq g^-(e)$ and
+ $g^{+}(r)\geq g^+(e)$ holds.
 
-Accordingly, we define the sub-network $\mathcal{N}_{\omega}$ that contains only the vertices and edges from $\mathcal{N}$ that have a weight limit larger than $\omega \in \mathbb{R}^{+}$.
+Accordingly, we define the sub-network $\mathcal{N}_{\omega}$ that contains only the vertices and edges from $\mathcal{N}$ that have a weight limit larger than $\omega \in \mathbb{R}^{+}$ and
+does not violate the maximal gradients.
 Hence, for the remainder of this manuscript, we set $\mathcal{N}=\mathcal{N}_{\omega=w(r)}$.
+In that sense, a transport request $r$ can not be conducted if $\mathcal{N}_{\omega=w(r)}$ is not
+connected between $o$ and $d$.
+
+\paragraph{Example}
+We consider a request $r=(o,d,w=20t, g^{-}=-0.10, g^{+}=0.08)$ where $o$ and $d$ are somewhere within the network. A road link $e_1=(o_1,d_1, w=30t, g^{-}=-0.08, g^{+}=0.05)$  can be traversed as, both, the bridge weight capacities and the gradients are feasible. On the other hand,  a link
+$e_2=(o_2,d_2, w=10t, g^{-}=-0.12, g^{+}=0.07)$ cannot be used as there is at least one bridge
+on the link that carries only $10t$ (while the transport has $20t$). Also, there
+is a $-0.12$ descent ($-12\,\%$) that cannot be dealt with in a safely manner as the
+transport is cannot handle more than $8\%$ descent.
+
 
 \subsubsection{Integer Programming Formulation}
 In order to give an \emph{Integer Programming} (IP) formulation for we enumerate the
@@ -99,14 +116,19 @@ The set of outgoing (ingoing) edges of vertex $i$ is denoted by  $\delta^{+} (i)
 We consider three different objectives, i.e., different assignment of $c_{ij}$.
 \begin{enumerate}
   \item \emph{Classic shortest path}, where $c_{ij}=\ell_{ij}$. \label{obj_short}
-  \item \emph{Minimal number of surpassed briges}, where  $c_{ij}=b_{ij}$.  \label{obj_minBridge}
+  \item \emph{Minimal number of surpassed bridges}, where  $c_{ij}=b_{ij}$.  \label{obj_minBridge}
   \item \emph{Prefer high level roads}, where we assign an exponential weighting to the road classes (in ascending order of preference) $C$, $c_0=2^0,c_1=2^1, \ldots$.  \label{obj_highLevelRoad}
+  \item \emph{Avoid steep roads}, exponential weights are assigned to the roads.
+  Therefore we summarize the gradients of a road segment $e$ into $g(e)=\max\{{|g^{-}(e)|+g^{+}(e)}\}$
+  and assign them exponential weights $c_{ij}=\euler^{g(e)}$.
+  \label{obj_steep}
+  \item \emph{Minimize elevation}, minimize the total elevation that the transport
+  must overcome. Sum of the total (descent) elevation of all links. $c_{ij}=\text{elevation}$.
 \end{enumerate}
 
 \subsubsection{Solution Procedere}
 
-As objective functions \ref{obj_short} and  \ref{obj_highLevelRoad}
-use costs which induce no \emph{negative cycles}  on $G$, the problem can be efficiently solved
+As the considered objectives use costs which induce no \emph{negative cycles}  on $G$, the problem can be efficiently solved
 by polynomial-time algorithms like
 \emph{Bellman-Ford's} \cite{Bell1958,Ford1956} or \emph{Dijistra's} \cite{dijkstra1959note} algorithm.
 % In case of \ref{obj:obj_minBridge}, links having no bridges ($b(e)=0$) can induce cycles which are of length zero.
