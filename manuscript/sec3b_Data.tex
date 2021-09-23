@@ -2,9 +2,22 @@
 % !TeX root =./main.tex
 % !TeX spellcheck = en_US
 
+
+For our study we consider the road network of the state of Carinthia, Austria.
 We base our study on data that is available from OSM \cite{OpenStreetMap}.
+% For now, we consider the \textit{higher level road network} in Carinthia, Austria,
+% i.e., \textit{A}, \textit{S}, \textit{L}, \textit{B}, in the  form of a matrix.
+
 We use the \emph{R} programming language \cite{RVienna} to extract that data from
 \emph{Overpass} API we use the \texttt{osmdata} R package \cite{osmdataR20221}.
+
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{map.jpg}
+  \caption{Overview of the higher level road network in Carinthia.}
+  \label{fig:higher level}
+\end{figure}
 
 
 \subsection{Road Network and Levels}
@@ -32,3 +45,25 @@ tells as the maximal carrying capacity of the bridge. In case that no the field 
 following the rule of thump, there is now restriction for road legal vehicles, and
 a weight restriction of $60t$ (or more is assumed).
 We map the bridges to the road segment using the \texttt{???} package.
+
+
+\subsection{Sample Transport Request}
+
+\begin{table}[!ht]
+  \caption{Overview of the transport request considered in the analysis.}
+  \label{tab:request}
+  \centering
+\begin{tabular}{l|llll|l}
+Type  & $w(r)$  & $g(r)$  & $o$  & $d$ & Description\\ \hline\hline
+Super heavy  & 58t  & 0.08 & Thörl-Maglern  & Villach (Industriegebiet) &  MAN TGX D3876 (387kw)\\
+&&&&& + Goldhofer TN-L Flatbed Trailer
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.5\textwidth]{./figures/felbert.jpg}
+  \caption{\ohc transport on a motorway.}
+  \label{fig:truck}
+\end{figure}

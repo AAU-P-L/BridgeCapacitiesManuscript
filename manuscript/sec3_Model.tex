@@ -1,10 +1,17 @@
 %
 % !TeX root =./main.tex
 % !TeX spellcheck = en_US
-\subsection{Matrix Representation of the Road Network}
 
-For now, we consider the \textit{higher level road network} in Carinthia, Austria,
-i.e., \textit{A}, \textit{S}, \textit{L}, \textit{B}, in the  form of a matrix.
+
+\subsubsection{Transport Request}
+
+A \emph{transport request} $r=(o,d,w,g) \in \mathcal{V} \times \mathcal{V} \times \mathbb{R}^{+}$
+has an \emph{origin} $s$, a \emph{destination} $t$, a \emph{total weight} $w$, and
+a \emph{maximal gradient} $g$.
+The maximal gradient defines which climbs or descent can be done with the transport in a safely manner.
+
+\subsubsection{Matrix Representation of the Road Network}
+
 The vertices of the matrix are the crossing points of the roads, while
 the road section connecting those points form the edges of the matrix.
 For each edge, we have the distance between the vertices and the length of the bridges along the segment
@@ -18,18 +25,18 @@ easily be extended to a directed graph. However, the authors omitted this for re
 
 Classically,  the considered network $\mathcal{N}=(\mathcal{V},\mathcal{E})$ consists of
 \begin{itemize}
-  \item \emph{Nodes} (vertices) $\mathcal{V}=\{1,\ldots, n\}$, which represent the intersections of road
-  well as the start (end) points of the roads, and
+  \item \emph{Nodes} (vertices) $\mathcal{V}=\{1,\ldots, n\}$, which represent the intersections of the road segments,
+as  well as the start (end) points of the roads, and
 
   \item \emph{Links} (edges) $\mathcal{E} \subseteq \mathcal{L} \times \mathcal{L}$,
-  correspond to the roads (road segements) connecting the vertices \cite{liedtke2012generation}.
+  correspond to the roads (road segments) connecting the vertices \cite{liedtke2012generation}.
 \end{itemize}
 
 Road links $e \in \mathcal{E}$ have a length $\ell(e)\in \mathbb{R}^{+}$ representing their road length.
 Further, they have a weights $c(e) \in C$ giving their \emph{classification} following \textit{Open Street Map} (OSM) \cite{OpenStreetMap}. Starting from the highest level, we classify the roads
 $C=\{0,1,2\,\ldots\}$ where these are regarded dimensionless units.
 
-For each road link  $e \in \mathcal{E}$ we know the \emph{maximum gradient} (descent and ascent). We denote them by $g^{+}(e) \in [0,1)$ and  $g^{-}(e) \in (-1,0]$ for the steepest ascent and descent, accordingly.
+For each road link  $e \in \mathcal{E}$ we know the \emph{maximum gradient} $g(e) \in [0,1)$ which gives the steepest ascending or descending gradient (measured in percent).
 
 Bridges (and other types of building structures that must be overpassed)
 have \emph{weight limits} (measured in metric tons) which are determined by civil engineers.
@@ -38,14 +45,6 @@ For each link $e$, we set a \emph{weight limit} $w(e) \in \mathbb{R}^{+}$ which 
 minimum over all bridges on this link and the \emph{number of bridges} $b(e) \in \mathbb{N}^{0}$.
 A weight limit $w(e)= \infty$ describes the circumstance
 that no limit is given for $e$.
-Similarly, we assume that nodes $v \in \mathcal{V}$ can have weight limits.
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[width=0.9\textwidth]{map.jpg}
-  \caption{Overview of the higher level road network in Carinthia.}
-  \label{fig:higher level}
-\end{figure}
-
 
 A simple toy example, see Figure \ref{fig_toy_example_1}, shall illustrate these definitions.
 \begin{figure}[!ht]
@@ -56,25 +55,10 @@ A simple toy example, see Figure \ref{fig_toy_example_1}, shall illustrate these
 \end{figure}
 
 
-\subsection{Related Work on the Shortest Path Problem}
+\subsubsection{Feasible Sub-Network}
 
-\citet{TACCARI2016122, zhu2014vehicle, Osegueda.1999}
-
-\subsection{Mathematical Model}
-
-Next, we give an exact problem formulation.
-
-\subsubsection{Feasible Subnetwork}
-A \emph{transport request} $r=(o,d,w,g^{-},g^{+}) \in \mathcal{V} \times \mathcal{V} \times \mathbb{R}^{+}$
-has an \emph{origin} $s$, a \emph{destination} $t$, a \emph{total weight} $w$,
-a \emph{maximal descent gradient} $g^{-}$, and a \emph{maximal ascent gradient} $g^{+}$.
-The maximal gradients define the gradient that is doable for the transport with
-creating a safety hazard.
-
-Clearly, a transport $r$ can only pass through nodes $v \in \mathcal{V}$ with
-$w(r) \leq w(v)$ and traverse road links $e \in \mathcal{E}$ for which $w(r) \leq w(e)$ holds.
-Further, $r$ can only travel on road links $e$ for which $g^{-}(r)\leq g^-(e)$ and
- $g^{+}(r)\geq g^+(e)$ holds.
+Clearly, a transport $r$ can only traverse road links $e \in \mathcal{E}$ for which $w(r) \leq w(e)$
+ $g(r)\geq g^-(e)$ hold.
 
 Accordingly, we define the sub-network $\mathcal{N}_{\omega}$ that contains only the vertices and edges from $\mathcal{N}$ that have a weight limit larger than $\omega \in \mathbb{R}^{+}$ and
 does not violate the maximal gradients.
@@ -83,11 +67,16 @@ In that sense, a transport request $r$ can not be conducted if $\mathcal{N}_{\om
 connected between $o$ and $d$.
 
 \paragraph{Example}
-We consider a request $r=(o,d,w=20t, g^{-}=-0.10, g^{+}=0.08)$ where $o$ and $d$ are somewhere within the network. A road link $e_1=(o_1,d_1, w=30t, g^{-}=-0.08, g^{+}=0.05)$  can be traversed as, both, the bridge weight capacities and the gradients are feasible. On the other hand,  a link
-$e_2=(o_2,d_2, w=10t, g^{-}=-0.12, g^{+}=0.07)$ cannot be used as there is at least one bridge
+We consider a request $r=(o,d,w=20t, g=0.10)$ where $o$ and $d$ are somewhere within the network. A road link $e_1=(o_1,d_1, w=30t, g=-0.08)$  can be traversed as, both, the bridge weight capacities and the gradients are feasible. On the other hand,  a link
+$e_2=(o_2,d_2, w=10t, g=-0.12)$ cannot be used as there is at least one bridge
 on the link that carries only $10t$ (while the transport has $20t$). Also, there
-is a $-0.12$ descent ($-12\,\%$) that cannot be dealt with in a safely manner as the
-transport is cannot handle more than $8\%$ descent.
+is a $0.12$ descent ($12\,\%$) that cannot be dealt with in a safely manner as the
+transport is cannot handle more than $10\%$ gradient.
+
+
+
+
+\section{Shortest Path Problem}
 
 
 \subsubsection{Integer Programming Formulation}
@@ -113,20 +102,24 @@ A standard IP formulation to determine the shortest path between $s$ and $t$ can
 The set of outgoing (ingoing) edges of vertex $i$ is denoted by  $\delta^{+} (i)$  $(\delta^{-} (i))$.
 
 
+\subsubsection{Objectives}
+
 We consider three different objectives, i.e., different assignment of $c_{ij}$.
 \begin{enumerate}
   \item \emph{Classic shortest path}, where $c_{ij}=\ell_{ij}$. \label{obj_short}
   \item \emph{Minimal number of surpassed bridges}, where  $c_{ij}=b_{ij}$.  \label{obj_minBridge}
   \item \emph{Prefer high level roads}, where we assign an exponential weighting to the road classes (in ascending order of preference) $C$, $c_0=2^0,c_1=2^1, \ldots$.  \label{obj_highLevelRoad}
-  \item \emph{Avoid steep roads}, exponential weights are assigned to the roads.
-  Therefore we summarize the gradients of a road segment $e$ into $g(e)=\max\{{|g^{-}(e)|+g^{+}(e)}\}$
-  and assign them exponential weights $c_{ij}=\euler^{g(e)}$.
+  \item \emph{Avoid steep roads}, exponential weights are assigned, i.e., $c_{ij}=\euler^{g(e)}$.
   \label{obj_steep}
-  \item \emph{Minimize elevation}, minimize the total elevation that the transport
-  must overcome. Sum of the total (descent) elevation of all links. $c_{ij}=\text{elevation}$.
 \end{enumerate}
 
+
+\subsubsection{Related Work on the Shortest Path Problem}
+
+\citet{TACCARI2016122, zhu2014vehicle, Osegueda.1999}
+
 \subsubsection{Solution Procedere}
+
 
 As the considered objectives use costs which induce no \emph{negative cycles}  on $G$, the problem can be efficiently solved
 by polynomial-time algorithms like
