@@ -3,7 +3,6 @@ library(sf)
 library(tidygraph)
 library(tidyverse)
 library(TSP)
-library(fontawesome)
 library(tidyverse)
 library(sf)
 library(ggmap) # downloading raster maps from a variety of sources
@@ -18,7 +17,7 @@ library(leaflet)
 library(htmlwidgets)
 library(tidyverse)
 
-
+# https://rallydatajunkie.com/visualising-rally-stages/working-with-route-data.html
 # http://switchfromshapefile.org/
 
 bbox <- getbb("Kärnten, Austria",
@@ -26,34 +25,50 @@ bbox <- getbb("Kärnten, Austria",
   format_out = "sf_polygon"
 )[1, 1]
 
-
-
-########### 1.  Retrieve Road Network, clean, and store locally ###################
-bbox_to_string(bbox)
-# https://wiki.openstreetmap.org/wiki/Key:highway
-# dput(available_tags("highway"))
-tags <- c(
-  "motorway", "trunk", "primary", "secondary", "tertiary", "unclassified",
-  "motorway_link", "trunk_link", "primary_link", "secondary_link", "tertiary_link"
+bbox.veneto <- getbb("Veneto, Italy",
+              featuretype = "state",
+              format_out = "sf_polygon"
+)[1, 1]
+bbox.friuli<- getbb("Friuli-Venezia Giulia, Italy",
+                     featuretype = "state",
+                     format_out = "sf_polygon"
 )
 
-# st_read
-# st_write
-########## 1. Get road network
-query <- opq(bbox = bbox, timeout = 500) %>%
-  add_osm_feature(key = "highway", value = tags)
-features <- osmdata_sf(query)
-features<- trim_osmdata(features, bbox)
-
-## Select a
-not_all_na <- function(x) any(!is.na(x))
-not_any_na <- function(x) all(!is.na(x))
-network<- features$osm_lines %>% select(where(not_all_na))
-# select(where(not_any_na))
+poly <- leaflet() %>%
+  addTiles()%>%
+  addPolygons(data=bbox) %>%
+  addPolygons(data=bbox.veneto) %>%
+  addPolygons(data=bbox.friuli$multipolygon) 
+  
+  
+# 
+# 
+# 
+# ########### 1.  Retrieve Road Network, clean, and store locally ###################
+# bbox_to_string(bbox)
+# # https://wiki.openstreetmap.org/wiki/Key:highway
+# # dput(available_tags("highway"))
+# tags <- c(
+#   "motorway", "trunk", "primary", "secondary", "tertiary", "unclassified",
+#   "motorway_link", "trunk_link", "primary_link", "secondary_link", "tertiary_link"
+# )
+# 
+# # st_read
+# # st_write
+# ########## 1. Get road network
+# query <- opq(bbox = bbox, timeout = 500) %>%
+#   add_osm_feature(key = "highway", value = tags)
+# features <- osmdata_sf(query)
+# features<- trim_osmdata(features, bbox)
+# 
+# ## Select a
+# not_all_na <- function(x) any(!is.na(x))
+# not_any_na <- function(x) all(!is.na(x))
+# network<- features$osm_lines %>% select(where(not_all_na))
 
 
 # Write to file
-st_write(network, "osm_road_network_carinthia.gpkg", driver = "gpkg")
+# st_write(network, "osm_road_network_carinthia.gpkg", driver = "gpkg")
 
 
 
@@ -63,11 +78,11 @@ st_write(network, "osm_road_network_carinthia.gpkg", driver = "gpkg")
 
 network<- st_read("osm_road_network_carinthia.gpkg")
 
-net <- as_sfnetwork(network, directed = TRUE) %>%
+net <- as_sfnetwork(network, directed = TRUE) 
   # st_transform(3035) %>%
 
 ### Set weights  
-net <- net %>%   activate("edges") %>%  mutate(weight = st_length(geometry))
+net <- net %>%   activate("edges") %>%  mutate(weight = edge_length())
 
 ## Check lengths
 net %>%   activate("edges") %>% select(weight)
