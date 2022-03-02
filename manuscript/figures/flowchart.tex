@@ -30,6 +30,7 @@
     \draw [arrow] (start.east) -- (pro1.west);
     \draw [arrow] (pro1.east) -- (pro2.west);
     \draw [arrow] (pro2.east) -- (pro3.west);
+    \draw [arrow] (pro2.east) -- (pro4.west);
     \draw [arrow] (pro4.east) -- (dec1.west);
     \draw [arrow] (pro3.east) -- (dec1.west);
 
@@ -37,7 +38,10 @@
 
     % \draw [arrow] (dec1.east) -- (appr.west);
     \draw [arrow] (dec1.east) -- node[anchor=south] {yes} (appr.west);
-    \draw [arrow] (dec1.north) |- node[anchor=south] {no} (pro1.north);
+    % \draw [arrow] (dec1.north) |- node[anchor=south] {no} (pro1.north);
+
+    \draw [arrow] (dec1.north) -- ([yshift=0.5cm]dec1.north) node [near start] {no}  --    ([yshift=1cm]pro1.north) -| (pro1.north)
+
 
 
     % \draw [arrow] (dec1.north) -- (start.north);
