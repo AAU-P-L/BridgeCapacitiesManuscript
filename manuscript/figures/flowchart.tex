@@ -1,0 +1,53 @@
+% !TeX root =../main.tex
+% !TeX spellcheck = en_US
+
+% https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ%3A_A_Tutorial_for_Beginners_(Part_3)%E2%80%94Creating_Flowcharts
+
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=1cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=1cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=1cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=1cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+\begin{tikzpicture}[node distance=2.5cm, font=\footnotesize]
+
+  \node (start) [startstop] {Draft Route};
+
+    \node (pro1) [process, text width=1.5cm,right of=start] {submit draft to responsible authority};
+
+    \node (pro2) [process, text width=1.5cm, right of=pro1] {check draft by civil engineer};
+
+    \node (pro3) [process, text width=1.5cm, right of=pro2,  yshift=1cm] {On-site visits};
+    \node (pro4) [process, text width=1.5cm, right of=pro2,  yshift=-1cm] {Statistical calculations};
+
+    \node (dec1) [decision, text width=1.5cm, right of=pro4, yshift=1cm,  ] {Route Feasible};
+
+    \node (appr) [startstop,  text width=1.5cm, right of=dec1] {Approval Granted};
+
+
+    \draw [arrow] (start.east) -- (pro1.west);
+    \draw [arrow] (pro1.east) -- (pro2.west);
+    \draw [arrow] (pro2.east) -- (pro3.west);
+    \draw [arrow] (pro2.east) -- (pro4.west);
+    \draw [arrow] (pro4.east) -- (dec1.west);
+    \draw [arrow] (pro3.east) -- (dec1.west);
+
+
+
+    % \draw [arrow] (dec1.east) -- (appr.west);
+    \draw [arrow] (dec1.east) -- node[anchor=south] {yes} (appr.west);
+    % \draw [arrow] (dec1.north) |- node[anchor=south] {no} (pro1.north);
+
+    \draw [arrow] (dec1.north) -- ([yshift=0.5cm]dec1.north) node [near start] {no}  --    ([yshift=1cm]pro1.north) -| (pro1.north);
+
+
+
+    % \draw [arrow] (dec1.north) -- (start.north);
+
+    % \draw [arrow] (dec1) -- node[anchor=south] {no} (pro2b);
+
+
+
+  \end{tikzpicture}
